@@ -8,25 +8,37 @@
 
 import Foundation
 
-final class MockNotebookRepo: NotebookRepository {
-    var items : Array<Notebook> = []
+final class MockRepository: Repository {
     
+    var notebooks : Array<Notebook> = []
+    var notes : Array<Note> = []
+
     init() {
         for index in 1...20 {
             let color = GradientColor(firstColor: "#fffff", secondColor: "#00000")
             let notebook = Notebook(id: index, name: "Notebook \(index)", notesCount: index, gradientColor: color )
-            items.append(notebook)
+            notebooks.append(notebook)
         }
+        
+        for index in 1...30 {
+            let note = Note(id: index, title: "Title of \(index) note", content: "Content of \(index)th note", notebookId: 1)
+            notes.append(note)
+        }
+            
         
     }
     
+}
+    
+extension MockRepository {
+    
     func getNotebooks(onComplete: @escaping ([Notebook]) -> Void) {
-        onComplete(items)
+        onComplete(notebooks)
     }
     
     func deleteNotebook(id: Int, onComplete: @escaping () -> Void) {
-        if let index = items.firstIndex(where: { $0.id == id }) {
-            items.remove(at: index)
+        if let index = notebooks.firstIndex(where: { $0.id == id }) {
+            notebooks.remove(at: index)
         }
         onComplete()
     }
@@ -34,36 +46,30 @@ final class MockNotebookRepo: NotebookRepository {
     func createNotebook(title: String, onComplete: @escaping (Notebook) -> Void) {
         let color = GradientColor(firstColor: "#fffff", secondColor: "#00000")
         let notebook = Notebook(id: 231, name: title, notesCount: 0, gradientColor: color)
-        items.append(notebook)
+        notebooks.append(notebook)
         onComplete(notebook)
     }
 }
 
-final class MockNotesRepository: NotesRepository {
-    var items : Array<Note> = []
 
-    init() {
-        for index in 1...30 {
-            let note = Note(id: index, title: "Title of \(index) note", content: "Content of \(index)th note", notebookId: 1)
-            items.append(note)
-        }
-        
-    }
+extension MockRepository {
+    
+    
     
     func getNotesFromNotebook(notebookId: Int, onComplete: @escaping ([Note]) -> Void) {
-        onComplete(items)
+        onComplete(notes)
     }
     
     func deleteNote(noteId: Int, onComplete: @escaping () -> Void) {
-        if let index = items.firstIndex(where:  { $0.id == noteId}) {
-            items.remove(at: index)
+        if let index = notes.firstIndex(where:  { $0.id == noteId}) {
+            notes.remove(at: index)
         }
         onComplete()
     }
-
+    
     func createNote(notebookId: Int, title: String, content: String, onComplete: @escaping (Note) -> Void) {
         let note = Note(id: 111, title: title, content: content, notebookId: notebookId)
-        items.append(note)
+        notes.append(note)
         onComplete(note)
     }
     

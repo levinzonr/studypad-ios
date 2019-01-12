@@ -22,6 +22,7 @@
 		9530FC8821EA66B1004DD256 /* MockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9530FC8721EA66B1004DD256 /* MockRepository.swift */; };
 		9530FC8A21EA6D83004DD256 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9530FC8921EA6D83004DD256 /* Note.swift */; };
 		9530FC8C21EA7219004DD256 /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9530FC8B21EA7219004DD256 /* Extenstions.swift */; };
+		9530FC8E21EA7459004DD256 /* DependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9530FC8D21EA7459004DD256 /* DependencyManager.swift */; };
 		BC41889BA65B8B5D23110F55 /* Pods_StudyPadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA30EBDCB9DB0851AC6A1448 /* Pods_StudyPadUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		9530FC8721EA66B1004DD256 /* MockRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepository.swift; sourceTree = "<group>"; };
 		9530FC8921EA6D83004DD256 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		9530FC8B21EA7219004DD256 /* Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
+		9530FC8D21EA7459004DD256 /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
 		D478DB767903BAE8302B9A5E /* Pods-StudyPadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyPadUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StudyPadUITests/Pods-StudyPadUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA30EBDCB9DB0851AC6A1448 /* Pods_StudyPadUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudyPadUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -180,6 +182,7 @@
 				9530FC8321EA5869004DD256 /* AppCoordinator.swift */,
 				9530FC8521EA653B004DD256 /* Repositories.swift */,
 				9530FC8721EA66B1004DD256 /* MockRepository.swift */,
+				9530FC8D21EA7459004DD256 /* DependencyManager.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				9530FC8621EA653B004DD256 /* Repositories.swift in Sources */,
 				9530FC5121EA4B28004DD256 /* MainViewController.swift in Sources */,
 				9530FC8121EA52F6004DD256 /* Notebook.swift in Sources */,
+				9530FC8E21EA7459004DD256 /* DependencyManager.swift in Sources */,
 				9530FC4F21EA4B28004DD256 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

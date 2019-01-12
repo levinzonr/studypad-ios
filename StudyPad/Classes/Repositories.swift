@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias Repository = NotebookRepository
+typealias Repository = NotebookRepository & NotesRepository
 
 protocol NotebookRepository{
     
