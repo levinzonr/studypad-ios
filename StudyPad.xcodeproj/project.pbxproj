@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9530FC4F21EA4B28004DD256 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9530FC4E21EA4B28004DD256 /* AppDelegate.swift */; };
+		9530FC5121EA4B28004DD256 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9530FC5021EA4B28004DD256 /* ViewController.swift */; };
+		9530FC5421EA4B28004DD256 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9530FC5221EA4B28004DD256 /* Main.storyboard */; };
+		9530FC5621EA4B2A004DD256 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9530FC5521EA4B2A004DD256 /* Assets.xcassets */; };
+		9530FC5921EA4B2A004DD256 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9530FC5721EA4B2A004DD256 /* LaunchScreen.storyboard */; };
+		9530FC6421EA4B2A004DD256 /* StudyPadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9530FC6321EA4B2A004DD256 /* StudyPadTests.swift */; };
+		9530FC6F21EA4B2A004DD256 /* StudyPadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9530FC6E21EA4B2A004DD256 /* StudyPadUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9530FC6021EA4B2A004DD256 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9530FC4321EA4B27004DD256 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9530FC4A21EA4B27004DD256;
+			remoteInfo = StudyPad;
+		};
+		9530FC6B21EA4B2A004DD256 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9530FC4321EA4B27004DD256 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9530FC4A21EA4B27004DD256;
+			remoteInfo = StudyPad;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9530FC4B21EA4B27004DD256 /* StudyPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9530FC4E21EA4B28004DD256 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9530FC5021EA4B28004DD256 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9530FC5321EA4B28004DD256 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9530FC5521EA4B2A004DD256 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9530FC5821EA4B2A004DD256 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9530FC5A21EA4B2A004DD256 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9530FC5F21EA4B2A004DD256 /* StudyPadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyPadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9530FC6321EA4B2A004DD256 /* StudyPadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyPadTests.swift; sourceTree = "<group>"; };
+		9530FC6521EA4B2A004DD256 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9530FC6A21EA4B2A004DD256 /* StudyPadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyPadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9530FC6E21EA4B2A004DD256 /* StudyPadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyPadUITests.swift; sourceTree = "<group>"; };
+		9530FC7021EA4B2A004DD256 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9530FC4821EA4B27004DD256 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9530FC5C21EA4B2A004DD256 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9530FC6721EA4B2A004DD256 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9530FC4221EA4B27004DD256 = {
+			isa = PBXGroup;
+			children = (
+				9530FC4D21EA4B27004DD256 /* StudyPad */,
+				9530FC6221EA4B2A004DD256 /* StudyPadTests */,
+				9530FC6D21EA4B2A004DD256 /* StudyPadUITests */,
+				9530FC4C21EA4B27004DD256 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9530FC4C21EA4B27004DD256 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9530FC4B21EA4B27004DD256 /* StudyPad.app */,
+				9530FC5F21EA4B2A004DD256 /* StudyPadTests.xctest */,
+				9530FC6A21EA4B2A004DD256 /* StudyPadUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9530FC4D21EA4B27004DD256 /* StudyPad */ = {
+			isa = PBXGroup;
+			children = (
+				9530FC4E21EA4B28004DD256 /* AppDelegate.swift */,
+				9530FC5021EA4B28004DD256 /* ViewController.swift */,
+				9530FC5221EA4B28004DD256 /* Main.storyboard */,
+				9530FC5521EA4B2A004DD256 /* Assets.xcassets */,
+				9530FC5721EA4B2A004DD256 /* LaunchScreen.storyboard */,
+				9530FC5A21EA4B2A004DD256 /* Info.plist */,
+			);
+			path = StudyPad;
+			sourceTree = "<group>";
+		};
+		9530FC6221EA4B2A004DD256 /* StudyPadTests */ = {
+			isa = PBXGroup;
+			children = (
+				9530FC6321EA4B2A004DD256 /* StudyPadTests.swift */,
+				9530FC6521EA4B2A004DD256 /* Info.plist */,
+			);
+			path = StudyPadTests;
+			sourceTree = "<group>";
+		};
+		9530FC6D21EA4B2A004DD256 /* StudyPadUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9530FC6E21EA4B2A004DD256 /* StudyPadUITests.swift */,
+				9530FC7021EA4B2A004DD256 /* Info.plist */,
+			);
+			path = StudyPadUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9530FC4A21EA4B27004DD256 /* StudyPad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9530FC7321EA4B2A004DD256 /* Build configuration list for PBXNativeTarget "StudyPad" */;
+			buildPhases = (
+				9530FC4721EA4B27004DD256 /* Sources */,
+				9530FC4821EA4B27004DD256 /* Frameworks */,
+				9530FC4921EA4B27004DD256 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StudyPad;
+			productName = StudyPad;
+			productReference = 9530FC4B21EA4B27004DD256 /* StudyPad.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9530FC5E21EA4B2A004DD256 /* StudyPadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9530FC7621EA4B2A004DD256 /* Build configuration list for PBXNativeTarget "StudyPadTests" */;
+			buildPhases = (
+				9530FC5B21EA4B2A004DD256 /* Sources */,
+				9530FC5C21EA4B2A004DD256 /* Frameworks */,
+				9530FC5D21EA4B2A004DD256 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9530FC6121EA4B2A004DD256 /* PBXTargetDependency */,
+			);
+			name = StudyPadTests;
+			productName = StudyPadTests;
+			productReference = 9530FC5F21EA4B2A004DD256 /* StudyPadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9530FC6921EA4B2A004DD256 /* StudyPadUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9530FC7921EA4B2A004DD256 /* Build configuration list for PBXNativeTarget "StudyPadUITests" */;
+			buildPhases = (
+				9530FC6621EA4B2A004DD256 /* Sources */,
+				9530FC6721EA4B2A004DD256 /* Frameworks */,
+				9530FC6821EA4B2A004DD256 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9530FC6C21EA4B2A004DD256 /* PBXTargetDependency */,
+			);
+			name = StudyPadUITests;
+			productName = StudyPadUITests;
+			productReference = 9530FC6A21EA4B2A004DD256 /* StudyPadUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9530FC4321EA4B27004DD256 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Roman Levinzon";
+				TargetAttributes = {
+					9530FC4A21EA4B27004DD256 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					9530FC5E21EA4B2A004DD256 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 9530FC4A21EA4B27004DD256;
+					};
+					9530FC6921EA4B2A004DD256 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 9530FC4A21EA4B27004DD256;
+					};
+				};
+			};
+			buildConfigurationList = 9530FC4621EA4B27004DD256 /* Build configuration list for PBXProject "StudyPad" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9530FC4221EA4B27004DD256;
+			productRefGroup = 9530FC4C21EA4B27004DD256 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9530FC4A21EA4B27004DD256 /* StudyPad */,
+				9530FC5E21EA4B2A004DD256 /* StudyPadTests */,
+				9530FC6921EA4B2A004DD256 /* StudyPadUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9530FC4921EA4B27004DD256 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9530FC5921EA4B2A004DD256 /* LaunchScreen.storyboard in Resources */,
+				9530FC5621EA4B2A004DD256 /* Assets.xcassets in Resources */,
+				9530FC5421EA4B28004DD256 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9530FC5D21EA4B2A004DD256 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9530FC6821EA4B2A004DD256 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9530FC4721EA4B27004DD256 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9530FC5121EA4B28004DD256 /* ViewController.swift in Sources */,
+				9530FC4F21EA4B28004DD256 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9530FC5B21EA4B2A004DD256 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9530FC6421EA4B2A004DD256 /* StudyPadTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9530FC6621EA4B2A004DD256 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9530FC6F21EA4B2A004DD256 /* StudyPadUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9530FC6121EA4B2A004DD256 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9530FC4A21EA4B27004DD256 /* StudyPad */;
+			targetProxy = 9530FC6021EA4B2A004DD256 /* PBXContainerItemProxy */;
+		};
+		9530FC6C21EA4B2A004DD256 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9530FC4A21EA4B27004DD256 /* StudyPad */;
+			targetProxy = 9530FC6B21EA4B2A004DD256 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9530FC5221EA4B28004DD256 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9530FC5321EA4B28004DD256 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9530FC5721EA4B2A004DD256 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9530FC5821EA4B2A004DD256 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9530FC7121EA4B2A004DD256 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9530FC7221EA4B2A004DD256 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9530FC7421EA4B2A004DD256 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StudyPad/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cz.levinzonr.StudyPad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9530FC7521EA4B2A004DD256 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StudyPad/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cz.levinzonr.StudyPad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9530FC7721EA4B2A004DD256 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StudyPadTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cz.levinzonr.StudyPadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StudyPad.app/StudyPad";
+			};
+			name = Debug;
+		};
+		9530FC7821EA4B2A004DD256 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StudyPadTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cz.levinzonr.StudyPadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StudyPad.app/StudyPad";
+			};
+			name = Release;
+		};
+		9530FC7A21EA4B2A004DD256 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StudyPadUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cz.levinzonr.StudyPadUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StudyPad;
+			};
+			name = Debug;
+		};
+		9530FC7B21EA4B2A004DD256 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StudyPadUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cz.levinzonr.StudyPadUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StudyPad;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9530FC4621EA4B27004DD256 /* Build configuration list for PBXProject "StudyPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9530FC7121EA4B2A004DD256 /* Debug */,
+				9530FC7221EA4B2A004DD256 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9530FC7321EA4B2A004DD256 /* Build configuration list for PBXNativeTarget "StudyPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9530FC7421EA4B2A004DD256 /* Debug */,
+				9530FC7521EA4B2A004DD256 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9530FC7621EA4B2A004DD256 /* Build configuration list for PBXNativeTarget "StudyPadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9530FC7721EA4B2A004DD256 /* Debug */,
+				9530FC7821EA4B2A004DD256 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9530FC7921EA4B2A004DD256 /* Build configuration list for PBXNativeTarget "StudyPadUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9530FC7A21EA4B2A004DD256 /* Debug */,
+				9530FC7B21EA4B2A004DD256 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9530FC4321EA4B27004DD256 /* Project object */;
+}
