@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+struct Notebook : Codable {
+    var id: Int
+    var name: String
+    var notesCount : Int
+    var gradientColor: GradientColor
+}
+
+
+struct GradientColor : Codable {
+    var firstColor: String
+    var secondColor: String
+}
