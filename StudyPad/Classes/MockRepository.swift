@@ -7,11 +7,14 @@
 //
 
 import Foundation
+import RxSwift
 
 final class MockRepository: Repository {
     
     var notebooks : Array<Notebook> = []
     var notes : Array<Note> = []
+    
+    let delay = RxTimeInterval(2000)
 
     init() {
         for index in 1...20 {
@@ -32,8 +35,8 @@ final class MockRepository: Repository {
     
 extension MockRepository {
     
-    func getNotebooks(onComplete: @escaping ([Notebook]) -> Void) {
-        onComplete(notebooks)
+    func getNotebooks() -> Single<[Notebook]> {
+        return Single.just(self.notebooks)
     }
     
     func deleteNotebook(id: Int, onComplete: @escaping () -> Void) {

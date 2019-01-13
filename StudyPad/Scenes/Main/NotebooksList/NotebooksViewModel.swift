@@ -7,18 +7,18 @@
 //
 
 import Foundation
+import RxSwift
 
-
-final class NotebooksPresenter : Presenter<NotebooksView> {
-    
+final class NotebooksViewModel {
     
     var repo: Repository
+    let notebooksObservable: Single<[Notebook]>
     
     init(repo: Repository) {
         self.repo = repo
+        notebooksObservable = repo.getNotebooks()
     }
+
+
     
-  
-    
-   
 }

@@ -22,8 +22,8 @@ final class NotebooksCoordinator: Coordinator {
     }
     
     func start() {
-        let presenter = NotebooksPresenter(repo: dependencies.repository)
-        let vc = NotebooksViewController.instantiate(with: presenter)
+        let viewModel = NotebooksViewModel(repo: dependencies.repository)
+        let vc = NotebooksViewController.instantiate(with: viewModel)
         navigationController.setViewControllers([vc], animated: false)
         print("Start")
         

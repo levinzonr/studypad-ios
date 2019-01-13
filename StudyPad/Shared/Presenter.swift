@@ -10,13 +10,19 @@ import Foundation
 
 class Presenter<T> {
     
-    var view: T!
+     var view: T?
+    
+    
 
     func attachView(view: T) {
         self.view = view
     }
     func dettachView() {
         self.view = nil
+    }
+    
+    func runAction(action: (T) -> Void) {
+        
     }
     
 }

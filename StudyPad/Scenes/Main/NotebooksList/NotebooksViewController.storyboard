@@ -18,17 +18,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="dsfds" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bqu-c1-Zde">
-                                <rect key="frame" x="147" y="257" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lel-fh-fQx">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="3ej-ao-EsM">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3ej-ao-EsM" id="pN7-x4-HAY">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lel-fh-fQx" firstAttribute="top" secondItem="pgb-sr-Lqw" secondAttribute="top" id="JR9-vd-fe8"/>
+                            <constraint firstItem="lel-fh-fQx" firstAttribute="leading" secondItem="pgb-sr-Lqw" secondAttribute="leading" id="Pbu-NC-9Fs"/>
+                            <constraint firstItem="pgb-sr-Lqw" firstAttribute="trailing" secondItem="lel-fh-fQx" secondAttribute="trailing" id="fDX-Sm-OvS"/>
+                            <constraint firstItem="pgb-sr-Lqw" firstAttribute="bottom" secondItem="lel-fh-fQx" secondAttribute="bottom" id="gTw-J4-Yi8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pgb-sr-Lqw"/>
                     </view>
+                    <connections>
+                        <outlet property="notebooksTableView" destination="lel-fh-fQx" id="dbD-xj-cGX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nqc-rf-xvy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,6 +10,6 @@ import Foundation
 
 protocol NotebooksView : View {
     
-    func showNotebooks()
+    func showNotebooks(items: [Notebook])
     
 }

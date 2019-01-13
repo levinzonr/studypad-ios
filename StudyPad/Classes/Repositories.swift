@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import RxSwift
 
 typealias Repository = NotebookRepository & NotesRepository
 
 protocol NotebookRepository{
     
-    func getNotebooks(onComplete: @escaping ([Notebook]) -> Void)
+    func getNotebooks() -> Single<[Notebook]>
     func createNotebook(title: String, onComplete: @escaping (Notebook) -> Void)
     func deleteNotebook(id: Int, onComplete: @escaping () -> Void)
     
