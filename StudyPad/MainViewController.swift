@@ -9,12 +9,18 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+            }
+
+
+    @IBAction func onButtonClicked(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "AutolayoutViewController")
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
-
-
 }
 

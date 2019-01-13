@@ -7,7 +7,38 @@
 //
 
 import Foundation
+import UIKit
 
-protocol AppCoordinator {
+class AppCoordinator : Coordinator {
+    
+    var dependencies: AllDependencies
+    let window: UIWindow
+    var children: [Coordinator] = []
+    
+    init(window: UIWindow, deps: AllDependencies = DependencyManager.shared) {
+        self.window = window
+        self.dependencies = deps
+    }
+    
+    func start() {
+        defer {
+            self.window.makeKeyAndVisible()
+        }
+        
+        showMain()
+    }
+    
+}
+
+extension AppCoordinator {
+    
+    
+    func showMain()  {
+    
+        let coordinator = BottomNavCoordinator(window: window, deps: dependencies)
+        coordinator.start()
+        children = [coordinator]
+        
+    }
     
 }

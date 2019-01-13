@@ -8,8 +8,13 @@
 
 import Foundation
 
+protocol ProvidesRepository {
+    var repository: Repository { get }
+}
 
-final class DependencyManager {
+typealias AllDependencies = ProvidesRepository
+
+final class DependencyManager : AllDependencies {
     
     static let shared = DependencyManager()
     
