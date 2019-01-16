@@ -1,5 +1,23 @@
 PODS:
   - Alamofire (5.0.0.beta.1)
+  - MaterialComponents/Cards (72.2.0):
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Icons/ic_check_circle
+    - MaterialComponents/private/Math
+    - MaterialComponents/private/Shapes
+    - MaterialComponents/ShadowLayer
+  - MaterialComponents/Ink (72.2.0):
+    - MaterialComponents/private/Math
+  - MaterialComponents/private/Icons/Base (72.2.0)
+  - MaterialComponents/private/Icons/ic_check_circle (72.2.0):
+    - MaterialComponents/private/Icons/Base
+  - MaterialComponents/private/Math (72.2.0)
+  - MaterialComponents/private/Shapes (72.2.0):
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
+  - MaterialComponents/ShadowElevations (72.2.0)
+  - MaterialComponents/ShadowLayer (72.2.0):
+    - MaterialComponents/ShadowElevations
   - RxAtomic (4.4.0)
   - RxCocoa (4.4.0):
     - RxSwift (~> 4.0)
@@ -8,22 +26,25 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0.beta.1)
+  - MaterialComponents/Cards
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - MaterialComponents
     - RxAtomic
     - RxCocoa
     - RxSwift
 
 SPEC CHECKSUMS:
   Alamofire: 2ef6d6c984c5d21c366e9b41a9ae7dfee2b67a44
+  MaterialComponents: d1637df9976683348de8eabd10de0723ec81db3d
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
 
-PODFILE CHECKSUM: b9350cd9f3dbe6fe6785f82bad361c9345c7d660
+PODFILE CHECKSUM: 0f98e82c22d3f17698360d0c90992287e8258d55
 
 COCOAPODS: 1.5.3

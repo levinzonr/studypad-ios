@@ -10,23 +10,21 @@ import Foundation
 import UIKit
 import RxSwift
 
-final class NotebooksViewController : UIViewController {
+final class NotebooksViewController : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    @IBOutlet weak var notebooksTableView: UITableView!
     var viewModel: NotebooksViewModel!
     
     var notebooks : [Notebook] = []
     
+    @IBOutlet weak var collectionView: UICollectionView!
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBindings()
-        notebooksTableView.delegate = self
-        notebooksTableView.dataSource = self
-        
-        let nib = UINib(nibName: "NotebookViewCell", bundle: nil)
-        notebooksTableView.register(nib, forCellReuseIdentifier: "notebookViewCell")
+        collectionView.delegate = self
+        collectionView.dataSource = self
+
     }
     
     
@@ -49,41 +47,31 @@ final class NotebooksViewController : UIViewController {
         print("Initsnaa")
         return vc
     }
-    
-   
-    
+
     func showNotebooks(items: [Notebook]) {
         self.notebooks = items
+    
     }
 }
 
-extension NotebooksViewController : UITableViewDelegate, UITableViewDataSource{
+extension NotebooksViewController {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.notebooks.count
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return notebooks.count
     }
     
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = notebooksTableView.dequeueReusableCell(withIdentifier: "notebookViewCell", for:  indexPath) as! NotebookViewCell
-        let notebook = notebooks[indexPath.row]
-        cell.notebookNameLabel.text = notebook.name
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [notebook.gradientColor.firstColor, notebook.gradientColor.secondColor]
-        gradientLayer.startPoint = CGPoint(x: 0.5, y: 1.0)
-        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0.0)
-        gradientLayer.locations = [NSNumber(floatLiteral: 0.0), NSNumber(floatLiteral: 1.0)]
-        gradientLayer.frame = cell.notebookColorView.bounds
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! NotebookViewCell
+       cell.notebookNameLabel.text = notebooks[indexPath.row].name
+        cell.setupCardView()
         
-        cell.notebookColorView.layer.insertSublayer(gradientLayer, at: 0)
-
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        let gradient = CAGradientLayer()
+        let colors = notebooks[indexPath.row].gradientColor
+        gradient.frame = cell.notebookGradientColorView.bounds
+        gradient.colors = colors.toColorArray()
+        cell.notebookGradientColorView.layer.addSublayer(gradient)
+        
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 86
-    }
-    
-
-    
 }

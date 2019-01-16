@@ -8,6 +8,7 @@ target 'StudyPad' do
   pod 'Alamofire', '~> 5.0.0.beta.1'
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
+  pod 'MaterialComponents/Cards'
   # Pods for StudyPad
 
   target 'StudyPadTests' do

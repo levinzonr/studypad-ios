@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3E0B462167B6E47D7BF04CBC /* Pods_StudyPadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85956D0667F2ABEDF965B399 /* Pods_StudyPadTests.framework */; };
 		516C8313F41BA8E387C81CEA /* Pods_StudyPad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9159DB616815EE7AD79EE931 /* Pods_StudyPad.framework */; };
+		9519714B21EFBAD2003ACFAE /* NotebookViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9519714921EFBAD2003ACFAE /* NotebookViewCell.swift */; };
+		9519714C21EFBAD2003ACFAE /* NotebookViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9519714A21EFBAD2003ACFAE /* NotebookViewCell.xib */; };
 		9530FC4F21EA4B28004DD256 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9530FC4E21EA4B28004DD256 /* AppDelegate.swift */; };
 		9530FC5621EA4B2A004DD256 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9530FC5521EA4B2A004DD256 /* Assets.xcassets */; };
 		9530FC5921EA4B2A004DD256 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9530FC5721EA4B2A004DD256 /* LaunchScreen.storyboard */; };
@@ -27,8 +29,6 @@
 		9530FC9C21EA9311004DD256 /* NotebooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9530FC9B21EA9311004DD256 /* NotebooksViewModel.swift */; };
 		9530FCA621EA9BF0004DD256 /* NotebooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9530FCA521EA9BF0004DD256 /* NotebooksViewController.swift */; };
 		9530FCA821EB4BEA004DD256 /* NotebooksViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9530FCA721EB4BEA004DD256 /* NotebooksViewController.storyboard */; };
-		959AA69721EBC2B6001B28EF /* NotebookViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AA69521EBC2B6001B28EF /* NotebookViewCell.swift */; };
-		959AA69821EBC2B6001B28EF /* NotebookViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 959AA69621EBC2B6001B28EF /* NotebookViewCell.xib */; };
 		BC41889BA65B8B5D23110F55 /* Pods_StudyPadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA30EBDCB9DB0851AC6A1448 /* Pods_StudyPadUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +57,8 @@
 		85956D0667F2ABEDF965B399 /* Pods_StudyPadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudyPadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9159DB616815EE7AD79EE931 /* Pods_StudyPad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudyPad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94CC7A680369EB0E4C4F79FE /* Pods-StudyPad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyPad.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudyPad/Pods-StudyPad.release.xcconfig"; sourceTree = "<group>"; };
+		9519714921EFBAD2003ACFAE /* NotebookViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookViewCell.swift; sourceTree = "<group>"; };
+		9519714A21EFBAD2003ACFAE /* NotebookViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotebookViewCell.xib; sourceTree = "<group>"; };
 		9530FC4B21EA4B27004DD256 /* StudyPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9530FC4E21EA4B28004DD256 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9530FC5521EA4B2A004DD256 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,8 +83,6 @@
 		9530FC9B21EA9311004DD256 /* NotebooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebooksViewModel.swift; sourceTree = "<group>"; };
 		9530FCA521EA9BF0004DD256 /* NotebooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebooksViewController.swift; sourceTree = "<group>"; };
 		9530FCA721EB4BEA004DD256 /* NotebooksViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotebooksViewController.storyboard; sourceTree = "<group>"; };
-		959AA69521EBC2B6001B28EF /* NotebookViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookViewCell.swift; sourceTree = "<group>"; };
-		959AA69621EBC2B6001B28EF /* NotebookViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotebookViewCell.xib; sourceTree = "<group>"; };
 		D478DB767903BAE8302B9A5E /* Pods-StudyPadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyPadUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StudyPadUITests/Pods-StudyPadUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA30EBDCB9DB0851AC6A1448 /* Pods_StudyPadUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudyPadUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -231,8 +231,8 @@
 		959AA69221EBC0D7001B28EF /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				959AA69521EBC2B6001B28EF /* NotebookViewCell.swift */,
-				959AA69621EBC2B6001B28EF /* NotebookViewCell.xib */,
+				9519714921EFBAD2003ACFAE /* NotebookViewCell.swift */,
+				9519714A21EFBAD2003ACFAE /* NotebookViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -369,7 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9530FCA821EB4BEA004DD256 /* NotebooksViewController.storyboard in Resources */,
-				959AA69821EBC2B6001B28EF /* NotebookViewCell.xib in Resources */,
+				9519714C21EFBAD2003ACFAE /* NotebookViewCell.xib in Resources */,
 				9530FC5921EA4B2A004DD256 /* LaunchScreen.storyboard in Resources */,
 				9530FC5621EA4B2A004DD256 /* Assets.xcassets in Resources */,
 			);
@@ -400,6 +400,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-StudyPad/Pods-StudyPad-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -407,6 +408,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -488,7 +490,7 @@
 				9530FC8121EA52F6004DD256 /* Notebook.swift in Sources */,
 				9530FCA621EA9BF0004DD256 /* NotebooksViewController.swift in Sources */,
 				9530FC9821EA9081004DD256 /* NotebooksCoordinator.swift in Sources */,
-				959AA69721EBC2B6001B28EF /* NotebookViewCell.swift in Sources */,
+				9519714B21EFBAD2003ACFAE /* NotebookViewCell.swift in Sources */,
 				9530FC8E21EA7459004DD256 /* DependencyManager.swift in Sources */,
 				9530FC4F21EA4B28004DD256 /* AppDelegate.swift in Sources */,
 			);
