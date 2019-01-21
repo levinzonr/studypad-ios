@@ -23,7 +23,6 @@ class NotebookViewCell: MDCCardCollectionCell {
         
         setShadowElevation(ShadowElevation(rawValue: 16), for: .highlighted)
         setShadowColor(UIColor.black, for: .normal)
-        setShadowElevation(<#T##shadowElevation: ShadowElevation##ShadowElevation#>, for: <#T##MDCCardCellState#>)
     }
 
 }

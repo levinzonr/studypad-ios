@@ -12,46 +12,66 @@ import RxSwift
 
 final class NotebooksViewController : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    var viewModel: NotebooksViewModel!
+    var presenter: NotebooksPresenter!
     
     var notebooks : [Notebook] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
     private let disposeBag = DisposeBag()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(createButtonPressed))
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupBindings()
         collectionView.delegate = self
         collectionView.dataSource = self
+        presenter.attachView(view: self)
+    }
+    
 
+    
+    private func showAlert() {
+        let alert = UIAlertController(title: "Some Title", message: "Enter a text", preferredStyle: .alert)
+        
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextField { (textField) in
+            textField.text = "Some default text"
+        }
+        
+        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            let textField = alert!.textFields![0] // Force unwrapping because we know it exists.
+            if let name = textField.text {
+                self.presenter.createNotebook(name: name)
+            }
+        }))
+        
+        // 4. Present the alert.
+        self.present(alert, animated: true, completion: nil)
     }
     
-    
-    private func setupBindings() {
-        viewModel.notebooksObservable
-            .observeOn(MainScheduler.instance)
-            .subscribe(onSuccess: ({ (items) in
-                print("scuses")
-                self.showNotebooks(items: items)
-            })) { (error) in
-                
-        }.disposed(by: disposeBag)
-    }
-    
-    static func instantiate(with viewModel: NotebooksViewModel) -> NotebooksViewController {
+    static func instantiate(with presenter: NotebooksPresenter) -> NotebooksViewController {
         let name = "\(NotebooksViewController.self)"
         let storyboard = UIStoryboard(name: name, bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: name) as! NotebooksViewController
-        vc.viewModel = viewModel
+        vc.presenter = presenter
         print("Initsnaa")
         return vc
     }
 
-    func showNotebooks(items: [Notebook]) {
-        self.notebooks = items
+}
+
+extension NotebooksViewController : NotebooksView {
     
+    func showNotebooks(notebooks: [Notebook]) {
+        print("Reloaded: Count: \(notebooks.count)")
+        self.notebooks = notebooks
+        self.collectionView.reloadData()
     }
+    
 }
 
 extension NotebooksViewController {
@@ -73,5 +93,12 @@ extension NotebooksViewController {
         cell.notebookGradientColorView.layer.addSublayer(gradient)
         
         return cell
+    }
+}
+
+private extension NotebooksViewController {
+    
+    @objc func createButtonPressed() {
+       showAlert()
     }
 }

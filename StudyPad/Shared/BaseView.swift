@@ -1,5 +1,5 @@
 //
-//  NotebooksView.swift
+//  BaseView.swift
 //  StudyPad
 //
 //  Created by Roman Levinzon on 21/01/2019.
@@ -7,9 +7,7 @@
 //
 
 import Foundation
-protocol NotebooksView : BaseView {
-    
-    func showNotebooks(notebooks: [Notebook])
 
+protocol BaseView {
     
 }

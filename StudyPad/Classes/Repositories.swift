@@ -13,7 +13,7 @@ typealias Repository = NotebookRepository & NotesRepository
 
 protocol NotebookRepository{
     
-    func getNotebooks() -> Single<[Notebook]>
+    func getNotebooks(onComplete: @escaping ([Notebook]) -> Void)
     func createNotebook(title: String, onComplete: @escaping (Notebook) -> Void)
     func deleteNotebook(id: Int, onComplete: @escaping () -> Void)
     

@@ -2,27 +2,29 @@
 //  Presenter.swift
 //  StudyPad
 //
-//  Created by Roman Levinzon on 12/01/2019.
+//  Created by Roman Levinzon on 21/01/2019.
 //  Copyright © 2019 Roman Levinzon. All rights reserved.
 //
 
 import Foundation
 
-class Presenter<T> {
+protocol BasePresenter {
+    associatedtype View
     
-     var view: T?
-    
-    
+    var view: View? { get set }
 
-    func attachView(view: T) {
-        self.view = view
-    }
-    func dettachView() {
-        self.view = nil
-    }
     
-    func runAction(action: (T) -> Void) {
-        
-    }
+    func attachView(view: View)
+    func dettachView()
     
 }
+
+extension BasePresenter  {
+    
+    func runAction(block: (View) -> Void) {
+        if let view  = self.view {
+            block(view)
+        }
+    }
+}
+

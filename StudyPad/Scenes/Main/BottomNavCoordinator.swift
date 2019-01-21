@@ -54,6 +54,7 @@ private extension BottomNavCoordinator {
         case .notebooks:
             coordinator = NotebooksCoordinator(navigationController: navController)
             navController.tabBarItem = UITabBarItem(title: "My LIbrary", image: nil, tag: 1)
+            
         case.challenges:
             coordinator = NotebooksCoordinator(navigationController: navController)
             navController.tabBarItem = UITabBarItem(title: "Challenges", image: nil, tag: 2)

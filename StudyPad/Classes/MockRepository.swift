@@ -35,8 +35,8 @@ final class MockRepository: Repository {
     
 extension MockRepository {
     
-    func getNotebooks() -> Single<[Notebook]> {
-        return Single.just(self.notebooks)
+    func getNotebooks(onComplete: @escaping ([Notebook]) -> Void) {
+        onComplete(notebooks)
     }
     
     func deleteNotebook(id: Int, onComplete: @escaping () -> Void) {
