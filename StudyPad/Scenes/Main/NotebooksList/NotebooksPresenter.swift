@@ -44,7 +44,16 @@ final class NotebooksPresenter : BasePresenter {
             self.loadNotebooks()
         }
     }
-
     
+    func deleteNotebook(notebook: Notebook) {
+        repo.deleteNotebook(id: notebook.id) {
+            self.loadNotebooks()
+        }
+    }
     
+    func updateNotebook(notebook: Notebook, newName: String) {
+        repo.updateNotebook(id: notebook.id, newName: newName) { (Notebook) in
+            self.loadNotebooks()
+        }
+    }
 }

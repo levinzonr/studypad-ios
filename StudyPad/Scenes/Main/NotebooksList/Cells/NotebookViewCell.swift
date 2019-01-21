@@ -8,15 +8,26 @@
 
 import UIKit
 import MaterialComponents.MaterialCards
+
+protocol NotebookViewCellDelegate: class {
+    func onMoreButtonClicked(index: Int)
+}
+
 class NotebookViewCell: MDCCardCollectionCell {
+
 
     @IBOutlet weak var notebookGradientColorView: UIView!
     @IBOutlet weak var notebookNameLabel: UILabel!
+    weak var delegate: NotebookViewCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
+    @IBAction func onMoreButtonClicked(_ sender: Any) {
+        delegate?.onMoreButtonClicked(index: tag)
+    }
     func setupCardView() {
 
         cornerRadius = 8

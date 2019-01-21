@@ -42,6 +42,7 @@ extension MockRepository {
     func deleteNotebook(id: Int, onComplete: @escaping () -> Void) {
         if let index = notebooks.firstIndex(where: { $0.id == id }) {
             notebooks.remove(at: index)
+            print("removed: \(notebooks.count)")
         }
         onComplete()
     }
@@ -52,6 +53,19 @@ extension MockRepository {
         notebooks.append(notebook)
         onComplete(notebook)
     }
+    
+    
+    func updateNotebook(id: Int, newName: String, onComplete: @escaping (Notebook) -> Void)  {
+        if let index = notebooks.firstIndex(where: { $0.id == id }) {
+            let notebook = self.notebooks[index]
+            let updatedNotebook = Notebook(id: notebook.id, name: newName, notesCount: notebook.notesCount, gradientColor: notebook.gradientColor)
+            self.notebooks[index] = updatedNotebook
+            onComplete(updatedNotebook)
+        }
+    }
+    
+    
+
 }
 
 

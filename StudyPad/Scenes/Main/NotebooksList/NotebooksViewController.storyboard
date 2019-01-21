@@ -45,12 +45,22 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neO-os-DJU">
+                                                    <rect key="frame" x="301" y="33" width="46" height="30"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="onMoreButtonClicked:" destination="KDs-nL-SpO" eventType="touchUpInside" id="dpP-Kw-EuX"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstItem="vnR-tC-9TX" firstAttribute="leading" secondItem="KDs-nL-SpO" secondAttribute="leading" id="5Aw-XB-tkk"/>
+                                            <constraint firstAttribute="trailing" secondItem="neO-os-DJU" secondAttribute="trailing" constant="31" id="DYq-K5-aav"/>
                                             <constraint firstItem="vnR-tC-9TX" firstAttribute="top" secondItem="KDs-nL-SpO" secondAttribute="top" id="VsA-i5-6rc"/>
+                                            <constraint firstItem="neO-os-DJU" firstAttribute="top" secondItem="KDs-nL-SpO" secondAttribute="top" constant="31" id="WGa-3n-8Tv"/>
                                             <constraint firstItem="jPf-dG-ZYj" firstAttribute="leading" secondItem="vnR-tC-9TX" secondAttribute="trailing" constant="16" id="YQ8-Ug-Gou"/>
+                                            <constraint firstAttribute="bottom" secondItem="neO-os-DJU" secondAttribute="bottom" constant="46" id="awN-4q-PYt"/>
                                             <constraint firstAttribute="trailing" secondItem="jPf-dG-ZYj" secondAttribute="trailing" id="gQA-hN-2AQ"/>
                                             <constraint firstAttribute="bottom" secondItem="vnR-tC-9TX" secondAttribute="bottom" id="q30-MA-wkV"/>
                                         </constraints>
