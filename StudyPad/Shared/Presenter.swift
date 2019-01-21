@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol BasePresenter {
+protocol BasePresenter : class {
     associatedtype View
     
     var view: View? { get set }

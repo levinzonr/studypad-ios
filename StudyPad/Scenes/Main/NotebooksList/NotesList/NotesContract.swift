@@ -1,5 +1,5 @@
 //
-//  BaseView.swift
+//  NotesListContract.swift
 //  StudyPad
 //
 //  Created by Roman Levinzon on 21/01/2019.
@@ -8,6 +8,15 @@
 
 import Foundation
 
-protocol BaseView : class {
+protocol NotesView : BaseView {
+    
+    
+}
+
+protocol NotesPresenter: BasePresenter {
+
+}
+
+protocol NotesCoordinator {
     
 }

@@ -25,10 +25,11 @@ final class NotebooksPresenter : BasePresenter {
     typealias View = NotebooksView
     
     var repo: Repository
+    private weak var coordinatorDelegate: NotebooksCoordinatorDelegate?
     
-    
-    init(repo: Repository) {
+    init(repo: Repository, _ coordinatorDelegate: NotebooksCoordinatorDelegate) {
         self.repo = repo
+        self.coordinatorDelegate = coordinatorDelegate
     }
     
     func loadNotebooks() {
@@ -55,5 +56,9 @@ final class NotebooksPresenter : BasePresenter {
         repo.updateNotebook(id: notebook.id, newName: newName) { (Notebook) in
             self.loadNotebooks()
         }
+    }
+    
+    func showNotes(notebook: Notebook)  {
+        coordinatorDelegate?.showNotesView(notebook: notebook)
     }
 }

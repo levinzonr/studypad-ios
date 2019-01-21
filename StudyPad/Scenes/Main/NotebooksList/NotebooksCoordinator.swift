@@ -22,13 +22,23 @@ final class NotebooksCoordinator: Coordinator {
     }
     
     func start() {
-        let presenter = NotebooksPresenter(repo: dependencies.repository)
+        let presenter = NotebooksPresenter(repo: dependencies.repository, self)
         let vc = NotebooksViewController.instantiate(with: presenter)
         navigationController.setViewControllers([vc], animated: false)
         print("Start")
 
     }
     
+}
+
+extension NotebooksCoordinator : NotebooksCoordinatorDelegate {
+    
+    func showNotesView(notebook: Notebook) {
+        let coordinator = NotesCoordianator(navController: navigationController, deps: dependencies)
+        children.append(coordinator)
+        coordinator.start()
+        
+    }
     
     
     

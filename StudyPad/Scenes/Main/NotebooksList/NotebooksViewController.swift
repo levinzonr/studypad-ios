@@ -118,6 +118,10 @@ extension NotebooksViewController : NotebookViewCellDelegate {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.showNotes(notebook: notebooks[indexPath.row])
+    }
+    
     func onMoreButtonClicked(index: Int) {
         print("notebooks as \(index)")
         showOptionsMenu(notebook: notebooks[index])
