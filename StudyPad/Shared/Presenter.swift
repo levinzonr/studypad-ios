@@ -21,7 +21,7 @@ protocol BasePresenter : class {
 
 extension BasePresenter  {
     
-    func runAction(block: (View) -> Void) {
+    func runAction(_ block: (View) -> Void) {
         if let view  = self.view {
             block(view)
         }

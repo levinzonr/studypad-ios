@@ -9,18 +9,32 @@
 import Foundation
 
 class NotesPresenterImpl: NotesPresenter {
+
     typealias View = NotesView
-    weak var view: NotesView?
+    var view: NotesView?
     
     let repo: NotesRepository
+    let notebook: Notebook
     
-    init(repo: NotesRepository) {
+    
+    init(repo: NotesRepository, notebook: Notebook) {
         self.repo = repo
+        self.notebook = notebook
     }
     
     func attachView(view: NotesView) {
         self.view = view
+        loadNotesFromNotebook(notebook: notebook)
     }
+    
+    func loadNotesFromNotebook(notebook: Notebook) {
+        repo.getNotesFromNotebook(notebookId: notebook.id) { ( items: [Note]) in
+            self.runAction({ (view: NotesPresenterImpl.View) in
+                view.showNotes(items)
+            })
+        }
+    }
+
     
     func dettachView() {
         self.view = nil

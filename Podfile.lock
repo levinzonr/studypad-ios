@@ -18,6 +18,11 @@ PODS:
   - MaterialComponents/ShadowElevations (72.2.0)
   - MaterialComponents/ShadowLayer (72.2.0):
     - MaterialComponents/ShadowElevations
+  - Reusable (4.0.5):
+    - Reusable/Storyboard (= 4.0.5)
+    - Reusable/View (= 4.0.5)
+  - Reusable/Storyboard (4.0.5)
+  - Reusable/View (4.0.5)
   - RxAtomic (4.4.0)
   - RxCocoa (4.4.0):
     - RxSwift (~> 4.0)
@@ -27,6 +32,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.0.0.beta.1)
   - MaterialComponents/Cards
+  - Reusable
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
 
@@ -34,6 +40,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - MaterialComponents
+    - Reusable
     - RxAtomic
     - RxCocoa
     - RxSwift
@@ -41,10 +48,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 2ef6d6c984c5d21c366e9b41a9ae7dfee2b67a44
   MaterialComponents: d1637df9976683348de8eabd10de0723ec81db3d
+  Reusable: 188be1a54ac0691bc66e5bb24ec6eb91971b315b
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
 
-PODFILE CHECKSUM: 0f98e82c22d3f17698360d0c90992287e8258d55
+PODFILE CHECKSUM: 9227a19f43234700edf96b28a9277bb9608b69db
 
 COCOAPODS: 1.5.3

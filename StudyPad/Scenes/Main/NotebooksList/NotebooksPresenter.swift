@@ -11,6 +11,8 @@ import RxSwift
 
 final class NotebooksPresenter : BasePresenter {
     var view: NotebooksView?
+    typealias View = NotebooksView
+    
     
     func attachView(view: NotebooksView) {
         self.view = view
@@ -22,7 +24,6 @@ final class NotebooksPresenter : BasePresenter {
         self.view = nil
     }
     
-    typealias View = NotebooksView
     
     var repo: Repository
     private weak var coordinatorDelegate: NotebooksCoordinatorDelegate?
@@ -34,7 +35,7 @@ final class NotebooksPresenter : BasePresenter {
     
     func loadNotebooks() {
         repo.getNotebooks { (items: [Notebook]) in
-            self.runAction(block: { (view: NotebooksView) in
+            self.runAction({ (view: NotebooksView) in
                 view.showNotebooks(notebooks: items)
             })
         }

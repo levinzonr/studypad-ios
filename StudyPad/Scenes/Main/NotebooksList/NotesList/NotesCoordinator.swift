@@ -19,9 +19,12 @@ class NotesCoordianator: Coordinator {
         self.navigationController = navController
     }
     
-    
     func start() {
-        let presenter = NotesPresenterImpl(repo: dependencies.repository)
+        fatalError()
+    }
+    
+    func start(notebook: Notebook) {
+        let presenter = NotesPresenterImpl(repo: dependencies.repository, notebook: notebook)
         let vc = NotesViewController.instantiate(with: presenter)
         navigationController.pushViewController(vc, animated: true)
     }

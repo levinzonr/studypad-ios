@@ -9,6 +9,8 @@ target 'StudyPad' do
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
   pod 'MaterialComponents/Cards'
+  pod 'Reusable'
+  
   # Pods for StudyPad
 
   target 'StudyPadTests' do

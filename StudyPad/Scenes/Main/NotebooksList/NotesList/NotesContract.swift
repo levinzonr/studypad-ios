@@ -9,11 +9,11 @@
 import Foundation
 
 protocol NotesView : BaseView {
-    
-    
+    func showNotes(_ notes: [Note])
 }
 
 protocol NotesPresenter: BasePresenter {
+    func loadNotesFromNotebook(notebook: Notebook)
 
 }
 

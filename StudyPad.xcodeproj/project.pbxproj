@@ -37,6 +37,8 @@
 		955496C621F63F230081668F /* NotesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 955496C521F63F230081668F /* NotesViewController.storyboard */; };
 		955496C821F63F520081668F /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955496C721F63F520081668F /* NotesViewController.swift */; };
 		955496CA21F63FD00081668F /* NotesPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955496C921F63FD00081668F /* NotesPresenterImpl.swift */; };
+		955496CE21F651010081668F /* NoteViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955496CC21F651010081668F /* NoteViewCell.swift */; };
+		955496CF21F651010081668F /* NoteViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 955496CD21F651010081668F /* NoteViewCell.xib */; };
 		BC41889BA65B8B5D23110F55 /* Pods_StudyPadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA30EBDCB9DB0851AC6A1448 /* Pods_StudyPadUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +101,8 @@
 		955496C521F63F230081668F /* NotesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotesViewController.storyboard; sourceTree = "<group>"; };
 		955496C721F63F520081668F /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		955496C921F63FD00081668F /* NotesPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesPresenterImpl.swift; sourceTree = "<group>"; };
+		955496CC21F651010081668F /* NoteViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewCell.swift; sourceTree = "<group>"; };
+		955496CD21F651010081668F /* NoteViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteViewCell.xib; sourceTree = "<group>"; };
 		D478DB767903BAE8302B9A5E /* Pods-StudyPadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyPadUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StudyPadUITests/Pods-StudyPadUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA30EBDCB9DB0851AC6A1448 /* Pods_StudyPadUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudyPadUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -251,6 +255,7 @@
 		955496C021F63E300081668F /* NotesList */ = {
 			isa = PBXGroup;
 			children = (
+				955496CB21F650D00081668F /* Cells */,
 				955496C121F63E560081668F /* NotesContract.swift */,
 				955496C321F63EE30081668F /* NotesCoordinator.swift */,
 				955496C521F63F230081668F /* NotesViewController.storyboard */,
@@ -258,6 +263,15 @@
 				955496C921F63FD00081668F /* NotesPresenterImpl.swift */,
 			);
 			path = NotesList;
+			sourceTree = "<group>";
+		};
+		955496CB21F650D00081668F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				955496CC21F651010081668F /* NoteViewCell.swift */,
+				955496CD21F651010081668F /* NoteViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		959AA69221EBC0D7001B28EF /* Cells */ = {
@@ -400,6 +414,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				955496CF21F651010081668F /* NoteViewCell.xib in Resources */,
 				9530FCA821EB4BEA004DD256 /* NotebooksViewController.storyboard in Resources */,
 				9519714C21EFBAD2003ACFAE /* NotebookViewCell.xib in Resources */,
 				9530FC5921EA4B2A004DD256 /* LaunchScreen.storyboard in Resources */,
@@ -434,6 +449,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-StudyPad/Pods-StudyPad-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -442,6 +458,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -528,6 +545,7 @@
 				9519714B21EFBAD2003ACFAE /* NotebookViewCell.swift in Sources */,
 				9530FC8E21EA7459004DD256 /* DependencyManager.swift in Sources */,
 				955496C221F63E560081668F /* NotesContract.swift in Sources */,
+				955496CE21F651010081668F /* NoteViewCell.swift in Sources */,
 				955496C821F63F520081668F /* NotesViewController.swift in Sources */,
 				955496C421F63EE30081668F /* NotesCoordinator.swift in Sources */,
 				955496CA21F63FD00081668F /* NotesPresenterImpl.swift in Sources */,
