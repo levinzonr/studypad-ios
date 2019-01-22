@@ -15,11 +15,12 @@ class NotesPresenterImpl: NotesPresenter {
     
     let repo: NotesRepository
     let notebook: Notebook
+    let coordinator: NotesCoordinatorDelegate
     
-    
-    init(repo: NotesRepository, notebook: Notebook) {
+    init(repo: NotesRepository, notebook: Notebook, _ delegate: NotesCoordinatorDelegate) {
         self.repo = repo
         self.notebook = notebook
+        self.coordinator = delegate
     }
     
     func attachView(view: NotesView) {
@@ -33,6 +34,11 @@ class NotesPresenterImpl: NotesPresenter {
                 view.showNotes(items)
             })
         }
+    }
+    
+    
+    func handleNoteClick(note: Note) {
+        coordinator.showNotesDetail(note: note)
     }
 
     

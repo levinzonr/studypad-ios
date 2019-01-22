@@ -40,7 +40,5 @@ extension NotebooksCoordinator : NotebooksCoordinatorDelegate {
         
     }
     
-    
-    
-    
+
 }

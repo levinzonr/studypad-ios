@@ -11,6 +11,12 @@
 		516C8313F41BA8E387C81CEA /* Pods_StudyPad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9159DB616815EE7AD79EE931 /* Pods_StudyPad.framework */; };
 		9519714B21EFBAD2003ACFAE /* NotebookViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9519714921EFBAD2003ACFAE /* NotebookViewCell.swift */; };
 		9519714C21EFBAD2003ACFAE /* NotebookViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9519714A21EFBAD2003ACFAE /* NotebookViewCell.xib */; };
+		952952F921F7694B00599603 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952952F821F7694B00599603 /* User.swift */; };
+		952952FC21F772A100599603 /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952952FB21F772A100599603 /* NoteDetailViewController.swift */; };
+		952952FE21F772B000599603 /* NoteDetailContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952952FD21F772B000599603 /* NoteDetailContract.swift */; };
+		9529530021F772C100599603 /* NoteDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952952FF21F772C100599603 /* NoteDetailCoordinator.swift */; };
+		9529530221F772ED00599603 /* NoteDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9529530121F772ED00599603 /* NoteDetailPresenter.swift */; };
+		9529530421F7730300599603 /* NoteDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9529530321F7730300599603 /* NoteDetailViewController.storyboard */; };
 		9530FC4F21EA4B28004DD256 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9530FC4E21EA4B28004DD256 /* AppDelegate.swift */; };
 		9530FC5621EA4B2A004DD256 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9530FC5521EA4B2A004DD256 /* Assets.xcassets */; };
 		9530FC5921EA4B2A004DD256 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9530FC5721EA4B2A004DD256 /* LaunchScreen.storyboard */; };
@@ -75,6 +81,12 @@
 		94CC7A680369EB0E4C4F79FE /* Pods-StudyPad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyPad.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudyPad/Pods-StudyPad.release.xcconfig"; sourceTree = "<group>"; };
 		9519714921EFBAD2003ACFAE /* NotebookViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookViewCell.swift; sourceTree = "<group>"; };
 		9519714A21EFBAD2003ACFAE /* NotebookViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotebookViewCell.xib; sourceTree = "<group>"; };
+		952952F821F7694B00599603 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		952952FB21F772A100599603 /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
+		952952FD21F772B000599603 /* NoteDetailContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailContract.swift; sourceTree = "<group>"; };
+		952952FF21F772C100599603 /* NoteDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailCoordinator.swift; sourceTree = "<group>"; };
+		9529530121F772ED00599603 /* NoteDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailPresenter.swift; sourceTree = "<group>"; };
+		9529530321F7730300599603 /* NoteDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NoteDetailViewController.storyboard; sourceTree = "<group>"; };
 		9530FC4B21EA4B27004DD256 /* StudyPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9530FC4E21EA4B28004DD256 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9530FC5521EA4B2A004DD256 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -147,6 +159,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		952952FA21F7728D00599603 /* NoteDetail */ = {
+			isa = PBXGroup;
+			children = (
+				952952FB21F772A100599603 /* NoteDetailViewController.swift */,
+				952952FD21F772B000599603 /* NoteDetailContract.swift */,
+				952952FF21F772C100599603 /* NoteDetailCoordinator.swift */,
+				9529530121F772ED00599603 /* NoteDetailPresenter.swift */,
+				9529530321F7730300599603 /* NoteDetailViewController.storyboard */,
+			);
+			path = NoteDetail;
+			sourceTree = "<group>";
+		};
 		9530FC4221EA4B27004DD256 = {
 			isa = PBXGroup;
 			children = (
@@ -175,7 +199,7 @@
 				9530FC9321EA8D01004DD256 /* Scenes */,
 				9530FC9021EA8AC9004DD256 /* Shared */,
 				9530FC8221EA584C004DD256 /* Classes */,
-				9530FC7D21EA50E8004DD256 /* Entities */,
+				9530FC7D21EA50E8004DD256 /* Models */,
 				9530FC5521EA4B2A004DD256 /* Assets.xcassets */,
 				9530FC5721EA4B2A004DD256 /* LaunchScreen.storyboard */,
 				9530FC5A21EA4B2A004DD256 /* Info.plist */,
@@ -202,18 +226,20 @@
 			path = StudyPadUITests;
 			sourceTree = "<group>";
 		};
-		9530FC7D21EA50E8004DD256 /* Entities */ = {
+		9530FC7D21EA50E8004DD256 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				9530FC8021EA52F6004DD256 /* Notebook.swift */,
 				9530FC8921EA6D83004DD256 /* Note.swift */,
+				952952F821F7694B00599603 /* User.swift */,
 			);
-			path = Entities;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		9530FC7F21EA526E004DD256 /* NotebooksList */ = {
 			isa = PBXGroup;
 			children = (
+				952952FA21F7728D00599603 /* NoteDetail */,
 				955496C021F63E300081668F /* NotesList */,
 				959AA69221EBC0D7001B28EF /* Cells */,
 				9530FC9721EA9081004DD256 /* NotebooksCoordinator.swift */,
@@ -440,6 +466,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9529530421F7730300599603 /* NoteDetailViewController.storyboard in Resources */,
 				955496CF21F651010081668F /* NoteViewCell.xib in Resources */,
 				9530FCA821EB4BEA004DD256 /* NotebooksViewController.storyboard in Resources */,
 				9519714C21EFBAD2003ACFAE /* NotebookViewCell.xib in Resources */,
@@ -556,6 +583,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				952952FC21F772A100599603 /* NoteDetailViewController.swift in Sources */,
+				9529530021F772C100599603 /* NoteDetailCoordinator.swift in Sources */,
 				9530FC8C21EA7219004DD256 /* Extenstions.swift in Sources */,
 				9530FC8421EA5869004DD256 /* AppCoordinator.swift in Sources */,
 				955496BE21F624C00081668F /* NotebooksView.swift in Sources */,
@@ -573,9 +602,12 @@
 				9530FCA621EA9BF0004DD256 /* NotebooksViewController.swift in Sources */,
 				9530FC9821EA9081004DD256 /* NotebooksCoordinator.swift in Sources */,
 				955496DA21F718B50081668F /* LoginContract.swift in Sources */,
+				952952FE21F772B000599603 /* NoteDetailContract.swift in Sources */,
 				9519714B21EFBAD2003ACFAE /* NotebookViewCell.swift in Sources */,
+				9529530221F772ED00599603 /* NoteDetailPresenter.swift in Sources */,
 				9530FC8E21EA7459004DD256 /* DependencyManager.swift in Sources */,
 				955496D821F712260081668F /* LoginCoordinator.swift in Sources */,
+				952952F921F7694B00599603 /* User.swift in Sources */,
 				955496C221F63E560081668F /* NotesContract.swift in Sources */,
 				955496CE21F651010081668F /* NoteViewCell.swift in Sources */,
 				955496C821F63F520081668F /* NotesViewController.swift in Sources */,

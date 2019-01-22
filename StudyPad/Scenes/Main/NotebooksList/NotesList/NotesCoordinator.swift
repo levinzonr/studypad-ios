@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+protocol NotesCoordinatorDelegate {
+    func showNotesDetail(note: Note)
+}
+
 class NotesCoordianator: Coordinator {
     var children: [Coordinator] = []
     
@@ -24,16 +28,19 @@ class NotesCoordianator: Coordinator {
     }
     
     func start(notebook: Notebook) {
-        let presenter = NotesPresenterImpl(repo: dependencies.repository, notebook: notebook)
+        let presenter = NotesPresenterImpl(repo: dependencies.repository, notebook: notebook, self)
         let vc = NotesViewController.instantiate(with: presenter)
         navigationController.pushViewController(vc, animated: true)
     }
     
+}
 
+extension NotesCoordianator : NotesCoordinatorDelegate {
     
-    
-    
-    
-    
+    func showNotesDetail(note: Note) {
+        let coordinator = NoteDetailCoordinator(deps: dependencies, navController: navigationController)
+        children.append(coordinator)
+        coordinator.start(note: note)
+    }
 }
 

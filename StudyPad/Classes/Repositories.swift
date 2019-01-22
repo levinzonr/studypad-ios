@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-typealias Repository = NotebookRepository & NotesRepository
+typealias Repository = NotebookRepository & NotesRepository & KeychainRepository
 
 protocol NotebookRepository{
     
@@ -26,8 +26,9 @@ protocol NotesRepository {
     func deleteNote(noteId: Int, onComplete: @escaping () -> Void)
 }
 
-protocol UserRepository {
+protocol KeychainRepository {
     
-    func login(email : String, password: String) 
+    func login(request: User.LoginRequest, onComplete: @escaping (User.LoginResponse) -> Void)
+    func createAccount(request: User.SignupRequest, onComplete: @escaping (User.LoginResponse) -> Void)
     
 }

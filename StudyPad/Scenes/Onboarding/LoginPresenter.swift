@@ -22,16 +22,21 @@ class LoginPresenter : BasePresenter {
     }
     
     
-    let userManager: UserManager
+    let loginRequest = User.LoginRequest()
+    
+    let repository: KeychainRepository
     let coordiantor: LoginFlowDelegate?
+    let userManager: UserManager
     
     init(deps: AllDependencies, coordinator: LoginFlowDelegate) {
-        self.userManager = deps.userManager
+        self.repository = deps.repository
         self.coordiantor = coordinator
+        self.userManager = deps.userManager
     }
 
     func login()  {
-        userManager.loginViaEmail(email: "mai", password: "pass") { (Bool) in
+        repository.login(request: loginRequest) { (res: User.LoginResponse) in
+            self.userManager.token = res.token
             self.coordiantor?.finish()
         }
     }

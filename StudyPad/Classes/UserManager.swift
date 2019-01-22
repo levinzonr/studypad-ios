@@ -10,16 +10,22 @@ import Foundation
 
 
 final class UserManager {
-    
-    var email: String = ""
-    
+        
     func isLoggedIn() -> Bool {
-        return !email.isEmpty
+        return token != nil
     }
-    
-    func loginViaEmail(email: String, password: String,  onComplete: @escaping (Bool) -> Void) {
-        self.email = email
-        onComplete(true)
+
+    var token: String? {
+        get {
+            return UserDefaults.standard.string(forKey: .token)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: .token)
+        }
     }
+}
+
+private extension String {
+    static let token = "user-manager-token"
     
 }
