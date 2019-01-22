@@ -43,6 +43,8 @@
 		955496D421F660C90081668F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955496D321F660C90081668F /* LoginViewController.swift */; };
 		955496D621F710860081668F /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955496D521F710860081668F /* UserManager.swift */; };
 		955496D821F712260081668F /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955496D721F712260081668F /* LoginCoordinator.swift */; };
+		955496DA21F718B50081668F /* LoginContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955496D921F718B50081668F /* LoginContract.swift */; };
+		955496DC21F718E80081668F /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955496DB21F718E80081668F /* LoginPresenter.swift */; };
 		BC41889BA65B8B5D23110F55 /* Pods_StudyPadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA30EBDCB9DB0851AC6A1448 /* Pods_StudyPadUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +113,8 @@
 		955496D321F660C90081668F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		955496D521F710860081668F /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		955496D721F712260081668F /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		955496D921F718B50081668F /* LoginContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContract.swift; sourceTree = "<group>"; };
+		955496DB21F718E80081668F /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		D478DB767903BAE8302B9A5E /* Pods-StudyPadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyPadUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StudyPadUITests/Pods-StudyPadUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA30EBDCB9DB0851AC6A1448 /* Pods_StudyPadUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudyPadUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -290,6 +294,8 @@
 				955496D121F65FCC0081668F /* LoginViewController.storyboard */,
 				955496D321F660C90081668F /* LoginViewController.swift */,
 				955496D721F712260081668F /* LoginCoordinator.swift */,
+				955496D921F718B50081668F /* LoginContract.swift */,
+				955496DB21F718E80081668F /* LoginPresenter.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -562,9 +568,11 @@
 				9530FC8621EA653B004DD256 /* Repositories.swift in Sources */,
 				9530FC9C21EA9311004DD256 /* NotebooksPresenter.swift in Sources */,
 				9530FC8121EA52F6004DD256 /* Notebook.swift in Sources */,
+				955496DC21F718E80081668F /* LoginPresenter.swift in Sources */,
 				955496BA21F6216C0081668F /* Presenter.swift in Sources */,
 				9530FCA621EA9BF0004DD256 /* NotebooksViewController.swift in Sources */,
 				9530FC9821EA9081004DD256 /* NotebooksCoordinator.swift in Sources */,
+				955496DA21F718B50081668F /* LoginContract.swift in Sources */,
 				9519714B21EFBAD2003ACFAE /* NotebookViewCell.swift in Sources */,
 				9530FC8E21EA7459004DD256 /* DependencyManager.swift in Sources */,
 				955496D821F712260081668F /* LoginCoordinator.swift in Sources */,

@@ -38,7 +38,6 @@ extension AppCoordinator {
     
     
     func showMain()  {
-    
         let coordinator = BottomNavCoordinator(window: window, deps: dependencies)
         coordinator.start()
         children = [coordinator]
@@ -47,8 +46,15 @@ extension AppCoordinator {
     
     func showLogin() {
         let coordinator = LoginCoordinator(window: window, deps: dependencies)
+        coordinator.delegate = self
         coordinator.start()
         children = [coordinator]
     }
     
+}
+
+extension AppCoordinator : LoginFlowDelegate {
+    func finish()  {
+        showMain()
+    }
 }

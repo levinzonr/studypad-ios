@@ -13,6 +13,7 @@ class LoginCoordinator : Coordinator {
     var children: [Coordinator] = []
     
     var dependencies: AllDependencies
+    var delegate: LoginFlowDelegate? = nil
     
     let navigationController: UINavigationController
     let window: UIWindow
@@ -23,11 +24,17 @@ class LoginCoordinator : Coordinator {
     }
     
     func start() {
-        
-        let vc = LoginViewController.newInstance()
+        let presenter = LoginPresenter(deps: dependencies, coordinator: delegate!)
+        let vc = LoginViewController.newInstance(with: presenter)
         self.window.rootViewController = navigationController
         navigationController.setViewControllers([vc], animated: true)
 
     }
+    
+}
 
+protocol LoginFlowDelegate {
+    
+    func finish()
+    
 }
