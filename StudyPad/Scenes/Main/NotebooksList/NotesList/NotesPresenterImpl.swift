@@ -41,6 +41,9 @@ class NotesPresenterImpl: NotesPresenter {
         coordinator.showNotesDetail(note: note)
     }
 
+    func handleNoteCreateion() {
+        coordinator.showNoteCreation()
+    }
     
     func dettachView() {
         self.view = nil

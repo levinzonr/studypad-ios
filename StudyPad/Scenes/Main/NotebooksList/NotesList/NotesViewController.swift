@@ -25,6 +25,8 @@ final class NotesViewController : UIViewController {
         self.tableView.register(cellType: NoteViewCell.self)
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(createButtonPressed))
+
     }
     
     static func instantiate(with presenter: NotesPresenterImpl) -> NotesViewController {
@@ -74,4 +76,10 @@ extension NotesViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     
+}
+
+extension NotesViewController {
+    @objc func createButtonPressed() {
+        presenter.handleNoteCreateion()
+    }
 }

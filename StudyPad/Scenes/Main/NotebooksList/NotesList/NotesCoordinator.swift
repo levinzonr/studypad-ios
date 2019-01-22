@@ -11,6 +11,7 @@ import UIKit
 
 protocol NotesCoordinatorDelegate {
     func showNotesDetail(note: Note)
+    func showNoteCreation()
 }
 
 class NotesCoordianator: Coordinator {
@@ -41,6 +42,12 @@ extension NotesCoordianator : NotesCoordinatorDelegate {
         let coordinator = NoteDetailCoordinator(deps: dependencies, navController: navigationController)
         children.append(coordinator)
         coordinator.start(note: note)
+    }
+    
+    func showNoteCreation() {
+        let presenter = NoteEditPresenter(note: nil)
+        let vc = NoteEditViewController.newInstance(with:  presenter)
+        navigationController.pushViewController(vc, animated: true)
     }
 }
 
