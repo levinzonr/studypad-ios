@@ -39,6 +39,10 @@
 		955496CA21F63FD00081668F /* NotesPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955496C921F63FD00081668F /* NotesPresenterImpl.swift */; };
 		955496CE21F651010081668F /* NoteViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955496CC21F651010081668F /* NoteViewCell.swift */; };
 		955496CF21F651010081668F /* NoteViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 955496CD21F651010081668F /* NoteViewCell.xib */; };
+		955496D221F65FCC0081668F /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 955496D121F65FCC0081668F /* LoginViewController.storyboard */; };
+		955496D421F660C90081668F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955496D321F660C90081668F /* LoginViewController.swift */; };
+		955496D621F710860081668F /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955496D521F710860081668F /* UserManager.swift */; };
+		955496D821F712260081668F /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955496D721F712260081668F /* LoginCoordinator.swift */; };
 		BC41889BA65B8B5D23110F55 /* Pods_StudyPadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA30EBDCB9DB0851AC6A1448 /* Pods_StudyPadUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +107,10 @@
 		955496C921F63FD00081668F /* NotesPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesPresenterImpl.swift; sourceTree = "<group>"; };
 		955496CC21F651010081668F /* NoteViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewCell.swift; sourceTree = "<group>"; };
 		955496CD21F651010081668F /* NoteViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteViewCell.xib; sourceTree = "<group>"; };
+		955496D121F65FCC0081668F /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		955496D321F660C90081668F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		955496D521F710860081668F /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		955496D721F712260081668F /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		D478DB767903BAE8302B9A5E /* Pods-StudyPadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyPadUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StudyPadUITests/Pods-StudyPadUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA30EBDCB9DB0851AC6A1448 /* Pods_StudyPadUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudyPadUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -221,6 +229,7 @@
 				9530FC8521EA653B004DD256 /* Repositories.swift */,
 				9530FC8721EA66B1004DD256 /* MockRepository.swift */,
 				9530FC8D21EA7459004DD256 /* DependencyManager.swift */,
+				955496D521F710860081668F /* UserManager.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -238,6 +247,7 @@
 		9530FC9321EA8D01004DD256 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				955496D021F65FAD0081668F /* Onboarding */,
 				9530FC9421EA8D10004DD256 /* Main */,
 			);
 			path = Scenes;
@@ -272,6 +282,16 @@
 				955496CD21F651010081668F /* NoteViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		955496D021F65FAD0081668F /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				955496D121F65FCC0081668F /* LoginViewController.storyboard */,
+				955496D321F660C90081668F /* LoginViewController.swift */,
+				955496D721F712260081668F /* LoginCoordinator.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		959AA69221EBC0D7001B28EF /* Cells */ = {
@@ -419,6 +439,7 @@
 				9519714C21EFBAD2003ACFAE /* NotebookViewCell.xib in Resources */,
 				9530FC5921EA4B2A004DD256 /* LaunchScreen.storyboard in Resources */,
 				9530FC5621EA4B2A004DD256 /* Assets.xcassets in Resources */,
+				955496D221F65FCC0081668F /* LoginViewController.storyboard in Resources */,
 				955496C621F63F230081668F /* NotesViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,8 +553,10 @@
 				9530FC8C21EA7219004DD256 /* Extenstions.swift in Sources */,
 				9530FC8421EA5869004DD256 /* AppCoordinator.swift in Sources */,
 				955496BE21F624C00081668F /* NotebooksView.swift in Sources */,
+				955496D421F660C90081668F /* LoginViewController.swift in Sources */,
 				9530FC9221EA8AE4004DD256 /* Coordinator.swift in Sources */,
 				9530FC8821EA66B1004DD256 /* MockRepository.swift in Sources */,
+				955496D621F710860081668F /* UserManager.swift in Sources */,
 				9530FC8A21EA6D83004DD256 /* Note.swift in Sources */,
 				9530FC9621EA8D2F004DD256 /* BottomNavCoordinator.swift in Sources */,
 				9530FC8621EA653B004DD256 /* Repositories.swift in Sources */,
@@ -544,6 +567,7 @@
 				9530FC9821EA9081004DD256 /* NotebooksCoordinator.swift in Sources */,
 				9519714B21EFBAD2003ACFAE /* NotebookViewCell.swift in Sources */,
 				9530FC8E21EA7459004DD256 /* DependencyManager.swift in Sources */,
+				955496D821F712260081668F /* LoginCoordinator.swift in Sources */,
 				955496C221F63E560081668F /* NotesContract.swift in Sources */,
 				955496CE21F651010081668F /* NoteViewCell.swift in Sources */,
 				955496C821F63F520081668F /* NotesViewController.swift in Sources */,

@@ -25,3 +25,9 @@ protocol NotesRepository {
     func createNote(notebookId: Int, title: String, content: String, onComplete: @escaping (Note) -> Void)
     func deleteNote(noteId: Int, onComplete: @escaping () -> Void)
 }
+
+protocol UserRepository {
+    
+    func login(email : String, password: String) 
+    
+}

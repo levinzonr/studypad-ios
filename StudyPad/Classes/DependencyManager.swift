@@ -8,18 +8,21 @@
 
 import Foundation
 
-protocol ProvidesRepository {
+protocol DepsProvider {
     var repository: Repository { get }
+    var userManager: UserManager { get }
 }
 
-typealias AllDependencies = ProvidesRepository
+
+typealias AllDependencies = DepsProvider
 
 final class DependencyManager : AllDependencies {
     
     static let shared = DependencyManager()
-    
+
     
     let repository : Repository = MockRepository()
+    let userManager: UserManager = UserManager()
     
     private init() {}
     

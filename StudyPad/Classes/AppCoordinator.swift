@@ -25,7 +25,11 @@ class AppCoordinator : Coordinator {
             self.window.makeKeyAndVisible()
         }
         
-        showMain()
+        if (dependencies.userManager.isLoggedIn()) {
+            showMain()
+        } else {
+            showLogin()
+        }
     }
     
 }
@@ -39,6 +43,12 @@ extension AppCoordinator {
         coordinator.start()
         children = [coordinator]
         
+    }
+    
+    func showLogin() {
+        let coordinator = LoginCoordinator(window: window, deps: dependencies)
+        coordinator.start()
+        children = [coordinator]
     }
     
 }
