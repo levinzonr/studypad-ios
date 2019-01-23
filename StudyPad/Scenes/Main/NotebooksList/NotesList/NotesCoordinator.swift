@@ -19,8 +19,10 @@ class NotesCoordianator: Coordinator {
     
     var dependencies: AllDependencies
     let navigationController: UINavigationController
-    init(navController: UINavigationController, deps: AllDependencies) {
+    let notebook: Notebook
+    init(navController: UINavigationController, deps: AllDependencies, notebook: Notebook ) {
         self.dependencies = deps
+        self.notebook = notebook
         self.navigationController = navController
     }
     
@@ -45,7 +47,7 @@ extension NotesCoordianator : NotesCoordinatorDelegate {
     }
     
     func showNoteCreation() {
-        let presenter = NoteEditPresenter(note: nil)
+        let presenter = NoteEditPresenter(note: nil, notebook.id, dependencies.repository)
         let vc = NoteEditViewController.newInstance(with:  presenter)
         navigationController.pushViewController(vc, animated: true)
     }

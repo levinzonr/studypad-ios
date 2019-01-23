@@ -18,22 +18,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KM7-J2-0Gi">
-                                <rect key="frame" x="0.0" y="176" width="375" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="KM7-J2-0Gi">
+                                <rect key="frame" x="24" y="237" width="326" height="405"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epy-Oz-5Rj">
-                                <rect key="frame" x="0.0" y="132" width="375" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epy-Oz-5Rj">
+                                <rect key="frame" x="6" y="40" width="375" height="64"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5nu-Ak-yRB" firstAttribute="trailing" secondItem="KM7-J2-0Gi" secondAttribute="trailing" constant="16" id="2mx-nB-saj"/>
+                            <constraint firstItem="epy-Oz-5Rj" firstAttribute="top" secondItem="5nu-Ak-yRB" secondAttribute="top" constant="16" id="I5X-ZM-GTb"/>
+                            <constraint firstItem="KM7-J2-0Gi" firstAttribute="top" secondItem="epy-Oz-5Rj" secondAttribute="bottom" constant="16" id="KAv-yB-wiu"/>
+                            <constraint firstItem="5nu-Ak-yRB" firstAttribute="leading" secondItem="KM7-J2-0Gi" secondAttribute="leading" constant="16" id="Xkg-rE-Rjr"/>
+                            <constraint firstItem="5nu-Ak-yRB" firstAttribute="bottom" secondItem="KM7-J2-0Gi" secondAttribute="bottom" constant="16" id="uYa-Xh-ayh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5nu-Ak-yRB"/>
                     </view>
                     <connections>

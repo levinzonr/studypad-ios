@@ -29,13 +29,18 @@ class NotesPresenterImpl: NotesPresenter {
     }
     
     func loadNotesFromNotebook(notebook: Notebook) {
+        print("load")
         repo.getNotesFromNotebook(notebookId: notebook.id) { ( items: [Note]) in
             self.runAction({ (view: NotesPresenterImpl.View) in
                 view.showNotes(items)
+                print("loaded")
             })
         }
     }
     
+    func refresh() {
+        loadNotesFromNotebook(notebook: notebook)
+    }
     
     func handleNoteClick(note: Note) {
         coordinator.showNotesDetail(note: note)

@@ -22,7 +22,8 @@ protocol NotebookRepository{
 
 protocol NotesRepository {
     func getNotesFromNotebook(notebookId: Int, onComplete: @escaping ([Note]) -> Void)
-    func createNote(notebookId: Int, title: String, content: String, onComplete: @escaping (Note) -> Void)
+    func createNote(request: Note.CreateRequest, onComplete: @escaping (Note) -> Void)
+    func updateNote(request: Note.UpdateRequest, onComplete: @escaping () -> Void)
     func deleteNote(noteId: Int, onComplete: @escaping () -> Void)
 }
 

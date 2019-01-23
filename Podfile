@@ -10,6 +10,8 @@ target 'StudyPad' do
   pod 'RxCocoa',    '~> 4.0'
   pod 'MaterialComponents/Cards'
   pod 'Reusable'
+  pod 'UITextView+Placeholder'
+
   
   # Pods for StudyPad
 

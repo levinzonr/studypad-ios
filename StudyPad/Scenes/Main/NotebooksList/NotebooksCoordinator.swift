@@ -34,7 +34,7 @@ final class NotebooksCoordinator: Coordinator {
 extension NotebooksCoordinator : NotebooksCoordinatorDelegate {
     
     func showNotesView(notebook: Notebook) {
-        let coordinator = NotesCoordianator(navController: navigationController, deps: dependencies)
+        let coordinator = NotesCoordianator(navController: navigationController, deps: dependencies, notebook: notebook)
         children.append(coordinator)
         coordinator.start(notebook: notebook)
         

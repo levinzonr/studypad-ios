@@ -28,6 +28,7 @@ PODS:
     - RxSwift (~> 4.0)
   - RxSwift (4.4.0):
     - RxAtomic (~> 4.4)
+  - "UITextView+Placeholder (1.2.1)"
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0.beta.1)
@@ -35,6 +36,7 @@ DEPENDENCIES:
   - Reusable
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
+  - "UITextView+Placeholder"
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -44,6 +46,7 @@ SPEC REPOS:
     - RxAtomic
     - RxCocoa
     - RxSwift
+    - "UITextView+Placeholder"
 
 SPEC CHECKSUMS:
   Alamofire: 2ef6d6c984c5d21c366e9b41a9ae7dfee2b67a44
@@ -52,7 +55,8 @@ SPEC CHECKSUMS:
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  "UITextView+Placeholder": 0c3efd97f37ea64bde7f34cc6e90fe02e87b3909
 
-PODFILE CHECKSUM: 9227a19f43234700edf96b28a9277bb9608b69db
+PODFILE CHECKSUM: e03239020a2f08da6fcaed58af8bff3f1659fb7d
 
 COCOAPODS: 1.5.3

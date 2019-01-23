@@ -21,12 +21,17 @@ final class NotesViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter?.attachView(view: self)
+        presenter.attachView(view: self)
         self.tableView.register(cellType: NoteViewCell.self)
         self.tableView.dataSource = self
         self.tableView.delegate = self
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(createButtonPressed))
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("did appear")
+        presenter.refresh()
     }
     
     static func instantiate(with presenter: NotesPresenterImpl) -> NotesViewController {
@@ -42,7 +47,9 @@ final class NotesViewController : UIViewController {
 extension NotesViewController : NotesView {
     
     func showNotes(_ notes: [Note]) {
+        print("view loaded")
         self.notes = notes
+        tableView.reloadData()
     }
     
 }

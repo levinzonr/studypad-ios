@@ -10,4 +10,9 @@ import Foundation
 
 protocol NoteEditView: BaseView {
     
+    func showSaveButtonEnabled(_ enabled: Bool)
+    func showEditMode(_ note: Note)
+    func showNoteUpdated()
+    func showNoteCreated()
+
 }

@@ -20,7 +20,6 @@ class NoteDetailViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attachView(view: self)
-        
     }
     
     static func newInstance(with presenter: NoteDetailPresenter) -> NoteDetailViewController {

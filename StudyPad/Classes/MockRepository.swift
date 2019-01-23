@@ -84,10 +84,19 @@ extension MockRepository {
         onComplete()
     }
     
-    func createNote(notebookId: Int, title: String, content: String, onComplete: @escaping (Note) -> Void) {
-        let note = Note(id: 111, title: title, content: content, notebookId: notebookId)
+    func createNote(request: Note.CreateRequest, onComplete: @escaping (Note) -> Void) {
+        let note = Note(id: notes.count + 12, title: request.title, content: request.content, notebookId: request.notebookId)
         notes.append(note)
         onComplete(note)
+    }
+    
+    func updateNote(request: Note.UpdateRequest, onComplete: @escaping () -> Void) {
+        if let index = notes.firstIndex(where: {$0.id == request.id }) {
+            let note = notes[index]
+            let newNote = Note(id: note.id, title: request.title, content: request.content, notebookId: note.notebookId)
+            notes[index] = newNote
+            onComplete()
+        }
     }
     
 }

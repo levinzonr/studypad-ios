@@ -13,4 +13,18 @@ struct Note : Codable {
     var title: String
     var content: String
     var notebookId: Int
+    
+    
+    struct UpdateRequest {
+        var id: Int
+        var title: String
+        var content: String
+    }
+    
+    struct CreateRequest {
+        var notebookId: Int
+        var title: String
+        var content: String
+    }
+    
 }

@@ -14,6 +14,7 @@ protocol NotesView : BaseView {
 
 protocol NotesPresenter: BasePresenter {
     func loadNotesFromNotebook(notebook: Notebook)
+    func refresh()
 
 }
 
