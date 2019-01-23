@@ -41,9 +41,9 @@ class NotesCoordianator: Coordinator {
 extension NotesCoordianator : NotesCoordinatorDelegate {
     
     func showNotesDetail(note: Note) {
-        let coordinator = NoteDetailCoordinator(deps: dependencies, navController: navigationController)
+        let coordinator = NoteDetailCoordinator(deps: dependencies, navController: navigationController, note: note)
         children.append(coordinator)
-        coordinator.start(note: note)
+        coordinator.start()
     }
     
     func showNoteCreation() {

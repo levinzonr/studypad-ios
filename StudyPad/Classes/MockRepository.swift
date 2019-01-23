@@ -17,17 +17,16 @@ final class MockRepository: Repository {
     let delay = RxTimeInterval(2000)
 
     init() {
-        for index in 1...20 {
+        for index in 1...2 {
             let color = GradientColor(firstColor: "#fffff", secondColor: "#00000")
             let notebook = Notebook(id: index, name: "Notebook \(index)", notesCount: index, gradientColor: color )
             notebooks.append(notebook)
         }
         
-        for index in 1...30 {
+        for index in 1...5 {
             let note = Note(id: index, title: "Title of \(index) note", content: "Content of \(index)th note", notebookId: 1)
             notes.append(note)
         }
-            
         
     }
     

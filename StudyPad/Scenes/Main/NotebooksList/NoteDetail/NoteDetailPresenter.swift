@@ -11,9 +11,10 @@ import Foundation
 final class NoteDetailPresenter: BasePresenter {
     
     let note: Note
-    
-    init(note: Note) {
+    let delegate: NoteDetailDelegate
+    init(note: Note, delegate: NoteDetailDelegate) {
         self.note = note
+        self.delegate = delegate
     }
     
     typealias View = NoteDetailView
@@ -30,6 +31,10 @@ final class NoteDetailPresenter: BasePresenter {
         self.view = nil
     }
     
+    
+    func showEditNote() {
+        delegate.showEditNote()
+    }
     
     
 }

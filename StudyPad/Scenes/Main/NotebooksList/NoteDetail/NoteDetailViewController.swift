@@ -16,10 +16,18 @@ class NoteDetailViewController : UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     
+    override func loadView() {
+        super.loadView()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editButtonPressed))
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attachView(view: self)
+    }
+    
+    @objc func editButtonPressed() {
+        presenter.showEditNote()
     }
     
     static func newInstance(with presenter: NoteDetailPresenter) -> NoteDetailViewController {
@@ -29,6 +37,7 @@ class NoteDetailViewController : UIViewController {
         vc.presenter = presenter
         return vc
     }
+    
 }
 
 extension NoteDetailViewController : NoteDetailView {
