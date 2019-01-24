@@ -13,10 +13,25 @@ class LoginViewController : UIViewController {
     
     var presenter: LoginPresenter!
     
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var passwordInputField: UITextField!
+    @IBOutlet weak var emailInputField: UITextField!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        presenter.attachView(view: self)
+    }
+    
     @IBAction func onLoginButtonClicked(_ sender: Any) {
         presenter.login()
     }
-    
+   
+    @IBAction func onEmailInputPassword(_ sender: Any) {
+        presenter.email = emailInputField.text ?? ""
+    }
+    @IBAction func onPasswordInputChanged(_ sender: Any) {
+        presenter.password = passwordInputField.text ?? ""
+    }
     static func newInstance(with presenter: LoginPresenter) -> LoginViewController {
         let name = "\(LoginViewController.self)"
         let sb = UIStoryboard.init(name: name, bundle: nil)
@@ -25,4 +40,12 @@ class LoginViewController : UIViewController {
         return vc
     }
     
+}
+
+extension LoginViewController : LoginView {
+    
+    func showLoginButtonEnabled(_ enabled: Bool) {
+        print("enabled: \(enabled)")
+        loginButton.isEnabled = enabled
+    }
 }

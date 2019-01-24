@@ -11,9 +11,7 @@ import Foundation
 
 final class UserManager {
         
-    func isLoggedIn() -> Bool {
-        return token != nil
-    }
+   
 
     var token: String? {
         get {
@@ -23,6 +21,15 @@ final class UserManager {
             UserDefaults.standard.set(newValue, forKey: .token)
         }
     }
+    
+    func isLoggedIn() -> Bool {
+        return token != nil
+    }
+    
+    func clear() {
+        UserDefaults.standard.set(nil, forKey: .token)
+    }
+    
 }
 
 private extension String {

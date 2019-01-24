@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 extension Array where Element: Equatable {
     
@@ -29,4 +29,21 @@ extension Array where Element: Equatable {
         return false
     }
     
+}
+
+extension String  {
+    
+    func instantiateViewController() -> UIViewController {
+        let sb = UIStoryboard.init(name: self, bundle: nil)
+        return sb.instantiateViewController(withIdentifier: self)
+    }
+    
+}
+
+extension UIViewController {
+    static func instantiate() -> UIViewController {
+        let name = NSStringFromClass(self)
+        let sb = UIStoryboard.init(name: name, bundle: nil)
+        return sb.instantiateViewController(withIdentifier: name)
+    }
 }

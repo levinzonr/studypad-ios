@@ -17,11 +17,12 @@ class BottomNavCoordinator: Coordinator {
     
     private let window: UIWindow
     private let bottomNavController = UITabBarController()
-    
+    let appFlowDelegate : AppFlowDelegate
 
-    init(window: UIWindow, deps: AllDependencies) {
+    init(window: UIWindow, deps: AllDependencies, appDelegeate: AppFlowDelegate) {
         self.window = window
         self.dependencies = deps
+        self.appFlowDelegate = appDelegeate
     }
     
     func start() {
@@ -56,14 +57,16 @@ private extension BottomNavCoordinator {
             navController.tabBarItem = UITabBarItem(title: "My LIbrary", image: nil, tag: 1)
             
         case.challenges:
-            coordinator = NotebooksCoordinator(navigationController: navController)
+            coordinator = ProfileCoordinator(nav: navController, appDelegate: appFlowDelegate)
             navController.tabBarItem = UITabBarItem(title: "Challenges", image: nil, tag: 2)
         case .settings:
-            coordinator = NotebooksCoordinator(navigationController: navController)
-            navController.tabBarItem = UITabBarItem(title: "Settings", image: nil, tag: 3)
+            coordinator = ProfileCoordinator(nav: navController, appDelegate: appFlowDelegate)
+            navController.tabBarItem = UITabBarItem(title: "Profile", image: nil, tag: 3)
         }
         children.append(coordinator)
         coordinator.start()
         
     }
+    
+    
 }

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="xIR-g6-BQQ">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="M6n-Ap-WmZ" customClass="ProfileViewController" customModule="StudyPad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xh2-s9-v8M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPs-0E-YnL">
+                                <rect key="frame" x="16" y="621" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onLogoutButtonPressed:" destination="M6n-Ap-WmZ" eventType="touchUpInside" id="UtU-zU-NdI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TPs-0E-YnL" firstAttribute="leading" secondItem="B7W-Nu-CqG" secondAttribute="leading" constant="16" id="6Fu-8y-wk4"/>
+                            <constraint firstItem="B7W-Nu-CqG" firstAttribute="bottom" secondItem="TPs-0E-YnL" secondAttribute="bottom" constant="16" id="HFX-3Y-2t9"/>
+                            <constraint firstItem="B7W-Nu-CqG" firstAttribute="trailing" secondItem="TPs-0E-YnL" secondAttribute="trailing" constant="16" id="jQ6-m0-vSB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="B7W-Nu-CqG"/>
+                    </view>
+                    <connections>
+                        <outlet property="profileLogoutButton" destination="TPs-0E-YnL" id="XsJ-KW-mHC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o3q-LR-DyK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="161"/>
+        </scene>
+    </scenes>
+</document>

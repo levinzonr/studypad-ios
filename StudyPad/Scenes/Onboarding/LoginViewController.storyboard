@@ -24,6 +24,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onEmailInputPassword:" destination="RwT-aX-ghD" eventType="editingChanged" id="II7-vE-33M"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zGo-kb-seJ">
                                 <rect key="frame" x="37" y="318" width="301" height="30"/>
@@ -31,6 +34,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onPasswordInputChanged:" destination="RwT-aX-ghD" eventType="editingChanged" id="nBx-k0-du9"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyD-ex-cXr">
                                 <rect key="frame" x="115" y="370" width="144" height="30"/>
@@ -50,6 +56,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="N4F-Et-xnC"/>
                     </view>
+                    <connections>
+                        <outlet property="emailInputField" destination="rxh-l3-1Hb" id="oAC-Rk-r12"/>
+                        <outlet property="loginButton" destination="vyD-ex-cXr" id="CHa-s7-E7D"/>
+                        <outlet property="passwordInputField" destination="zGo-kb-seJ" id="5dQ-Zt-oBA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IHu-2e-Ve5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

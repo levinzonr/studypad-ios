@@ -9,6 +9,11 @@
 import Foundation
 import UIKit
 
+protocol AppFlowDelegate : class {
+    func showMain()
+    func showLogin()
+}
+
 class AppCoordinator : Coordinator {
     
     var dependencies: AllDependencies
@@ -34,11 +39,11 @@ class AppCoordinator : Coordinator {
     
 }
 
-extension AppCoordinator {
+extension AppCoordinator : AppFlowDelegate {
     
     
     func showMain()  {
-        let coordinator = BottomNavCoordinator(window: window, deps: dependencies)
+        let coordinator = BottomNavCoordinator(window: window, deps: dependencies, appDelegeate: self)
         coordinator.start()
         children = [coordinator]
         

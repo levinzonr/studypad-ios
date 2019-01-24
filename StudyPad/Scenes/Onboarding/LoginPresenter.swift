@@ -13,8 +13,32 @@ class LoginPresenter : BasePresenter {
     typealias View = LoginView
     var view: LoginView?
     
+    var email: String {
+        set {
+            loginRequest.email = newValue
+            print("set email")
+            updateLoginButtonState()
+        }
+        get {
+            return loginRequest.email
+        }
+    }
+    
+    var password: String {
+        set {
+            loginRequest.password = newValue
+            updateLoginButtonState()
+        }
+        get {
+            return loginRequest.password
+        }
+    }
+    
+    private var loginRequest = User.LoginRequest()
+
     func attachView(view: LoginView) {
         self.view = view
+        view.showLoginButtonEnabled(false)
     }
     
     func dettachView() {
@@ -22,7 +46,6 @@ class LoginPresenter : BasePresenter {
     }
     
     
-    let loginRequest = User.LoginRequest()
     
     let repository: KeychainRepository
     let coordiantor: LoginFlowDelegate?
@@ -38,6 +61,19 @@ class LoginPresenter : BasePresenter {
         repository.login(request: loginRequest) { (res: User.LoginResponse) in
             self.userManager.token = res.token
             self.coordiantor?.finish()
+        }
+    }
+    
+    
+    
+    private func updateLoginButtonState() {
+        print("Update")
+        let validPassword = !password.isEmpty
+        let validEmail = !email.isEmpty
+        print("Update")
+
+        self.runAction { (view : LoginView) in
+            view.showLoginButtonEnabled(validEmail && validPassword)
         }
     }
     
