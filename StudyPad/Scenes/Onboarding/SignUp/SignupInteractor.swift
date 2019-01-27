@@ -12,9 +12,11 @@ class SignupInteractor {
     // MARK: - Properties
     weak var output: SignupInteractorOutput?
     let repository: KeychainRepository
+    let userManager: UserManager
     // MARK: - Init
-    init(repository: KeychainRepository) {
+    init(repository: KeychainRepository, _ userManager: UserManager) {
         self.repository = repository
+        self.userManager = userManager
     }
 }
 
@@ -27,6 +29,7 @@ extension SignupInteractor: SignupInteractorInput {
         let crequest = User.SignupRequest(email: request.email, password: request.password, firstName: "", lastName: "")
         repository.createAccount(request: crequest) { (response : User.LoginResponse) in
             print("created")
+            self.userManager.token = response.access_token
             self.output?.present(Signup.Response.AccountCreated())
         }
     }

@@ -12,7 +12,10 @@ target 'StudyPad' do
   pod 'Reusable'
   pod 'UITextView+Placeholder'
   pod 'AlamofireNetworkActivityLogger', '~> 2.3'
-
+  pod 'FBSDKLoginKit'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'FacebookShare'
   
   # Pods for StudyPad
 

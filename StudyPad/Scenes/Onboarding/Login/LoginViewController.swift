@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+
 class LoginViewController : UIViewController {
     
     var presenter: LoginPresenter!
@@ -31,6 +32,10 @@ class LoginViewController : UIViewController {
     }
     @IBAction func onEmailInputPassword(_ sender: Any) {
         presenter.email = emailInputField.text ?? ""
+    }
+    @IBAction func onFacebookButtonPressed(_ sender: Any) {
+        print("Facebook")
+        presenter.loginViaFacebook()
     }
     @IBAction func onPasswordInputChanged(_ sender: Any) {
         presenter.password = passwordInputField.text ?? ""

@@ -7,7 +7,8 @@
 //
 
 import Foundation
-
+import FacebookLogin
+import FacebookCore
 
 class LoginPresenter : BasePresenter {
     typealias View = LoginView
@@ -63,6 +64,24 @@ class LoginPresenter : BasePresenter {
         }
     }
     
+    func loginViaFacebook() {
+        let manager = LoginManager()
+        manager.logIn(readPermissions: [.publicProfile, .email], viewController: nil) { loginResult in
+            switch loginResult {
+            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
+                self.repository.loginViaFacebook(token: accessToken.authenticationToken, onComplete: { response in
+                    print("Succes: \(accessToken)")
+                    self.userManager.token = response.access_token
+                })
+            case .cancelled:
+                print("cance;;ed")
+            case .failed(let error):
+                print("Error: \(error)")
+            }
+        }
+    }
+    
+    
     func showCreateAccount() {
         coordiantor?.showSignup()
     }
@@ -77,5 +96,6 @@ class LoginPresenter : BasePresenter {
             view.showLoginButtonEnabled(validEmail && validPassword)
         }
     }
+    
     
 }

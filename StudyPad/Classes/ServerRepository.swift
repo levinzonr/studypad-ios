@@ -90,7 +90,32 @@ extension ServerRepository {
                 }
         }
     }
+    
+    func loginViaFacebook(token: String, onComplete: @escaping (User.LoginResponse) -> Void) {
+        
+        let payload: [String: Any] = [
+            "token": token
+        ]
+        sessionManager
+            .request(AUTH + "facebook", method: .post, parameters: payload, encoding: JSONEncoding.default)
+            .responseJSON { response in
+                if let data = response.data {
+                    print("respomse \(response)")
+                    do {
+                        let jsonDecoder = JSONDecoder()
+                        let result = try jsonDecoder.decode(User.LoginResponse.self, from: data)
+                        print(result)
+                        onComplete(result)
+                        
+                    } catch {
+                        print("catch facebook")
+                    }
+                }
+    }
 
+
+    
+}
     
 }
 

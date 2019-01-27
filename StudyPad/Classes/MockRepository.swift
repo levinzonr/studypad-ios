@@ -111,4 +111,9 @@ extension MockRepository {
         onComplete(User.LoginResponse(access_token : "token"))
     }
     
+    func loginViaFacebook(token: String, onComplete: @escaping (User.LoginResponse) -> Void) {
+        
+    }
+
+    
 }

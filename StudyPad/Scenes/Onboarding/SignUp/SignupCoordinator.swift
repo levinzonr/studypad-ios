@@ -20,7 +20,7 @@ class SignupCoordinator: Coordinator {
     }
     
     func start() {
-        let interactor = SignupInteractor(repository: dependencies.repository)
+        let interactor = SignupInteractor(repository: dependencies.repository, dependencies.userManager)
         let presenter = SignupPresenter(interactor: interactor, coordinator: self)
         let vc = SignupViewController.instantiate(with: presenter)
         interactor.output = presenter
