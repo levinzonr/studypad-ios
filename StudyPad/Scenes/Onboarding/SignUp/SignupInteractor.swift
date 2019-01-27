@@ -30,6 +30,7 @@ extension SignupInteractor: SignupInteractorInput {
         repository.createAccount(request: crequest) { (response : User.LoginResponse) in
             print("created")
             self.userManager.token = response.access_token
+            self.userManager.userInfo = response.user
             self.output?.present(Signup.Response.AccountCreated())
         }
     }

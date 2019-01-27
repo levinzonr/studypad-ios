@@ -104,11 +104,10 @@ extension MockRepository {
 extension MockRepository {
     
     func login(request: User.LoginRequest, onComplete: @escaping (User.LoginResponse) -> Void) {
-        onComplete(User.LoginResponse(access_token : "token"))
+       
     }
     
     func createAccount(request: User.SignupRequest, onComplete: @escaping (User.LoginResponse) -> Void) {
-        onComplete(User.LoginResponse(access_token : "token"))
     }
     
     func loginViaFacebook(token: String, onComplete: @escaping (User.LoginResponse) -> Void) {

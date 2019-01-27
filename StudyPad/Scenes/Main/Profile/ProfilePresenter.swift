@@ -23,6 +23,11 @@ class ProfilePresenter : BasePresenter {
     
     func attachView(view: ProfileView) {
         self.view = view
+        if let user = userManager.userInfo {
+            runAction { view in
+                view.showProfileInfo(user)
+            }
+        }
     }
     
     func dettachView() {

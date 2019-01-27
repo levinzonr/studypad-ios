@@ -28,6 +28,13 @@
                                     <action selector="onLogoutButtonPressed:" destination="M6n-Ap-WmZ" eventType="touchUpInside" id="UtU-zU-NdI"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIf-yX-Mkd">
+                                <rect key="frame" x="31" y="125" width="296" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -39,11 +46,12 @@
                     </view>
                     <connections>
                         <outlet property="profileLogoutButton" destination="TPs-0E-YnL" id="XsJ-KW-mHC"/>
+                        <outlet property="userNameLabel" destination="tIf-yX-Mkd" id="0tr-HI-hL1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o3q-LR-DyK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30" y="161"/>
+            <point key="canvasLocation" x="29.600000000000001" y="160.56971514242881"/>
         </scene>
     </scenes>
 </document>

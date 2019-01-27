@@ -60,6 +60,8 @@ class LoginPresenter : BasePresenter {
     func login()  {
         repository.login(request: loginRequest) { (res: User.LoginResponse) in
             self.userManager.token = res.access_token
+            self.userManager.userInfo = res.user
+            print("user info set: \n\n\n\(res.user)")
             self.coordiantor?.finish()
         }
     }

@@ -10,6 +10,6 @@ import Foundation
 
 protocol ProfileView : BaseView {
     
-    
+    func showProfileInfo(_ user: User)
     
 }
