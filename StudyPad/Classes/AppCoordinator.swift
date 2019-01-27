@@ -50,16 +50,10 @@ extension AppCoordinator : AppFlowDelegate {
     }
     
     func showLogin() {
-        let coordinator = LoginCoordinator(window: window, deps: dependencies)
+        let coordinator = LoginCoordinator(window: window, deps: dependencies, self)
         coordinator.delegate = self
         coordinator.start()
         children = [coordinator]
     }
     
-}
-
-extension AppCoordinator : LoginFlowDelegate {
-    func finish()  {
-        showMain()
-    }
 }

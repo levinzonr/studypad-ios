@@ -18,8 +18,8 @@ final class MockRepository: Repository {
 
     init() {
         for index in 1...2 {
-            let color = GradientColor(firstColor: "#fffff", secondColor: "#00000")
-            let notebook = Notebook(id: index, name: "Notebook \(index)", notesCount: index, gradientColor: color )
+            let color = GradientColor(startColor: "#fffff", endColor: "#00000")
+            let notebook = Notebook(id: index, name: "Notebook \(index)", notesCount: index, color: color )
             notebooks.append(notebook)
         }
         
@@ -47,8 +47,8 @@ extension MockRepository {
     }
     
     func createNotebook(title: String, onComplete: @escaping (Notebook) -> Void) {
-        let color = GradientColor(firstColor: "#fffff", secondColor: "#00000")
-        let notebook = Notebook(id: 231, name: title, notesCount: 0, gradientColor: color)
+        let color = GradientColor(startColor: "#fffff", endColor: "#00000")
+        let notebook = Notebook(id: 231, name: title, notesCount: 0, color: color)
         notebooks.append(notebook)
         onComplete(notebook)
     }
@@ -57,7 +57,7 @@ extension MockRepository {
     func updateNotebook(id: Int, newName: String, onComplete: @escaping (Notebook) -> Void)  {
         if let index = notebooks.firstIndex(where: { $0.id == id }) {
             let notebook = self.notebooks[index]
-            let updatedNotebook = Notebook(id: notebook.id, name: newName, notesCount: notebook.notesCount, gradientColor: notebook.gradientColor)
+            let updatedNotebook = Notebook(id: notebook.id, name: newName, notesCount: notebook.notesCount, color: notebook.color)
             self.notebooks[index] = updatedNotebook
             onComplete(updatedNotebook)
         }
@@ -104,11 +104,11 @@ extension MockRepository {
 extension MockRepository {
     
     func login(request: User.LoginRequest, onComplete: @escaping (User.LoginResponse) -> Void) {
-        onComplete(User.LoginResponse(token : "token"))
+        onComplete(User.LoginResponse(access_token : "token"))
     }
     
     func createAccount(request: User.SignupRequest, onComplete: @escaping (User.LoginResponse) -> Void) {
-        onComplete(User.LoginResponse(token : "token"))
+        onComplete(User.LoginResponse(access_token : "token"))
     }
     
 }

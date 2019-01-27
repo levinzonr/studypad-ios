@@ -13,18 +13,18 @@ struct Notebook : Codable {
     var id: Int
     var name: String
     var notesCount : Int
-    var gradientColor: GradientColor
+    var color: GradientColor
 }
 
 
 struct GradientColor : Codable {
-    var firstColor: String
-    var secondColor: String
+    var startColor: String
+    var endColor: String
     
     func toColorArray() -> [CGColor] {
         var array = Array<CGColor>()
-        array.append(hexStringToUIColor(hex: firstColor).cgColor)
-        array.append(hexStringToUIColor(hex: secondColor).cgColor)
+        array.append(hexStringToUIColor(hex: startColor).cgColor)
+        array.append(hexStringToUIColor(hex: endColor).cgColor)
         return array
     }
     

@@ -16,7 +16,6 @@ class LoginPresenter : BasePresenter {
     var email: String {
         set {
             loginRequest.email = newValue
-            print("set email")
             updateLoginButtonState()
         }
         get {
@@ -59,18 +58,20 @@ class LoginPresenter : BasePresenter {
 
     func login()  {
         repository.login(request: loginRequest) { (res: User.LoginResponse) in
-            self.userManager.token = res.token
+            self.userManager.token = res.access_token
             self.coordiantor?.finish()
         }
+    }
+    
+    func showCreateAccount() {
+        coordiantor?.showSignup()
     }
     
     
     
     private func updateLoginButtonState() {
-        print("Update")
         let validPassword = !password.isEmpty
         let validEmail = !email.isEmpty
-        print("Update")
 
         self.runAction { (view : LoginView) in
             view.showLoginButtonEnabled(validEmail && validPassword)

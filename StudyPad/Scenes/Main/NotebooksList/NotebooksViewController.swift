@@ -110,7 +110,7 @@ extension NotebooksViewController : NotebookViewCellDelegate {
         cell.delegate = self
         cell.tag = indexPath.row
         let gradient = CAGradientLayer()
-        let colors = notebooks[indexPath.row].gradientColor
+        let colors = notebooks[indexPath.row].color
         gradient.frame = cell.notebookGradientColorView.bounds
         gradient.colors = colors.toColorArray()
         cell.notebookGradientColorView.layer.addSublayer(gradient)

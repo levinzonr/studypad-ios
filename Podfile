@@ -5,12 +5,13 @@ target 'StudyPad' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'Alamofire', '~> 5.0.0.beta.1'
+  pod 'Alamofire', '~> 4.7.3'
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
   pod 'MaterialComponents/Cards'
   pod 'Reusable'
   pod 'UITextView+Placeholder'
+  pod 'AlamofireNetworkActivityLogger', '~> 2.3'
 
   
   # Pods for StudyPad

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 extension Array where Element: Equatable {
     
@@ -45,5 +46,14 @@ extension UIViewController {
         let name = NSStringFromClass(self)
         let sb = UIStoryboard.init(name: name, bundle: nil)
         return sb.instantiateViewController(withIdentifier: name)
+    }
+}
+
+extension Request {
+    public func debugLog() -> Self {
+        #if DEBUG
+        debugPrint(self)
+        #endif
+        return self
     }
 }

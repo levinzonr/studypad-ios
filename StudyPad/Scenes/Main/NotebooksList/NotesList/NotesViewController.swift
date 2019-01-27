@@ -25,6 +25,7 @@ final class NotesViewController : UIViewController {
         self.tableView.register(cellType: NoteViewCell.self)
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        tableView.tableFooterView = UIView(frame: .zero)
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(createButtonPressed))
 
     }

@@ -21,10 +21,12 @@ final class DependencyManager : AllDependencies {
     static let shared = DependencyManager()
 
     
-    let repository : Repository = MockRepository()
     let userManager: UserManager = UserManager()
-    
-    private init() {}
+    let repository : Repository
+
+    private init() {
+        repository = ServerRepository(userManager: userManager)
+    }
     
     
 }

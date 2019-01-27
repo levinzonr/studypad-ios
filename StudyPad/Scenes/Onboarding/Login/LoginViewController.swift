@@ -26,6 +26,9 @@ class LoginViewController : UIViewController {
         presenter.login()
     }
    
+    @IBAction func onCreateAccountPressed(_ sender: Any) {
+        presenter.showCreateAccount()
+    }
     @IBAction func onEmailInputPassword(_ sender: Any) {
         presenter.email = emailInputField.text ?? ""
     }

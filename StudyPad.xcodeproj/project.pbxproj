@@ -60,6 +60,15 @@
 		9581187F21FA1372002DFA43 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581187E21FA1372002DFA43 /* ProfileCoordinator.swift */; };
 		9581188121FA1382002DFA43 /* ProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581188021FA1382002DFA43 /* ProfileProtocols.swift */; };
 		9581188321FA13D5002DFA43 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581188221FA13D5002DFA43 /* ProfilePresenter.swift */; };
+		9581188B21FA2CF7002DFA43 /* SignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581188521FA2CF7002DFA43 /* SignupPresenter.swift */; };
+		9581188C21FA2CF7002DFA43 /* SignupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9581188621FA2CF7002DFA43 /* SignupViewController.storyboard */; };
+		9581188D21FA2CF7002DFA43 /* SignupModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581188721FA2CF7002DFA43 /* SignupModels.swift */; };
+		9581188E21FA2CF7002DFA43 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581188821FA2CF7002DFA43 /* SignupViewController.swift */; };
+		9581188F21FA2CF7002DFA43 /* SignupProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581188921FA2CF7002DFA43 /* SignupProtocols.swift */; };
+		9581189021FA2CF7002DFA43 /* SignupInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581188A21FA2CF7002DFA43 /* SignupInteractor.swift */; };
+		9581189221FA3025002DFA43 /* SignupCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581189121FA3025002DFA43 /* SignupCoordinator.swift */; };
+		9581189521FDE890002DFA43 /* ServerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581189421FDE890002DFA43 /* ServerRepository.swift */; };
+		9581189721FDE999002DFA43 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581189621FDE999002DFA43 /* Constants.swift */; };
 		BC41889BA65B8B5D23110F55 /* Pods_StudyPadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA30EBDCB9DB0851AC6A1448 /* Pods_StudyPadUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +154,15 @@
 		9581187E21FA1372002DFA43 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		9581188021FA1382002DFA43 /* ProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocols.swift; sourceTree = "<group>"; };
 		9581188221FA13D5002DFA43 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		9581188521FA2CF7002DFA43 /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
+		9581188621FA2CF7002DFA43 /* SignupViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignupViewController.storyboard; sourceTree = "<group>"; };
+		9581188721FA2CF7002DFA43 /* SignupModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModels.swift; sourceTree = "<group>"; };
+		9581188821FA2CF7002DFA43 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		9581188921FA2CF7002DFA43 /* SignupProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupProtocols.swift; sourceTree = "<group>"; };
+		9581188A21FA2CF7002DFA43 /* SignupInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupInteractor.swift; sourceTree = "<group>"; };
+		9581189121FA3025002DFA43 /* SignupCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupCoordinator.swift; sourceTree = "<group>"; };
+		9581189421FDE890002DFA43 /* ServerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerRepository.swift; sourceTree = "<group>"; };
+		9581189621FDE999002DFA43 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D478DB767903BAE8302B9A5E /* Pods-StudyPadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyPadUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StudyPadUITests/Pods-StudyPadUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA30EBDCB9DB0851AC6A1448 /* Pods_StudyPadUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudyPadUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -302,6 +320,7 @@
 				9530FC8721EA66B1004DD256 /* MockRepository.swift */,
 				9530FC8D21EA7459004DD256 /* DependencyManager.swift */,
 				955496D521F710860081668F /* UserManager.swift */,
+				9581189421FDE890002DFA43 /* ServerRepository.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -312,6 +331,7 @@
 				9530FC9121EA8AE4004DD256 /* Coordinator.swift */,
 				955496B921F6216C0081668F /* Presenter.swift */,
 				955496BB21F622290081668F /* BaseView.swift */,
+				9581189621FDE999002DFA43 /* Constants.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -360,13 +380,36 @@
 		955496D021F65FAD0081668F /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				9581189321FDE710002DFA43 /* Login */,
+				9581188421FA2CDD002DFA43 /* SignUp */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		9581188421FA2CDD002DFA43 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				9581188521FA2CF7002DFA43 /* SignupPresenter.swift */,
+				9581188621FA2CF7002DFA43 /* SignupViewController.storyboard */,
+				9581188721FA2CF7002DFA43 /* SignupModels.swift */,
+				9581188821FA2CF7002DFA43 /* SignupViewController.swift */,
+				9581188921FA2CF7002DFA43 /* SignupProtocols.swift */,
+				9581188A21FA2CF7002DFA43 /* SignupInteractor.swift */,
+				9581189121FA3025002DFA43 /* SignupCoordinator.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		9581189321FDE710002DFA43 /* Login */ = {
+			isa = PBXGroup;
+			children = (
 				955496D121F65FCC0081668F /* LoginViewController.storyboard */,
 				955496D321F660C90081668F /* LoginViewController.swift */,
 				955496D721F712260081668F /* LoginCoordinator.swift */,
 				955496D921F718B50081668F /* LoginContract.swift */,
 				955496DB21F718E80081668F /* LoginPresenter.swift */,
 			);
-			path = Onboarding;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		959AA69221EBC0D7001B28EF /* Cells */ = {
@@ -513,6 +556,7 @@
 				955496CF21F651010081668F /* NoteViewCell.xib in Resources */,
 				9530FCA821EB4BEA004DD256 /* NotebooksViewController.storyboard in Resources */,
 				9519714C21EFBAD2003ACFAE /* NotebookViewCell.xib in Resources */,
+				9581188C21FA2CF7002DFA43 /* SignupViewController.storyboard in Resources */,
 				9530FC5921EA4B2A004DD256 /* LaunchScreen.storyboard in Resources */,
 				9530FC5621EA4B2A004DD256 /* Assets.xcassets in Resources */,
 				955496D221F65FCC0081668F /* LoginViewController.storyboard in Resources */,
@@ -547,6 +591,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-StudyPad/Pods-StudyPad-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.framework",
 				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
 				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
@@ -557,6 +602,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityLogger.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
@@ -636,20 +682,25 @@
 				9530FC8421EA5869004DD256 /* AppCoordinator.swift in Sources */,
 				955496BE21F624C00081668F /* NotebooksView.swift in Sources */,
 				955496D421F660C90081668F /* LoginViewController.swift in Sources */,
+				9581188B21FA2CF7002DFA43 /* SignupPresenter.swift in Sources */,
 				9529531221F8DEFA00599603 /* ProfileViewController.swift in Sources */,
 				9581188121FA1382002DFA43 /* ProfileProtocols.swift in Sources */,
+				9581188F21FA2CF7002DFA43 /* SignupProtocols.swift in Sources */,
 				9530FC9221EA8AE4004DD256 /* Coordinator.swift in Sources */,
 				9530FC8821EA66B1004DD256 /* MockRepository.swift in Sources */,
 				955496D621F710860081668F /* UserManager.swift in Sources */,
 				9529530921F77F9800599603 /* NoteEditViewController.swift in Sources */,
+				9581189021FA2CF7002DFA43 /* SignupInteractor.swift in Sources */,
 				9530FC8A21EA6D83004DD256 /* Note.swift in Sources */,
 				9530FC9621EA8D2F004DD256 /* BottomNavCoordinator.swift in Sources */,
 				9530FC8621EA653B004DD256 /* Repositories.swift in Sources */,
 				9530FC9C21EA9311004DD256 /* NotebooksPresenter.swift in Sources */,
+				9581188D21FA2CF7002DFA43 /* SignupModels.swift in Sources */,
 				9530FC8121EA52F6004DD256 /* Notebook.swift in Sources */,
 				955496DC21F718E80081668F /* LoginPresenter.swift in Sources */,
 				955496BA21F6216C0081668F /* Presenter.swift in Sources */,
 				9530FCA621EA9BF0004DD256 /* NotebooksViewController.swift in Sources */,
+				9581189721FDE999002DFA43 /* Constants.swift in Sources */,
 				9530FC9821EA9081004DD256 /* NotebooksCoordinator.swift in Sources */,
 				955496DA21F718B50081668F /* LoginContract.swift in Sources */,
 				952952FE21F772B000599603 /* NoteDetailContract.swift in Sources */,
@@ -658,12 +709,15 @@
 				9529530221F772ED00599603 /* NoteDetailPresenter.swift in Sources */,
 				9530FC8E21EA7459004DD256 /* DependencyManager.swift in Sources */,
 				955496D821F712260081668F /* LoginCoordinator.swift in Sources */,
+				9581189521FDE890002DFA43 /* ServerRepository.swift in Sources */,
 				952952F921F7694B00599603 /* User.swift in Sources */,
 				9529530B21F77FB300599603 /* NoteEditPresenter.swift in Sources */,
 				955496C221F63E560081668F /* NotesContract.swift in Sources */,
 				9529530D21F77FF000599603 /* NoteEditContract.swift in Sources */,
 				955496CE21F651010081668F /* NoteViewCell.swift in Sources */,
+				9581189221FA3025002DFA43 /* SignupCoordinator.swift in Sources */,
 				955496C821F63F520081668F /* NotesViewController.swift in Sources */,
+				9581188E21FA2CF7002DFA43 /* SignupViewController.swift in Sources */,
 				955496C421F63EE30081668F /* NotesCoordinator.swift in Sources */,
 				955496CA21F63FD00081668F /* NotesPresenterImpl.swift in Sources */,
 				9581188321FA13D5002DFA43 /* ProfilePresenter.swift in Sources */,

@@ -27,8 +27,8 @@ struct User {
         var token: String
     }
     
-    struct LoginResponse {
-        var token: String
+    struct LoginResponse  : Codable {
+        var access_token: String
     }
     
 }
