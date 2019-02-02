@@ -45,6 +45,6 @@ final class GradientView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         gradientLayer.colors = colors
-        roundCorners(corners: [.topLeft, .bottomLeft], radius: 16)
+        roundCorners(corners: [.topLeft, .bottomLeft], radius: 8)
     }
 }

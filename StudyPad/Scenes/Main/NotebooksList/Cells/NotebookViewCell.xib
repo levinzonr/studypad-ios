@@ -36,7 +36,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MtW-u1-7zq">
                                 <rect key="frame" x="402" y="91" width="48" height="48"/>
-                                <state key="normal" image="IconMore"/>
+                                <state key="normal" image="options"/>
                                 <connections>
                                     <action selector="onOptionsButtonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="tdb-zJ-QAi"/>
                                 </connections>
@@ -84,6 +84,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="IconMore" width="48" height="48"/>
+        <image name="options" width="48" height="48"/>
     </resources>
 </document>

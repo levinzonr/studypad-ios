@@ -54,14 +54,14 @@ private extension BottomNavCoordinator {
         switch type {
         case .notebooks:
             coordinator = NotebooksCoordinator(navigationController: navController)
-            navController.tabBarItem = UITabBarItem(title: "My LIbrary", image: nil, tag: 1)
+            navController.tabBarItem = UITabBarItem(title: "My Library", image: #imageLiteral(resourceName: "library"), tag: 1)
             
         case.challenges:
             coordinator = ProfileCoordinator(nav: navController, appDelegate: appFlowDelegate)
-            navController.tabBarItem = UITabBarItem(title: "Challenges", image: nil, tag: 2)
+            navController.tabBarItem = UITabBarItem(title: "Challenges", image: #imageLiteral(resourceName: "challenges"), tag: 2)
         case .settings:
             coordinator = ProfileCoordinator(nav: navController, appDelegate: appFlowDelegate)
-            navController.tabBarItem = UITabBarItem(title: "Profile", image: nil, tag: 3)
+            navController.tabBarItem = UITabBarItem(title: "Profile", image: #imageLiteral(resourceName: "profile"), tag: 3)
         }
         children.append(coordinator)
         coordinator.start()

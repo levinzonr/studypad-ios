@@ -29,7 +29,8 @@ class NotebookViewCell: UICollectionViewCell, Reusable {
    
     override func awakeFromNib() {
         super.awakeFromNib()
-        cardView.cornerRadius = 16
+        cardView.cornerRadius = 8
+        
     }
     
     @IBAction func onOptionsButtonPressed(_ sender: Any) {
