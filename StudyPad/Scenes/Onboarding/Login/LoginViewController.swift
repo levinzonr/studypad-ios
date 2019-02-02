@@ -17,10 +17,14 @@ class LoginViewController : UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var passwordInputField: UITextField!
     @IBOutlet weak var emailInputField: UITextField!
+    @IBOutlet weak var progressIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attachView(view: self)
+        
+        emailInputField.delegate = self
+        passwordInputField.delegate = self
     }
     
     @IBAction func onLoginButtonClicked(_ sender: Any) {
@@ -53,7 +57,22 @@ class LoginViewController : UIViewController {
 extension LoginViewController : LoginView {
     
     func showLoginButtonEnabled(_ enabled: Bool) {
-        print("enabled: \(enabled)")
         loginButton.isEnabled = enabled
     }
+    
+    func showLoading(_ show: Bool) {
+        progressIndicator.visible = show
+    }
+}
+
+extension LoginViewController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if (textField == emailInputField) {
+            return passwordInputField.becomeFirstResponder()
+        } else {
+            return textField.resignFirstResponder()
+        }
+    }
+    
 }

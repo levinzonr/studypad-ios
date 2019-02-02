@@ -57,3 +57,42 @@ extension Request {
         return self
     }
 }
+
+extension UIActivityIndicatorView {
+    
+    var visible: Bool {
+        
+        get {return !self.isHidden}
+        
+        set {
+            isHidden = !newValue
+            if (newValue) {
+                startAnimating()
+            } else {
+                stopAnimating()
+            }
+        }
+        
+    }
+    
+}
+
+
+extension UICollectionViewCell {
+    static var reuseId: String {
+        return String(describing: self)
+    }
+    
+    static var nib: UINib {
+        return UINib(nibName: reuseId, bundle: .main)
+    }
+}
+
+extension UIView {
+    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
+    }
+}

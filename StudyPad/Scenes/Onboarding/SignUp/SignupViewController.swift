@@ -19,6 +19,8 @@ class SignupViewController: UIViewController {
     
     @IBOutlet weak var createAccountBtn: UIButton!
     
+    @IBOutlet weak var progressIndicator: UIActivityIndicatorView!
+    
     // MARK: - Properties
     private var presenter: SignupPresenterInput!
 
@@ -37,6 +39,9 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewCreated()
+        emailInputField.delegate = self
+        passwordInputField.delegate = self
+        repeatPasswordInputField.delegate = self
     }
 
     // MARK: - Callbacks -
@@ -61,10 +66,34 @@ class SignupViewController: UIViewController {
 
 // PRESENTER -> VIEW
 extension SignupViewController: SignupPresenterOutput {
-    func showCreateButtonEnabled(enabled: Bool) {
+    func showCreateButtonEnabled(_ enabled: Bool) {
         print("enabled: \(enabled)")
         createAccountBtn.isEnabled = enabled
     }
     
+    func showLoading(_ show: Bool) {
+        progressIndicator.visible = show
+    }
     
+}
+
+extension SignupViewController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        var nextField: UITextField? = nil
+        if (emailInputField == textField) {
+            nextField = passwordInputField
+        } else if (textField == passwordInputField) {
+            nextField = repeatPasswordInputField
+        } else {
+            nextField = nil
+        }
+        
+        if let nextInput = nextField {
+            return nextInput.becomeFirstResponder()
+        } else {
+            return textField.resignFirstResponder()
+        }
+
+    }
 }

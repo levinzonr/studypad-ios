@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		3E0B462167B6E47D7BF04CBC /* Pods_StudyPadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85956D0667F2ABEDF965B399 /* Pods_StudyPadTests.framework */; };
 		516C8313F41BA8E387C81CEA /* Pods_StudyPad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9159DB616815EE7AD79EE931 /* Pods_StudyPad.framework */; };
-		9519714B21EFBAD2003ACFAE /* NotebookViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9519714921EFBAD2003ACFAE /* NotebookViewCell.swift */; };
-		9519714C21EFBAD2003ACFAE /* NotebookViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9519714A21EFBAD2003ACFAE /* NotebookViewCell.xib */; };
 		952952F921F7694B00599603 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952952F821F7694B00599603 /* User.swift */; };
 		952952FC21F772A100599603 /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952952FB21F772A100599603 /* NoteDetailViewController.swift */; };
 		952952FE21F772B000599603 /* NoteDetailContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952952FD21F772B000599603 /* NoteDetailContract.swift */; };
@@ -23,6 +21,7 @@
 		9529530D21F77FF000599603 /* NoteEditContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9529530C21F77FF000599603 /* NoteEditContract.swift */; };
 		9529531021F8DEE700599603 /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9529530F21F8DEE700599603 /* ProfileViewController.storyboard */; };
 		9529531221F8DEFA00599603 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9529531121F8DEFA00599603 /* ProfileViewController.swift */; };
+		952E2E60220600DF00C456AF /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952E2E5F220600DF00C456AF /* GradientView.swift */; };
 		9530FC4F21EA4B28004DD256 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9530FC4E21EA4B28004DD256 /* AppDelegate.swift */; };
 		9530FC5621EA4B2A004DD256 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9530FC5521EA4B2A004DD256 /* Assets.xcassets */; };
 		9530FC5921EA4B2A004DD256 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9530FC5721EA4B2A004DD256 /* LaunchScreen.storyboard */; };
@@ -69,6 +68,8 @@
 		9581189221FA3025002DFA43 /* SignupCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581189121FA3025002DFA43 /* SignupCoordinator.swift */; };
 		9581189521FDE890002DFA43 /* ServerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581189421FDE890002DFA43 /* ServerRepository.swift */; };
 		9581189721FDE999002DFA43 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581189621FDE999002DFA43 /* Constants.swift */; };
+		95FDDD012205D03E00E44785 /* NotebookViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FDDCFF2205D03E00E44785 /* NotebookViewCell.swift */; };
+		95FDDD022205D03E00E44785 /* NotebookViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95FDDD002205D03E00E44785 /* NotebookViewCell.xib */; };
 		BC41889BA65B8B5D23110F55 /* Pods_StudyPadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA30EBDCB9DB0851AC6A1448 /* Pods_StudyPadUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,8 +98,6 @@
 		85956D0667F2ABEDF965B399 /* Pods_StudyPadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudyPadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9159DB616815EE7AD79EE931 /* Pods_StudyPad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudyPad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94CC7A680369EB0E4C4F79FE /* Pods-StudyPad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyPad.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudyPad/Pods-StudyPad.release.xcconfig"; sourceTree = "<group>"; };
-		9519714921EFBAD2003ACFAE /* NotebookViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookViewCell.swift; sourceTree = "<group>"; };
-		9519714A21EFBAD2003ACFAE /* NotebookViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotebookViewCell.xib; sourceTree = "<group>"; };
 		952952F821F7694B00599603 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		952952FB21F772A100599603 /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
 		952952FD21F772B000599603 /* NoteDetailContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailContract.swift; sourceTree = "<group>"; };
@@ -111,6 +110,7 @@
 		9529530C21F77FF000599603 /* NoteEditContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditContract.swift; sourceTree = "<group>"; };
 		9529530F21F8DEE700599603 /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
 		9529531121F8DEFA00599603 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		952E2E5F220600DF00C456AF /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		9530FC4B21EA4B27004DD256 /* StudyPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9530FC4E21EA4B28004DD256 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9530FC5521EA4B2A004DD256 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -163,6 +163,8 @@
 		9581189121FA3025002DFA43 /* SignupCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupCoordinator.swift; sourceTree = "<group>"; };
 		9581189421FDE890002DFA43 /* ServerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerRepository.swift; sourceTree = "<group>"; };
 		9581189621FDE999002DFA43 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		95FDDCFF2205D03E00E44785 /* NotebookViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookViewCell.swift; sourceTree = "<group>"; };
+		95FDDD002205D03E00E44785 /* NotebookViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotebookViewCell.xib; sourceTree = "<group>"; };
 		D478DB767903BAE8302B9A5E /* Pods-StudyPadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyPadUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StudyPadUITests/Pods-StudyPadUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA30EBDCB9DB0851AC6A1448 /* Pods_StudyPadUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudyPadUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -415,8 +417,9 @@
 		959AA69221EBC0D7001B28EF /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				9519714921EFBAD2003ACFAE /* NotebookViewCell.swift */,
-				9519714A21EFBAD2003ACFAE /* NotebookViewCell.xib */,
+				952E2E5F220600DF00C456AF /* GradientView.swift */,
+				95FDDCFF2205D03E00E44785 /* NotebookViewCell.swift */,
+				95FDDD002205D03E00E44785 /* NotebookViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -553,9 +556,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9529530421F7730300599603 /* NoteDetailViewController.storyboard in Resources */,
+				95FDDD022205D03E00E44785 /* NotebookViewCell.xib in Resources */,
 				955496CF21F651010081668F /* NoteViewCell.xib in Resources */,
 				9530FCA821EB4BEA004DD256 /* NotebooksViewController.storyboard in Resources */,
-				9519714C21EFBAD2003ACFAE /* NotebookViewCell.xib in Resources */,
 				9581188C21FA2CF7002DFA43 /* SignupViewController.storyboard in Resources */,
 				9530FC5921EA4B2A004DD256 /* LaunchScreen.storyboard in Resources */,
 				9530FC5621EA4B2A004DD256 /* Assets.xcassets in Resources */,
@@ -595,10 +598,8 @@
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
 				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
@@ -613,10 +614,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
@@ -719,7 +718,6 @@
 				955496DA21F718B50081668F /* LoginContract.swift in Sources */,
 				952952FE21F772B000599603 /* NoteDetailContract.swift in Sources */,
 				9581187F21FA1372002DFA43 /* ProfileCoordinator.swift in Sources */,
-				9519714B21EFBAD2003ACFAE /* NotebookViewCell.swift in Sources */,
 				9529530221F772ED00599603 /* NoteDetailPresenter.swift in Sources */,
 				9530FC8E21EA7459004DD256 /* DependencyManager.swift in Sources */,
 				955496D821F712260081668F /* LoginCoordinator.swift in Sources */,
@@ -729,6 +727,8 @@
 				955496C221F63E560081668F /* NotesContract.swift in Sources */,
 				9529530D21F77FF000599603 /* NoteEditContract.swift in Sources */,
 				955496CE21F651010081668F /* NoteViewCell.swift in Sources */,
+				952E2E60220600DF00C456AF /* GradientView.swift in Sources */,
+				95FDDD012205D03E00E44785 /* NotebookViewCell.swift in Sources */,
 				9581189221FA3025002DFA43 /* SignupCoordinator.swift in Sources */,
 				955496C821F63F520081668F /* NotesViewController.swift in Sources */,
 				9581188E21FA2CF7002DFA43 /* SignupViewController.swift in Sources */,
@@ -905,6 +905,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GZ295Z5M8M;
 				INFOPLIST_FILE = StudyPad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -923,6 +924,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GZ295Z5M8M;
 				INFOPLIST_FILE = StudyPad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

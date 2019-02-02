@@ -8,18 +8,18 @@
 
 import Foundation
 import UIKit
-import RxSwift
+import Reusable
 
-final class NotebooksViewController : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+final class NotebooksViewController : UIViewController {
     
     var presenter: NotebooksPresenter!
     
     var notebooks : [Notebook] = []
     
-    @IBOutlet weak var collectionView: UICollectionView!
-    private let disposeBag = DisposeBag()
     
+    @IBOutlet weak var notebooksCollectionView: UICollectionView!
     
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(createButtonPressed))
@@ -27,8 +27,9 @@ final class NotebooksViewController : UIViewController, UICollectionViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        self.notebooksCollectionView.delegate = self
+        self.notebooksCollectionView.dataSource = self
+        self.notebooksCollectionView.register(NotebookViewCell.nib, forCellWithReuseIdentifier: NotebookViewCell.reuseId)
         presenter.attachView(view: self)
     }
     
@@ -92,40 +93,49 @@ extension NotebooksViewController : NotebooksView {
     func showNotebooks(notebooks: [Notebook]) {
         print("Reloaded: Count: \(notebooks.count)")
         self.notebooks = notebooks
-        self.collectionView.reloadData()
+        self.notebooksCollectionView.reloadData()
     }
     
 }
 
-extension NotebooksViewController : NotebookViewCellDelegate {
+extension NotebooksViewController : NotebookViewCellDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+   
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    
+    func collectionView(_ notebooksCollectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return notebooks.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! NotebookViewCell
-       cell.notebookNameLabel.text = notebooks[indexPath.row].name
-        cell.setupCardView()
+    func collectionView(_ notebooksCollectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = notebooksCollectionView.dequeueReusableCell(withReuseIdentifier: NotebookViewCell.reuseId, for: indexPath) as! NotebookViewCell
         cell.delegate = self
         cell.tag = indexPath.row
-        let gradient = CAGradientLayer()
-        let colors = notebooks[indexPath.row].color
-        gradient.frame = cell.notebookGradientColorView.bounds
-        gradient.colors = colors.toColorArray()
-        cell.notebookGradientColorView.layer.addSublayer(gradient)
-        
+        cell.configure(using: notebooks[indexPath.row])
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        presenter.showNotes(notebook: notebooks[indexPath.row])
+   
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    func onNotebookSelected(at position: Int) {
+        presenter.showNotes(notebook: notebooks[position])
     }
     
-    func onMoreButtonClicked(index: Int) {
-        print("notebooks as \(index)")
-        showOptionsMenu(notebook: notebooks[index])
+    func onMoreButtonClicked(_ position: Int) {
+        self.showOptionsMenu(notebook: notebooks[position])
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let widht = self.view.frame.width
+        let height = 120.0
+        return CGSize(width: Double(widht), height: height)
+    }
+
+    
+    
+    
 }
 
 

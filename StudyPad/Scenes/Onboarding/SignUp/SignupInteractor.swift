@@ -13,6 +13,8 @@ class SignupInteractor {
     weak var output: SignupInteractorOutput?
     let repository: KeychainRepository
     let userManager: UserManager
+    
+    
     // MARK: - Init
     init(repository: KeychainRepository, _ userManager: UserManager) {
         self.repository = repository

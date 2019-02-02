@@ -8,24 +8,17 @@ PODS:
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
-  - FacebookCore (0.5.0):
+  - FacebookCore (0.4.0):
     - Bolts (~> 1.9)
-    - FBSDKCoreKit (~> 4.37)
-  - FacebookLogin (0.5.0):
+    - FBSDKCoreKit (~> 4.36)
+  - FacebookLogin (0.4.0):
     - Bolts (~> 1.9)
-    - FacebookCore (~> 0.5)
-    - FBSDKCoreKit (~> 4.37)
-    - FBSDKLoginKit (~> 4.37)
-  - FacebookShare (0.5.0):
-    - Bolts (~> 1.9)
-    - FacebookCore (~> 0.5)
-    - FBSDKCoreKit (~> 4.37)
-    - FBSDKShareKit (~> 4.37)
-  - FBSDKCoreKit (4.39.0):
-    - Bolts (~> 1.9)
-  - FBSDKLoginKit (4.39.0):
-    - FBSDKCoreKit
-  - FBSDKShareKit (4.39.0):
+    - FacebookCore (~> 0.4)
+    - FBSDKCoreKit (~> 4.36)
+    - FBSDKLoginKit (~> 4.36)
+  - FBSDKCoreKit (4.36.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.36.0):
     - FBSDKCoreKit
   - MaterialComponents/Cards (72.2.0):
     - MaterialComponents/Ink
@@ -60,10 +53,10 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.7.3)
   - AlamofireNetworkActivityLogger (~> 2.3)
-  - FacebookCore
-  - FacebookLogin
-  - FacebookShare
-  - FBSDKLoginKit
+  - FacebookCore (= 0.4)
+  - FacebookLogin (= 0.4)
+  - FBSDKCoreKit (= 4.36.0)
+  - FBSDKLoginKit (= 4.36.0)
   - MaterialComponents/Cards
   - Reusable
   - RxCocoa (~> 4.0)
@@ -77,10 +70,8 @@ SPEC REPOS:
     - Bolts
     - FacebookCore
     - FacebookLogin
-    - FacebookShare
     - FBSDKCoreKit
     - FBSDKLoginKit
-    - FBSDKShareKit
     - MaterialComponents
     - Reusable
     - RxAtomic
@@ -92,12 +83,10 @@ SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   AlamofireNetworkActivityLogger: 6f3076652ab7fa6c819b59be08ea038d339e36d8
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
-  FacebookCore: 74288d0add931d361b1596beae787ab72c438249
-  FacebookLogin: ebcf34714a1cb9f0759d9f071cfb01ed500996cf
-  FacebookShare: 963b4bb1124a64a395b1e428163d70b5774116e8
-  FBSDKCoreKit: 1e3981faefab8c88edfaa9eecd94aab02d99a9bc
-  FBSDKLoginKit: 30ba5039a2c53d65a75103889bc2deebdacd5a1f
-  FBSDKShareKit: 5a0021c30abb64df9eeba87351dd8a627874543b
+  FacebookCore: 770e57cfe250a4de4458b682191c0ff062dee247
+  FacebookLogin: eb0f2251aca835a94d70a5f7e580edc46d1e1603
+  FBSDKCoreKit: 3b8e6570eedb443f9fc4af196a7bf39f18e3a3d8
+  FBSDKLoginKit: 8bccb6064708ab2f4251a7fc4e3b6d8d00ad91ba
   MaterialComponents: d1637df9976683348de8eabd10de0723ec81db3d
   Reusable: 188be1a54ac0691bc66e5bb24ec6eb91971b315b
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
@@ -105,6 +94,6 @@ SPEC CHECKSUMS:
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   "UITextView+Placeholder": 0c3efd97f37ea64bde7f34cc6e90fe02e87b3909
 
-PODFILE CHECKSUM: 44cda05ed1b8f80d282fc456deb36976f5488bc0
+PODFILE CHECKSUM: 56201f72d0c3573e4e9a1bf17f353d9e950866f7
 
 COCOAPODS: 1.5.3

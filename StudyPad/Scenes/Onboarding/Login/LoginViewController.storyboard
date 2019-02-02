@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                 <connections>
                                     <action selector="onEmailInputPassword:" destination="RwT-aX-ghD" eventType="editingChanged" id="II7-vE-33M"/>
                                 </connections>
@@ -33,7 +33,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
                                 <connections>
                                     <action selector="onPasswordInputChanged:" destination="RwT-aX-ghD" eventType="editingChanged" id="nBx-k0-du9"/>
                                 </connections>
@@ -66,6 +66,11 @@
                                     <action selector="onFacebookButtonPressed:" destination="RwT-aX-ghD" eventType="touchUpInside" id="w7t-12-0Fb"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="b9q-ZM-lI1">
+                                <rect key="frame" x="177" y="204" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="N4F-Et-xnC"/>
@@ -74,6 +79,7 @@
                         <outlet property="emailInputField" destination="rxh-l3-1Hb" id="oAC-Rk-r12"/>
                         <outlet property="loginButton" destination="vyD-ex-cXr" id="CHa-s7-E7D"/>
                         <outlet property="passwordInputField" destination="zGo-kb-seJ" id="5dQ-Zt-oBA"/>
+                        <outlet property="progressIndicator" destination="b9q-ZM-lI1" id="Nve-OU-TKy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IHu-2e-Ve5" userLabel="First Responder" sceneMemberID="firstResponder"/>

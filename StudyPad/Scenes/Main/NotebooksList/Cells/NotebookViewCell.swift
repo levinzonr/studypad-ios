@@ -2,38 +2,55 @@
 //  NotebookViewCell.swift
 //  StudyPad
 //
-//  Created by Roman Levinzon on 16/01/2019.
+//  Created by Roman Levinzon on 02/02/2019.
 //  Copyright © 2019 Roman Levinzon. All rights reserved.
 //
 
 import UIKit
-import MaterialComponents.MaterialCards
+import Reusable
+import MaterialComponents
 
-protocol NotebookViewCellDelegate: class {
-    func onMoreButtonClicked(index: Int)
+protocol NotebookViewCellDelegate : class  {
+    func onMoreButtonClicked(_ position : Int)
+    func onNotebookSelected(at position: Int)
 }
 
-class NotebookViewCell: MDCCardCollectionCell {
-
-
-    @IBOutlet weak var notebookGradientColorView: UIView!
-    @IBOutlet weak var notebookNameLabel: UILabel!
-    weak var delegate: NotebookViewCellDelegate?
+class NotebookViewCell: UICollectionViewCell, Reusable {
     
+    
+    @IBOutlet weak var notesCountLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var cardView: MDCCard!
+    
+    @IBOutlet weak var gradientView: GradientView!
+    weak var delegate: NotebookViewCellDelegate? = nil
+    
+    
+   
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        cardView.cornerRadius = 16
     }
     
-    @IBAction func onMoreButtonClicked(_ sender: Any) {
-        delegate?.onMoreButtonClicked(index: tag)
+    @IBAction func onOptionsButtonPressed(_ sender: Any) {
+        delegate?.onMoreButtonClicked(tag)
     }
-    func setupCardView() {
-
-        cornerRadius = 8
+    
+    @IBAction func onCardPressed(_ sender: Any) {
+        delegate?.onNotebookSelected(at: tag)
+    }
+    
+    
+    func configure(using notebook: Notebook) {
+     
+       nameLabel.text =  notebook.name
+        notesCountLabel.text = "Count: \(notebook.notesCount)"
         
-        setShadowElevation(ShadowElevation(rawValue: 16), for: .highlighted)
-        setShadowColor(UIColor.black, for: .normal)
+        let colors = notebook.color.toColorArray()
+        gradientView.colors = colors
+     
+        
+        
     }
 
 }

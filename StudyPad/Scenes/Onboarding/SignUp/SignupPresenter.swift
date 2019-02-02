@@ -27,7 +27,8 @@ class SignupPresenter {
 
 extension SignupPresenter: SignupPresenterInput {
     func viewCreated() {
-        output?.showCreateButtonEnabled(enabled: false)
+        output?.showCreateButtonEnabled(false)
+        output?.showLoading(false)
     }
 
     func handle(_ action: Signup.Action) {
@@ -45,6 +46,7 @@ extension SignupPresenter: SignupPresenterInput {
             updateButtonsState()
 
         case .create:
+            output?.showLoading(true)
             interactor.perform(Signup.Request.CreateAccount(email: userInfo.email, password: userInfo.password))
         }
        
@@ -54,7 +56,7 @@ extension SignupPresenter: SignupPresenterInput {
         let validEmail = !userInfo.email.isEmpty
         let validPassword = !userInfo.password.isEmpty && (userInfo.password == userInfo.passwordRepeat)
         print("Valid: \(validEmail) \(validPassword)")
-        output?.showCreateButtonEnabled(enabled: validEmail && validPassword )
+        output?.showCreateButtonEnabled(validEmail && validPassword)
         
     }
     

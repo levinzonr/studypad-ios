@@ -31,7 +31,8 @@ protocol SignupPresenterInput {
 
 // PRESENTER -> VIEW
 protocol SignupPresenterOutput: class {
-    func showCreateButtonEnabled(enabled: Bool)
+    func showCreateButtonEnabled(_ enabled: Bool)
+    func showLoading(_ show: Bool)
 }
 
 protocol SignupCoordinatorInput: class {

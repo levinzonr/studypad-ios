@@ -39,6 +39,7 @@ class LoginPresenter : BasePresenter {
     func attachView(view: LoginView) {
         self.view = view
         view.showLoginButtonEnabled(false)
+        view.showLoading(false)
     }
     
     func dettachView() {
@@ -58,6 +59,9 @@ class LoginPresenter : BasePresenter {
     }
 
     func login()  {
+        
+        self.runAction {$0.showLoading(true)}
+        
         repository.login(request: loginRequest) { (res: User.LoginResponse) in
             self.userManager.token = res.access_token
             self.userManager.userInfo = res.user
@@ -68,12 +72,16 @@ class LoginPresenter : BasePresenter {
     
     func loginViaFacebook() {
         let manager = LoginManager()
+        
+        self.runAction {$0.showLoading(true)}
+        
         manager.logIn(readPermissions: [.publicProfile, .email], viewController: nil) { loginResult in
             switch loginResult {
             case .success(let grantedPermissions, let declinedPermissions, let accessToken):
                 self.repository.loginViaFacebook(token: accessToken.authenticationToken, onComplete: { response in
                     print("Succes: \(accessToken)")
                     self.userManager.token = response.access_token
+                    self.coordiantor?.finish()
                 })
             case .cancelled:
                 print("cance;;ed")

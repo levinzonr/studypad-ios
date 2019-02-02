@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                 <connections>
                                     <action selector="onEmailValueChanged:" destination="F2H-rH-Lsj" eventType="editingChanged" id="B0c-T4-BL3"/>
                                 </connections>
@@ -40,7 +40,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
                                 <connections>
                                     <action selector="onRepeatPasswordValueChanged:" destination="F2H-rH-Lsj" eventType="editingChanged" id="8nG-aI-gb1"/>
                                 </connections>
@@ -50,7 +50,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES" textContentType="new-password"/>
                                 <connections>
                                     <action selector="onPasswordValueChanged:" destination="F2H-rH-Lsj" eventType="editingChanged" id="k5R-Wb-uOc"/>
                                 </connections>
@@ -63,6 +63,11 @@
                                     <action selector="onCreateButtonPressed:" destination="F2H-rH-Lsj" eventType="touchUpInside" id="j5T-uC-iBY"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="7Cw-eh-tLY">
+                                <rect key="frame" x="168" y="222" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Fhz-5B-qaF"/>
@@ -71,6 +76,7 @@
                         <outlet property="createAccountBtn" destination="yNV-7F-iJS" id="rMk-aw-KKh"/>
                         <outlet property="emailInputField" destination="9i0-c1-Goh" id="ggD-D5-Caz"/>
                         <outlet property="passwordInputField" destination="mZd-Be-0cR" id="EbI-vN-5p2"/>
+                        <outlet property="progressIndicator" destination="7Cw-eh-tLY" id="EMa-jb-EpI"/>
                         <outlet property="repeatPasswordInputField" destination="WDc-yF-4VU" id="v6Q-na-UDm"/>
                     </connections>
                 </viewController>
