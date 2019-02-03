@@ -14,11 +14,18 @@ class LoginViewController : UIViewController {
     
     var presenter: LoginPresenter!
     
+    @IBOutlet weak var facebooLoginButton: UIButton! {
+        didSet {
+            facebooLoginButton.imageView?.tintColor = .white
+            facebooLoginButton.tintColor = .white
+        }
+    }
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var passwordInputField: UITextField!
     @IBOutlet weak var emailInputField: UITextField!
     @IBOutlet weak var progressIndicator: UIActivityIndicatorView!
     
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attachView(view: self)

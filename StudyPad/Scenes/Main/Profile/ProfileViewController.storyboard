@@ -19,8 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPs-0E-YnL">
-                                <rect key="frame" x="16" y="621" width="343" height="30"/>
+                                <rect key="frame" x="16" y="611" width="343" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="PUC-yk-VIy"/>
+                                </constraints>
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -28,24 +31,46 @@
                                     <action selector="onLogoutButtonPressed:" destination="M6n-Ap-WmZ" eventType="touchUpInside" id="UtU-zU-NdI"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIf-yX-Mkd">
-                                <rect key="frame" x="31" y="125" width="296" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="7jS-Al-KPK">
+                                <rect key="frame" x="16" y="36" width="343" height="158.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="juY-mc-Uxp">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="122"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="122" id="cUj-hS-typ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIf-yX-Mkd">
+                                        <rect key="frame" x="0.0" y="138" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Hm-wP-5Rd">
+                                <rect key="frame" x="0.0" y="210.5" width="375" height="384.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="5Hm-wP-5Rd" firstAttribute="leading" secondItem="B7W-Nu-CqG" secondAttribute="leading" id="1nj-3S-fGQ"/>
                             <constraint firstItem="TPs-0E-YnL" firstAttribute="leading" secondItem="B7W-Nu-CqG" secondAttribute="leading" constant="16" id="6Fu-8y-wk4"/>
+                            <constraint firstItem="TPs-0E-YnL" firstAttribute="top" secondItem="5Hm-wP-5Rd" secondAttribute="bottom" constant="16" id="7GA-zw-FJ7"/>
+                            <constraint firstItem="7jS-Al-KPK" firstAttribute="top" secondItem="B7W-Nu-CqG" secondAttribute="top" constant="16" id="A1U-of-rbV"/>
+                            <constraint firstItem="B7W-Nu-CqG" firstAttribute="trailing" secondItem="5Hm-wP-5Rd" secondAttribute="trailing" id="CNY-3S-JSo"/>
                             <constraint firstItem="B7W-Nu-CqG" firstAttribute="bottom" secondItem="TPs-0E-YnL" secondAttribute="bottom" constant="16" id="HFX-3Y-2t9"/>
+                            <constraint firstItem="7jS-Al-KPK" firstAttribute="leading" secondItem="B7W-Nu-CqG" secondAttribute="leading" constant="16" id="ZFc-Gn-VtX"/>
+                            <constraint firstItem="5Hm-wP-5Rd" firstAttribute="top" secondItem="7jS-Al-KPK" secondAttribute="bottom" constant="16" id="fBb-pd-cf0"/>
                             <constraint firstItem="B7W-Nu-CqG" firstAttribute="trailing" secondItem="TPs-0E-YnL" secondAttribute="trailing" constant="16" id="jQ6-m0-vSB"/>
+                            <constraint firstItem="B7W-Nu-CqG" firstAttribute="trailing" secondItem="7jS-Al-KPK" secondAttribute="trailing" constant="16" id="rQu-ru-VyG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="B7W-Nu-CqG"/>
                     </view>
                     <connections>
                         <outlet property="profileLogoutButton" destination="TPs-0E-YnL" id="XsJ-KW-mHC"/>
+                        <outlet property="tableView" destination="5Hm-wP-5Rd" id="eBu-l7-Jao"/>
                         <outlet property="userNameLabel" destination="tIf-yX-Mkd" id="0tr-HI-hL1"/>
                     </connections>
                 </viewController>
@@ -54,4 +79,7 @@
             <point key="canvasLocation" x="29.600000000000001" y="160.56971514242881"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultAvatar" width="122" height="122"/>
+    </resources>
 </document>

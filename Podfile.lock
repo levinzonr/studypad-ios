@@ -20,6 +20,8 @@ PODS:
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.36.0):
     - FBSDKCoreKit
+  - Floaty (4.1.0)
+  - GoneVisible (1.2.0)
   - MaterialComponents/Cards (72.2.0):
     - MaterialComponents/Ink
     - MaterialComponents/private/Icons/ic_check_circle
@@ -57,6 +59,8 @@ DEPENDENCIES:
   - FacebookLogin (= 0.4)
   - FBSDKCoreKit (= 4.36.0)
   - FBSDKLoginKit (= 4.36.0)
+  - Floaty (~> 4.1.0)
+  - GoneVisible
   - MaterialComponents/Cards
   - Reusable
   - RxCocoa (~> 4.0)
@@ -72,6 +76,8 @@ SPEC REPOS:
     - FacebookLogin
     - FBSDKCoreKit
     - FBSDKLoginKit
+    - Floaty
+    - GoneVisible
     - MaterialComponents
     - Reusable
     - RxAtomic
@@ -87,6 +93,8 @@ SPEC CHECKSUMS:
   FacebookLogin: eb0f2251aca835a94d70a5f7e580edc46d1e1603
   FBSDKCoreKit: 3b8e6570eedb443f9fc4af196a7bf39f18e3a3d8
   FBSDKLoginKit: 8bccb6064708ab2f4251a7fc4e3b6d8d00ad91ba
+  Floaty: 1a4e213f3512cf3045ef9cb0c1ff456226d1f66a
+  GoneVisible: c552940cd9df7548427f6bffd000dcbcc6de187f
   MaterialComponents: d1637df9976683348de8eabd10de0723ec81db3d
   Reusable: 188be1a54ac0691bc66e5bb24ec6eb91971b315b
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
@@ -94,6 +102,6 @@ SPEC CHECKSUMS:
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   "UITextView+Placeholder": 0c3efd97f37ea64bde7f34cc6e90fe02e87b3909
 
-PODFILE CHECKSUM: 56201f72d0c3573e4e9a1bf17f353d9e950866f7
+PODFILE CHECKSUM: 3eb0bc1e2decee71253dcbf518e2c874dd7d8548
 
 COCOAPODS: 1.5.3

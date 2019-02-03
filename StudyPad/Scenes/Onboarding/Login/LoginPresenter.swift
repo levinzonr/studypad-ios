@@ -77,15 +77,17 @@ class LoginPresenter : BasePresenter {
         
         manager.logIn(readPermissions: [.publicProfile, .email], viewController: nil) { loginResult in
             switch loginResult {
-            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
+            case .success( _, _, let accessToken):
                 self.repository.loginViaFacebook(token: accessToken.authenticationToken, onComplete: { response in
                     print("Succes: \(accessToken)")
                     self.userManager.token = response.access_token
+                    self.userManager.userInfo = response.user
                     self.coordiantor?.finish()
                 })
             case .cancelled:
-                print("cance;;ed")
+                self.runAction{$0.showLoading(false)}
             case .failed(let error):
+                self.runAction{$0.showLoading(false)}
                 print("Error: \(error)")
             }
         }

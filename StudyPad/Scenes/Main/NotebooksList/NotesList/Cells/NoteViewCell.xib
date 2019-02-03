@@ -19,23 +19,33 @@
                 <rect key="frame" x="0.0" y="0.0" width="669" height="163.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIh-Ri-YpI">
-                        <rect key="frame" x="26" y="26" width="602" height="43"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                        <color key="textColor" red="0.96170660620000004" green="0.2261258307" blue="0.25111131990000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Lh-XS-tQG">
+                        <rect key="frame" x="28" y="19" width="613" height="23"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHw-5G-fmB">
+                        <rect key="frame" x="40" y="50" width="593" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="PIh-Ri-YpI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="0q0-fe-aVw"/>
-                    <constraint firstItem="PIh-Ri-YpI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="50" id="Z1y-KP-XWj"/>
-                    <constraint firstAttribute="bottom" secondItem="PIh-Ri-YpI" secondAttribute="bottom" constant="16" id="vDq-bL-Y3K"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="NHw-5G-fmB" secondAttribute="trailing" constant="16" id="3QP-km-2nt"/>
+                    <constraint firstItem="NHw-5G-fmB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="499-zi-t65"/>
+                    <constraint firstItem="NHw-5G-fmB" firstAttribute="top" secondItem="0Lh-XS-tQG" secondAttribute="bottom" constant="8" id="CGR-Gm-cJo"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="0Lh-XS-tQG" secondAttribute="trailing" constant="8" id="PDU-Xz-nxA"/>
+                    <constraint firstItem="0Lh-XS-tQG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="bqt-fC-fQs"/>
+                    <constraint firstItem="0Lh-XS-tQG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="iHL-54-buf"/>
                 </constraints>
             </tableViewCellContentView>
             <accessibility key="accessibilityConfiguration" identifier="NoteCell"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="noteTitleLabel" destination="PIh-Ri-YpI" id="AlR-I4-FWD"/>
+                <outlet property="noteContentLabel" destination="NHw-5G-fmB" id="S8A-qG-n3e"/>
+                <outlet property="noteTitleLabel" destination="0Lh-XS-tQG" id="jSH-Nk-tmC"/>
             </connections>
             <point key="canvasLocation" x="133.59999999999999" y="158.32083958020991"/>
         </tableViewCell>

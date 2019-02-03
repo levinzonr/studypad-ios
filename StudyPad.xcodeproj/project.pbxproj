@@ -22,6 +22,8 @@
 		9529531021F8DEE700599603 /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9529530F21F8DEE700599603 /* ProfileViewController.storyboard */; };
 		9529531221F8DEFA00599603 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9529531121F8DEFA00599603 /* ProfileViewController.swift */; };
 		952E2E60220600DF00C456AF /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952E2E5F220600DF00C456AF /* GradientView.swift */; };
+		952E2E682206E9E800C456AF /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952E2E662206E9E800C456AF /* ProfileViewCell.swift */; };
+		952E2E692206E9E800C456AF /* ProfileViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 952E2E672206E9E800C456AF /* ProfileViewCell.xib */; };
 		9530FC4F21EA4B28004DD256 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9530FC4E21EA4B28004DD256 /* AppDelegate.swift */; };
 		9530FC5621EA4B2A004DD256 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9530FC5521EA4B2A004DD256 /* Assets.xcassets */; };
 		9530FC5921EA4B2A004DD256 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9530FC5721EA4B2A004DD256 /* LaunchScreen.storyboard */; };
@@ -56,6 +58,7 @@
 		955496D821F712260081668F /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955496D721F712260081668F /* LoginCoordinator.swift */; };
 		955496DA21F718B50081668F /* LoginContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955496D921F718B50081668F /* LoginContract.swift */; };
 		955496DC21F718E80081668F /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955496DB21F718E80081668F /* LoginPresenter.swift */; };
+		955909622206FA6C00757784 /* ProfileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955909612206FA6C00757784 /* ProfileModels.swift */; };
 		9581187F21FA1372002DFA43 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581187E21FA1372002DFA43 /* ProfileCoordinator.swift */; };
 		9581188121FA1382002DFA43 /* ProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581188021FA1382002DFA43 /* ProfileProtocols.swift */; };
 		9581188321FA13D5002DFA43 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581188221FA13D5002DFA43 /* ProfilePresenter.swift */; };
@@ -111,6 +114,8 @@
 		9529530F21F8DEE700599603 /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
 		9529531121F8DEFA00599603 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		952E2E5F220600DF00C456AF /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		952E2E662206E9E800C456AF /* ProfileViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
+		952E2E672206E9E800C456AF /* ProfileViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewCell.xib; sourceTree = "<group>"; };
 		9530FC4B21EA4B27004DD256 /* StudyPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9530FC4E21EA4B28004DD256 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9530FC5521EA4B2A004DD256 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -151,6 +156,7 @@
 		955496D721F712260081668F /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		955496D921F718B50081668F /* LoginContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContract.swift; sourceTree = "<group>"; };
 		955496DB21F718E80081668F /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		955909612206FA6C00757784 /* ProfileModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModels.swift; sourceTree = "<group>"; };
 		9581187E21FA1372002DFA43 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		9581188021FA1382002DFA43 /* ProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocols.swift; sourceTree = "<group>"; };
 		9581188221FA13D5002DFA43 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
@@ -223,13 +229,24 @@
 		9529530E21F8DEA800599603 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				952E2E6122062B6C00C456AF /* Cells */,
 				9529530F21F8DEE700599603 /* ProfileViewController.storyboard */,
 				9529531121F8DEFA00599603 /* ProfileViewController.swift */,
 				9581187E21FA1372002DFA43 /* ProfileCoordinator.swift */,
 				9581188021FA1382002DFA43 /* ProfileProtocols.swift */,
 				9581188221FA13D5002DFA43 /* ProfilePresenter.swift */,
+				955909612206FA6C00757784 /* ProfileModels.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		952E2E6122062B6C00C456AF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				952E2E662206E9E800C456AF /* ProfileViewCell.swift */,
+				952E2E672206E9E800C456AF /* ProfileViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		9530FC4221EA4B27004DD256 = {
@@ -563,6 +580,7 @@
 				9530FC5921EA4B2A004DD256 /* LaunchScreen.storyboard in Resources */,
 				9530FC5621EA4B2A004DD256 /* Assets.xcassets in Resources */,
 				955496D221F65FCC0081668F /* LoginViewController.storyboard in Resources */,
+				952E2E692206E9E800C456AF /* ProfileViewCell.xib in Resources */,
 				9529530721F77F7D00599603 /* NoteEditViewController.storyboard in Resources */,
 				9529531021F8DEE700599603 /* ProfileViewController.storyboard in Resources */,
 				955496C621F63F230081668F /* NotesViewController.storyboard in Resources */,
@@ -600,6 +618,8 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/Floaty/Floaty.framework",
+				"${BUILT_PRODUCTS_DIR}/GoneVisible/GoneVisible.framework",
 				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
 				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
@@ -616,6 +636,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Floaty.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoneVisible.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
@@ -702,6 +724,7 @@
 				9530FC9221EA8AE4004DD256 /* Coordinator.swift in Sources */,
 				9530FC8821EA66B1004DD256 /* MockRepository.swift in Sources */,
 				955496D621F710860081668F /* UserManager.swift in Sources */,
+				955909622206FA6C00757784 /* ProfileModels.swift in Sources */,
 				9529530921F77F9800599603 /* NoteEditViewController.swift in Sources */,
 				9581189021FA2CF7002DFA43 /* SignupInteractor.swift in Sources */,
 				9530FC8A21EA6D83004DD256 /* Note.swift in Sources */,
@@ -713,6 +736,7 @@
 				955496DC21F718E80081668F /* LoginPresenter.swift in Sources */,
 				955496BA21F6216C0081668F /* Presenter.swift in Sources */,
 				9530FCA621EA9BF0004DD256 /* NotebooksViewController.swift in Sources */,
+				952E2E682206E9E800C456AF /* ProfileViewCell.swift in Sources */,
 				9581189721FDE999002DFA43 /* Constants.swift in Sources */,
 				9530FC9821EA9081004DD256 /* NotebooksCoordinator.swift in Sources */,
 				955496DA21F718B50081668F /* LoginContract.swift in Sources */,

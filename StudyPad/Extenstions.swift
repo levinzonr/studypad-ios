@@ -96,3 +96,13 @@ extension UIView {
         layer.mask = mask
     }
 }
+
+extension UITableViewCell {
+    static var reuseId: String {
+        return String(describing: self)
+    }
+    
+    static var nib: UINib {
+        return UINib(nibName: reuseId, bundle: .main)
+    }
+}

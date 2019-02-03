@@ -18,9 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xx5-Xe-voV">
-                                <rect key="frame" x="16" y="99" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xx5-Xe-voV">
+                                <rect key="frame" x="16" y="36" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -29,9 +28,8 @@
                                     <action selector="onNoteTitleChanged:" destination="5sF-96-koM" eventType="editingDidEnd" id="otl-FP-ENb"/>
                                 </connections>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hKr-9a-aYy">
-                                <rect key="frame" x="16" y="144" width="343" height="530"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hKr-9a-aYy">
+                                <rect key="frame" x="16" y="82" width="343" height="585"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -39,6 +37,15 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ivm-wc-IFk" firstAttribute="bottom" secondItem="hKr-9a-aYy" secondAttribute="bottom" id="20i-hq-oxd"/>
+                            <constraint firstItem="Ivm-wc-IFk" firstAttribute="trailing" secondItem="xx5-Xe-voV" secondAttribute="trailing" constant="16" id="KKv-aZ-Mjt"/>
+                            <constraint firstItem="Ivm-wc-IFk" firstAttribute="trailing" secondItem="hKr-9a-aYy" secondAttribute="trailing" constant="16" id="PVA-Ji-Tdu"/>
+                            <constraint firstItem="hKr-9a-aYy" firstAttribute="leading" secondItem="Ivm-wc-IFk" secondAttribute="leading" constant="16" id="ete-vU-MEJ"/>
+                            <constraint firstItem="xx5-Xe-voV" firstAttribute="top" secondItem="Ivm-wc-IFk" secondAttribute="top" constant="16" id="iOW-bC-Mj9"/>
+                            <constraint firstItem="xx5-Xe-voV" firstAttribute="leading" secondItem="Ivm-wc-IFk" secondAttribute="leading" constant="16" id="syl-UE-Lzd"/>
+                            <constraint firstItem="hKr-9a-aYy" firstAttribute="top" secondItem="xx5-Xe-voV" secondAttribute="bottom" constant="16" id="wGW-kf-hI2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ivm-wc-IFk"/>
                     </view>
                     <connections>
