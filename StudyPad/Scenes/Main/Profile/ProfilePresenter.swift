@@ -13,16 +13,21 @@ class ProfilePresenter : BasePresenter {
     typealias View = ProfileView
     
     weak var coordinator: AppFlowDelegate?
-    
+    weak var coord: ProfileFlowDelegate?
     var view: ProfileView?
     let userManager: UserManager
-    init(_ userManager : UserManager, coordinator: AppFlowDelegate) {
+    init(_ userManager : UserManager, coordinator: AppFlowDelegate,_  profileCoordinator: ProfileFlowDelegate) {
         self.userManager = userManager
         self.coordinator = coordinator
+        self.coord = profileCoordinator
     }
     
     func attachView(view: ProfileView) {
         self.view = view
+      
+    }
+    
+    func loadProfile() {
         if let user = userManager.userInfo {
             runAction { view in
                 view.showProfileInfo(user)
@@ -32,6 +37,10 @@ class ProfilePresenter : BasePresenter {
     
     func dettachView() {
         self.view = nil
+    }
+    
+    func editProfile() {
+        coord?.showEditProfile()
     }
     
     

@@ -10,6 +10,10 @@ import Foundation
 import RxSwift
 
 final class MockRepository: Repository {
+    func updateUserProfile(firstName: String, lastName: String, onComplete: @escaping (User) -> Void) {
+
+    }
+    
     
     var notebooks : Array<Notebook> = []
     var notes : Array<Note> = []

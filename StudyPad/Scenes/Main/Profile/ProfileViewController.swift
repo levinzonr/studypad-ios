@@ -29,16 +29,19 @@ final class ProfileViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.attachView(view: self)
-        
+        presenter.loadProfile()
         tableView.register(ProfileViewCell.nib, forCellReuseIdentifier: ProfileViewCell.reuseId)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.isScrollEnabled = false
-
-    
     }
     
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presenter.loadProfile()
+    }
     
     static func newInstance(with presenter: ProfilePresenter) -> ProfileViewController {
        let vc = "\(ProfileViewController.self)".instantiateViewController() as! ProfileViewController
@@ -82,5 +85,13 @@ extension ProfileViewController : UITableViewDelegate, UITableViewDataSource {
         return 75
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            presenter.editProfile()
+        default:
+            print("other")
+        }
+    }
     
 }

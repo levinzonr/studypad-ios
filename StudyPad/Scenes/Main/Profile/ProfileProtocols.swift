@@ -13,3 +13,7 @@ protocol ProfileView : BaseView {
     func showProfileInfo(_ user: User)
     
 }
+
+protocol ProfileFlowDelegate : class {
+    func showEditProfile()
+}

@@ -78,6 +78,12 @@
 		95590989220729C200757784 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95590983220729C200757784 /* MemoViewController.swift */; };
 		9559098A220729C200757784 /* MemoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95590984220729C200757784 /* MemoProtocols.swift */; };
 		9559098B220729C200757784 /* MemoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95590985220729C200757784 /* MemoInteractor.swift */; };
+		955909982207702E00757784 /* EditProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955909922207702E00757784 /* EditProfilePresenter.swift */; };
+		955909992207702E00757784 /* EditProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 955909932207702E00757784 /* EditProfileViewController.storyboard */; };
+		9559099A2207702E00757784 /* EditProfileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955909942207702E00757784 /* EditProfileModels.swift */; };
+		9559099B2207702E00757784 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955909952207702E00757784 /* EditProfileViewController.swift */; };
+		9559099C2207702E00757784 /* EditProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955909962207702E00757784 /* EditProfileProtocols.swift */; };
+		9559099D2207702E00757784 /* EditProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955909972207702E00757784 /* EditProfileInteractor.swift */; };
 		9581187F21FA1372002DFA43 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581187E21FA1372002DFA43 /* ProfileCoordinator.swift */; };
 		9581188121FA1382002DFA43 /* ProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581188021FA1382002DFA43 /* ProfileProtocols.swift */; };
 		9581188321FA13D5002DFA43 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581188221FA13D5002DFA43 /* ProfilePresenter.swift */; };
@@ -195,6 +201,12 @@
 		95590983220729C200757784 /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
 		95590984220729C200757784 /* MemoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoProtocols.swift; sourceTree = "<group>"; };
 		95590985220729C200757784 /* MemoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoInteractor.swift; sourceTree = "<group>"; };
+		955909922207702E00757784 /* EditProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilePresenter.swift; sourceTree = "<group>"; };
+		955909932207702E00757784 /* EditProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfileViewController.storyboard; sourceTree = "<group>"; };
+		955909942207702E00757784 /* EditProfileModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileModels.swift; sourceTree = "<group>"; };
+		955909952207702E00757784 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		955909962207702E00757784 /* EditProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileProtocols.swift; sourceTree = "<group>"; };
+		955909972207702E00757784 /* EditProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileInteractor.swift; sourceTree = "<group>"; };
 		9581187E21FA1372002DFA43 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		9581188021FA1382002DFA43 /* ProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocols.swift; sourceTree = "<group>"; };
 		9581188221FA13D5002DFA43 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
@@ -267,6 +279,7 @@
 		9529530E21F8DEA800599603 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				9559099122076FC400757784 /* EditProfile */,
 				952E2E6122062B6C00C456AF /* Cells */,
 				9529530F21F8DEE700599603 /* ProfileViewController.storyboard */,
 				9529531121F8DEFA00599603 /* ProfileViewController.swift */,
@@ -486,6 +499,19 @@
 			path = Memo;
 			sourceTree = "<group>";
 		};
+		9559099122076FC400757784 /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				955909922207702E00757784 /* EditProfilePresenter.swift */,
+				955909932207702E00757784 /* EditProfileViewController.storyboard */,
+				955909942207702E00757784 /* EditProfileModels.swift */,
+				955909952207702E00757784 /* EditProfileViewController.swift */,
+				955909962207702E00757784 /* EditProfileProtocols.swift */,
+				955909972207702E00757784 /* EditProfileInteractor.swift */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
 		9581188421FA2CDD002DFA43 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -654,6 +680,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9529530421F7730300599603 /* NoteDetailViewController.storyboard in Resources */,
+				955909992207702E00757784 /* EditProfileViewController.storyboard in Resources */,
 				95590987220729C200757784 /* MemoViewController.storyboard in Resources */,
 				95FDDD022205D03E00E44785 /* NotebookViewCell.xib in Resources */,
 				955496CF21F651010081668F /* NoteViewCell.xib in Resources */,
@@ -798,6 +825,7 @@
 				95590989220729C200757784 /* MemoViewController.swift in Sources */,
 				952952FC21F772A100599603 /* NoteDetailViewController.swift in Sources */,
 				9529530021F772C100599603 /* NoteDetailCoordinator.swift in Sources */,
+				9559099D2207702E00757784 /* EditProfileInteractor.swift in Sources */,
 				9530FC8C21EA7219004DD256 /* Extenstions.swift in Sources */,
 				9530FC8421EA5869004DD256 /* AppCoordinator.swift in Sources */,
 				955496BE21F624C00081668F /* NotebooksView.swift in Sources */,
@@ -817,6 +845,7 @@
 				9581189021FA2CF7002DFA43 /* SignupInteractor.swift in Sources */,
 				9559098A220729C200757784 /* MemoProtocols.swift in Sources */,
 				9530FC8A21EA6D83004DD256 /* Note.swift in Sources */,
+				955909982207702E00757784 /* EditProfilePresenter.swift in Sources */,
 				9530FC9621EA8D2F004DD256 /* BottomNavCoordinator.swift in Sources */,
 				9530FC8621EA653B004DD256 /* Repositories.swift in Sources */,
 				9530FC9C21EA9311004DD256 /* NotebooksPresenter.swift in Sources */,
@@ -839,6 +868,7 @@
 				952952F921F7694B00599603 /* User.swift in Sources */,
 				9559098B220729C200757784 /* MemoInteractor.swift in Sources */,
 				9529530B21F77FB300599603 /* NoteEditPresenter.swift in Sources */,
+				9559099C2207702E00757784 /* EditProfileProtocols.swift in Sources */,
 				955496C221F63E560081668F /* NotesContract.swift in Sources */,
 				95590979220717C100757784 /* NotebookSelectionPresenter.swift in Sources */,
 				9559097022070A4E00757784 /* ChallengesOverviewProtocols.swift in Sources */,
@@ -850,6 +880,7 @@
 				95FDDD012205D03E00E44785 /* NotebookViewCell.swift in Sources */,
 				95590986220729C200757784 /* MemoPresenter.swift in Sources */,
 				9581189221FA3025002DFA43 /* SignupCoordinator.swift in Sources */,
+				9559099B2207702E00757784 /* EditProfileViewController.swift in Sources */,
 				955496C821F63F520081668F /* NotesViewController.swift in Sources */,
 				9559096E22070A4E00757784 /* ChallengesOverviewModels.swift in Sources */,
 				9581188E21FA2CF7002DFA43 /* SignupViewController.swift in Sources */,
@@ -859,6 +890,7 @@
 				955496CA21F63FD00081668F /* NotesPresenterImpl.swift in Sources */,
 				95590988220729C200757784 /* MemoModels.swift in Sources */,
 				9581188321FA13D5002DFA43 /* ProfilePresenter.swift in Sources */,
+				9559099A2207702E00757784 /* EditProfileModels.swift in Sources */,
 				9530FC4F21EA4B28004DD256 /* AppDelegate.swift in Sources */,
 				955496BC21F622290081668F /* BaseView.swift in Sources */,
 			);

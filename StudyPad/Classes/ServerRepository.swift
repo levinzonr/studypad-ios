@@ -255,4 +255,29 @@ extension ServerRepository  {
     
 }
 
+extension ServerRepository {
+    
+    func updateUserProfile(firstName: String, lastName: String, onComplete: @escaping (User) -> Void) {
+        let payload : [String: Any] = [
+            "firstName": firstName,
+            "lastName": lastName,
+        ]
+        sessionManager
+            .request(API + "users/me", method: .post, parameters: payload, encoding: JSONEncoding.default, headers: authHeaders)
+            .responseJSON { response in
+                print("respnse \(response)")
+                if let data = response.data {
+                    do {
+                        let decoder = JSONDecoder()
+                        let result = try decoder.decode(User.self, from: data)
+                        onComplete(result)
+                    } catch {
+                        print("catch")
+                    }
+                }
+        }
+    }
+
+}
+
 

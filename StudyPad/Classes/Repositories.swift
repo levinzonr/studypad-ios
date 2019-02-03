@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-typealias Repository = NotebookRepository & NotesRepository & KeychainRepository
+typealias Repository = NotebookRepository & NotesRepository & KeychainRepository & UserRepository
 
 protocol NotebookRepository{
     
@@ -32,5 +32,10 @@ protocol KeychainRepository {
     func login(request: User.LoginRequest, onComplete: @escaping (User.LoginResponse) -> Void)
     func createAccount(request: User.SignupRequest, onComplete: @escaping (User.LoginResponse) -> Void)
     func loginViaFacebook(token: String, onComplete: @escaping (User.LoginResponse) -> Void)
+    
+}
+
+protocol UserRepository {
+    func updateUserProfile(firstName: String, lastName: String, onComplete: @escaping (User) -> Void)
     
 }
