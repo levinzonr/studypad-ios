@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+import SnapKit
 
 class LoginViewController : UIViewController {
     
@@ -16,13 +16,33 @@ class LoginViewController : UIViewController {
     
     @IBOutlet weak var facebooLoginButton: UIButton! {
         didSet {
-            facebooLoginButton.imageView?.tintColor = .white
             facebooLoginButton.tintColor = .white
+            facebooLoginButton.titleEdgeInsets.left = 24
+            facebooLoginButton.imageEdgeInsets.top = 8
+            facebooLoginButton.imageEdgeInsets.bottom = 8
+            let origImage = UIImage(named: "facebook");
+            let tintedImage = origImage?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+            facebooLoginButton.setImage(tintedImage, for: .normal)
+            facebooLoginButton.tintColor = .white
+            
         }
     }
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var passwordInputField: UITextField!
-    @IBOutlet weak var emailInputField: UITextField!
+    @IBOutlet weak var passwordInputField: UITextField! {
+        didSet {
+            passwordInputField.backgroundColor = .white
+            passwordInputField.snp.makeConstraints { make in
+                make.height.equalTo(55)
+            }
+        }
+    }
+    @IBOutlet weak var emailInputField: UITextField! {
+        didSet {
+            emailInputField.snp.makeConstraints { make in
+                make.height.equalTo(55)
+            }
+        }
+    }
     @IBOutlet weak var progressIndicator: UIActivityIndicatorView!
     
    

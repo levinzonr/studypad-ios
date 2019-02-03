@@ -21,7 +21,6 @@ PODS:
   - FBSDKLoginKit (4.36.0):
     - FBSDKCoreKit
   - Floaty (4.1.0)
-  - GoneVisible (1.2.0)
   - MaterialComponents/Cards (72.2.0):
     - MaterialComponents/Ink
     - MaterialComponents/private/Icons/ic_check_circle
@@ -50,6 +49,7 @@ PODS:
     - RxSwift (~> 4.0)
   - RxSwift (4.4.0):
     - RxAtomic (~> 4.4)
+  - SnapKit (4.0.1)
   - "UITextView+Placeholder (1.2.1)"
 
 DEPENDENCIES:
@@ -60,11 +60,11 @@ DEPENDENCIES:
   - FBSDKCoreKit (= 4.36.0)
   - FBSDKLoginKit (= 4.36.0)
   - Floaty (~> 4.1.0)
-  - GoneVisible
   - MaterialComponents/Cards
   - Reusable
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
+  - SnapKit (~> 4.0.0)
   - "UITextView+Placeholder"
 
 SPEC REPOS:
@@ -77,12 +77,12 @@ SPEC REPOS:
     - FBSDKCoreKit
     - FBSDKLoginKit
     - Floaty
-    - GoneVisible
     - MaterialComponents
     - Reusable
     - RxAtomic
     - RxCocoa
     - RxSwift
+    - SnapKit
     - "UITextView+Placeholder"
 
 SPEC CHECKSUMS:
@@ -94,14 +94,14 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: 3b8e6570eedb443f9fc4af196a7bf39f18e3a3d8
   FBSDKLoginKit: 8bccb6064708ab2f4251a7fc4e3b6d8d00ad91ba
   Floaty: 1a4e213f3512cf3045ef9cb0c1ff456226d1f66a
-  GoneVisible: c552940cd9df7548427f6bffd000dcbcc6de187f
   MaterialComponents: d1637df9976683348de8eabd10de0723ec81db3d
   Reusable: 188be1a54ac0691bc66e5bb24ec6eb91971b315b
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   "UITextView+Placeholder": 0c3efd97f37ea64bde7f34cc6e90fe02e87b3909
 
-PODFILE CHECKSUM: 3eb0bc1e2decee71253dcbf518e2c874dd7d8548
+PODFILE CHECKSUM: 9f466d1ebb797346248c53009bb82a7f295d47ed
 
 COCOAPODS: 1.5.3

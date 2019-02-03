@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notebook Selection View Controller-->
+        <scene sceneID="i0m-iF-p80">
+            <objects>
+                <viewController storyboardIdentifier="NotebookSelectionViewController" id="F2H-rH-Lsj" customClass="NotebookSelectionViewController" customModule="StudyPad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2ev-QE-M02">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5N8-wh-y4l">
+                                <rect key="frame" x="0.0" y="84" width="375" height="583"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9k-SB-TYa">
+                                <rect key="frame" x="32" y="44" width="311" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5N8-wh-y4l" firstAttribute="top" secondItem="k9k-SB-TYa" secondAttribute="bottom" constant="16" id="DId-Qc-fdg"/>
+                            <constraint firstItem="k9k-SB-TYa" firstAttribute="leading" secondItem="Fhz-5B-qaF" secondAttribute="leading" constant="32" id="L4T-ZS-821"/>
+                            <constraint firstItem="5N8-wh-y4l" firstAttribute="trailing" secondItem="Fhz-5B-qaF" secondAttribute="trailing" id="OwC-um-3AB"/>
+                            <constraint firstItem="5N8-wh-y4l" firstAttribute="bottom" secondItem="Fhz-5B-qaF" secondAttribute="bottom" id="T2A-Im-7N7"/>
+                            <constraint firstItem="k9k-SB-TYa" firstAttribute="top" secondItem="Fhz-5B-qaF" secondAttribute="top" constant="24" id="YFS-Xl-IIi"/>
+                            <constraint firstItem="Fhz-5B-qaF" firstAttribute="trailing" secondItem="k9k-SB-TYa" secondAttribute="trailing" constant="32" id="diK-Td-HtP"/>
+                            <constraint firstItem="5N8-wh-y4l" firstAttribute="leading" secondItem="Fhz-5B-qaF" secondAttribute="leading" id="hU9-pi-lJW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fhz-5B-qaF"/>
+                    </view>
+                    <connections>
+                        <outlet property="selectionTitleLabel" destination="k9k-SB-TYa" id="GWQ-5L-url"/>
+                        <outlet property="tableView" destination="5N8-wh-y4l" id="O38-sj-DHs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FyU-Lz-LgX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7" y="147"/>
+        </scene>
+    </scenes>
+</document>

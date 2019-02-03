@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double GoneVisibleVersionNumber;
-FOUNDATION_EXPORT const unsigned char GoneVisibleVersionString[];
+FOUNDATION_EXPORT double SnapKitVersionNumber;
+FOUNDATION_EXPORT const unsigned char SnapKitVersionString[];
 

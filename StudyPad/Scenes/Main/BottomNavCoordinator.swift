@@ -57,7 +57,7 @@ private extension BottomNavCoordinator {
             navController.tabBarItem = UITabBarItem(title: "My Library", image: #imageLiteral(resourceName: "library"), tag: 1)
             
         case.challenges:
-            coordinator = ProfileCoordinator(nav: navController, appDelegate: appFlowDelegate)
+            coordinator = ChallengesOverviewCoordinator(navigationController: navController)
             navController.tabBarItem = UITabBarItem(title: "Challenges", image: #imageLiteral(resourceName: "challenges"), tag: 2)
         case .settings:
             coordinator = ProfileCoordinator(nav: navController, appDelegate: appFlowDelegate)

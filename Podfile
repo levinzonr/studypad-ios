@@ -17,7 +17,8 @@ target 'StudyPad' do
   pod 'FacebookCore', '0.4'
   pod 'FacebookLogin', '0.4'
   pod "Floaty", "~> 4.1.0"
-  pod "GoneVisible"
+  pod 'SnapKit', '~> 4.0.0'
+
 
   
   # Pods for StudyPad

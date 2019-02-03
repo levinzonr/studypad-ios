@@ -84,16 +84,42 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9v0-sH-zas">
+                                <rect key="frame" x="179.5" y="542.5" width="16" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MLB-s4-2as">
+                                <rect key="frame" x="16" y="554" width="147.5" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="hAd-hm-KcT"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Gs-tR-aeN">
+                                <rect key="frame" x="219" y="554" width="148" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="N4F-Et-xnC" firstAttribute="trailing" secondItem="cjr-Rl-oqX" secondAttribute="trailing" constant="32" id="6Jz-DC-jpH"/>
                             <constraint firstItem="eAZ-XY-i8F" firstAttribute="centerX" secondItem="pLv-9z-nBR" secondAttribute="centerX" id="7kS-4g-5PO"/>
+                            <constraint firstItem="cjr-Rl-oqX" firstAttribute="top" secondItem="9v0-sH-zas" secondAttribute="bottom" constant="32" id="A2K-Vs-PbD"/>
                             <constraint firstItem="eAZ-XY-i8F" firstAttribute="leading" secondItem="N4F-Et-xnC" secondAttribute="leading" constant="16" id="AJe-Om-m7z"/>
+                            <constraint firstItem="2Gs-tR-aeN" firstAttribute="top" secondItem="MLB-s4-2as" secondAttribute="top" id="Guc-Za-L3Q"/>
                             <constraint firstItem="cjr-Rl-oqX" firstAttribute="leading" secondItem="N4F-Et-xnC" secondAttribute="leading" constant="32" id="NBC-Hj-0BU"/>
+                            <constraint firstItem="9v0-sH-zas" firstAttribute="centerX" secondItem="pLv-9z-nBR" secondAttribute="centerX" id="Ppv-aH-kr8"/>
+                            <constraint firstItem="MLB-s4-2as" firstAttribute="leading" secondItem="N4F-Et-xnC" secondAttribute="leading" constant="16" id="QbA-YG-VdP"/>
+                            <constraint firstItem="9v0-sH-zas" firstAttribute="leading" secondItem="MLB-s4-2as" secondAttribute="trailing" constant="16" id="TBU-kK-Ec4"/>
+                            <constraint firstItem="N4F-Et-xnC" firstAttribute="trailing" secondItem="2Gs-tR-aeN" secondAttribute="trailing" constant="16" id="bV9-pd-hP6"/>
                             <constraint firstItem="N4F-Et-xnC" firstAttribute="trailing" secondItem="eAZ-XY-i8F" secondAttribute="trailing" constant="16" id="gXf-g0-Y0u"/>
+                            <constraint firstItem="cjr-Rl-oqX" firstAttribute="top" secondItem="MLB-s4-2as" secondAttribute="bottom" constant="40" id="k9R-m1-ofa"/>
+                            <constraint firstItem="2Gs-tR-aeN" firstAttribute="leading" secondItem="9v0-sH-zas" secondAttribute="trailing" constant="16" id="kPh-fn-Hhm"/>
                             <constraint firstItem="cjr-Rl-oqX" firstAttribute="centerX" secondItem="pLv-9z-nBR" secondAttribute="centerX" id="nCB-5u-99R"/>
                             <constraint firstItem="eAZ-XY-i8F" firstAttribute="centerY" secondItem="pLv-9z-nBR" secondAttribute="centerY" id="rLV-Bc-KSu"/>
+                            <constraint firstItem="cjr-Rl-oqX" firstAttribute="top" secondItem="2Gs-tR-aeN" secondAttribute="bottom" constant="40" id="rlM-AB-yMn"/>
                             <constraint firstItem="N4F-Et-xnC" firstAttribute="bottom" secondItem="cjr-Rl-oqX" secondAttribute="bottom" constant="32" id="ygg-n9-J8S"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N4F-Et-xnC"/>

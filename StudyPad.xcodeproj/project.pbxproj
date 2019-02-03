@@ -59,6 +59,25 @@
 		955496DA21F718B50081668F /* LoginContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955496D921F718B50081668F /* LoginContract.swift */; };
 		955496DC21F718E80081668F /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955496DB21F718E80081668F /* LoginPresenter.swift */; };
 		955909622206FA6C00757784 /* ProfileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955909612206FA6C00757784 /* ProfileModels.swift */; };
+		9559096B22070A4E00757784 /* ChallengesOverviewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9559096422070A4E00757784 /* ChallengesOverviewCoordinator.swift */; };
+		9559096C22070A4E00757784 /* ChallengesOverviewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9559096522070A4E00757784 /* ChallengesOverviewPresenter.swift */; };
+		9559096D22070A4E00757784 /* ChallengesOverviewViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9559096622070A4E00757784 /* ChallengesOverviewViewController.storyboard */; };
+		9559096E22070A4E00757784 /* ChallengesOverviewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9559096722070A4E00757784 /* ChallengesOverviewModels.swift */; };
+		9559096F22070A4E00757784 /* ChallengesOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9559096822070A4E00757784 /* ChallengesOverviewViewController.swift */; };
+		9559097022070A4E00757784 /* ChallengesOverviewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9559096922070A4E00757784 /* ChallengesOverviewProtocols.swift */; };
+		9559097122070A4E00757784 /* ChallengesOverviewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9559096A22070A4E00757784 /* ChallengesOverviewInteractor.swift */; };
+		95590979220717C100757784 /* NotebookSelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95590973220717C100757784 /* NotebookSelectionPresenter.swift */; };
+		9559097A220717C100757784 /* NotebookSelectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95590974220717C100757784 /* NotebookSelectionViewController.storyboard */; };
+		9559097B220717C100757784 /* NotebookSelectionModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95590975220717C100757784 /* NotebookSelectionModels.swift */; };
+		9559097C220717C100757784 /* NotebookSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95590976220717C100757784 /* NotebookSelectionViewController.swift */; };
+		9559097D220717C100757784 /* NotebookSelectionProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95590977220717C100757784 /* NotebookSelectionProtocols.swift */; };
+		9559097E220717C100757784 /* NotebookSelectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95590978220717C100757784 /* NotebookSelectionInteractor.swift */; };
+		95590986220729C200757784 /* MemoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95590980220729C200757784 /* MemoPresenter.swift */; };
+		95590987220729C200757784 /* MemoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95590981220729C200757784 /* MemoViewController.storyboard */; };
+		95590988220729C200757784 /* MemoModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95590982220729C200757784 /* MemoModels.swift */; };
+		95590989220729C200757784 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95590983220729C200757784 /* MemoViewController.swift */; };
+		9559098A220729C200757784 /* MemoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95590984220729C200757784 /* MemoProtocols.swift */; };
+		9559098B220729C200757784 /* MemoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95590985220729C200757784 /* MemoInteractor.swift */; };
 		9581187F21FA1372002DFA43 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581187E21FA1372002DFA43 /* ProfileCoordinator.swift */; };
 		9581188121FA1382002DFA43 /* ProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581188021FA1382002DFA43 /* ProfileProtocols.swift */; };
 		9581188321FA13D5002DFA43 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581188221FA13D5002DFA43 /* ProfilePresenter.swift */; };
@@ -157,6 +176,25 @@
 		955496D921F718B50081668F /* LoginContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContract.swift; sourceTree = "<group>"; };
 		955496DB21F718E80081668F /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		955909612206FA6C00757784 /* ProfileModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModels.swift; sourceTree = "<group>"; };
+		9559096422070A4E00757784 /* ChallengesOverviewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesOverviewCoordinator.swift; sourceTree = "<group>"; };
+		9559096522070A4E00757784 /* ChallengesOverviewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesOverviewPresenter.swift; sourceTree = "<group>"; };
+		9559096622070A4E00757784 /* ChallengesOverviewViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChallengesOverviewViewController.storyboard; sourceTree = "<group>"; };
+		9559096722070A4E00757784 /* ChallengesOverviewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesOverviewModels.swift; sourceTree = "<group>"; };
+		9559096822070A4E00757784 /* ChallengesOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesOverviewViewController.swift; sourceTree = "<group>"; };
+		9559096922070A4E00757784 /* ChallengesOverviewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesOverviewProtocols.swift; sourceTree = "<group>"; };
+		9559096A22070A4E00757784 /* ChallengesOverviewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesOverviewInteractor.swift; sourceTree = "<group>"; };
+		95590973220717C100757784 /* NotebookSelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookSelectionPresenter.swift; sourceTree = "<group>"; };
+		95590974220717C100757784 /* NotebookSelectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotebookSelectionViewController.storyboard; sourceTree = "<group>"; };
+		95590975220717C100757784 /* NotebookSelectionModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookSelectionModels.swift; sourceTree = "<group>"; };
+		95590976220717C100757784 /* NotebookSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookSelectionViewController.swift; sourceTree = "<group>"; };
+		95590977220717C100757784 /* NotebookSelectionProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookSelectionProtocols.swift; sourceTree = "<group>"; };
+		95590978220717C100757784 /* NotebookSelectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookSelectionInteractor.swift; sourceTree = "<group>"; };
+		95590980220729C200757784 /* MemoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoPresenter.swift; sourceTree = "<group>"; };
+		95590981220729C200757784 /* MemoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MemoViewController.storyboard; sourceTree = "<group>"; };
+		95590982220729C200757784 /* MemoModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoModels.swift; sourceTree = "<group>"; };
+		95590983220729C200757784 /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
+		95590984220729C200757784 /* MemoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoProtocols.swift; sourceTree = "<group>"; };
+		95590985220729C200757784 /* MemoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoInteractor.swift; sourceTree = "<group>"; };
 		9581187E21FA1372002DFA43 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		9581188021FA1382002DFA43 /* ProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocols.swift; sourceTree = "<group>"; };
 		9581188221FA13D5002DFA43 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
@@ -367,6 +405,7 @@
 		9530FC9421EA8D10004DD256 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				95590963220709C200757784 /* Challenges */,
 				9529530E21F8DEA800599603 /* Profile */,
 				9530FC7F21EA526E004DD256 /* NotebooksList */,
 				9530FC9521EA8D2F004DD256 /* BottomNavCoordinator.swift */,
@@ -403,6 +442,48 @@
 				9581188421FA2CDD002DFA43 /* SignUp */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		95590963220709C200757784 /* Challenges */ = {
+			isa = PBXGroup;
+			children = (
+				9559097F2207293400757784 /* Memo */,
+				95590972220717A300757784 /* NotebookSelection */,
+				9559096422070A4E00757784 /* ChallengesOverviewCoordinator.swift */,
+				9559096522070A4E00757784 /* ChallengesOverviewPresenter.swift */,
+				9559096622070A4E00757784 /* ChallengesOverviewViewController.storyboard */,
+				9559096722070A4E00757784 /* ChallengesOverviewModels.swift */,
+				9559096822070A4E00757784 /* ChallengesOverviewViewController.swift */,
+				9559096922070A4E00757784 /* ChallengesOverviewProtocols.swift */,
+				9559096A22070A4E00757784 /* ChallengesOverviewInteractor.swift */,
+			);
+			path = Challenges;
+			sourceTree = "<group>";
+		};
+		95590972220717A300757784 /* NotebookSelection */ = {
+			isa = PBXGroup;
+			children = (
+				95590973220717C100757784 /* NotebookSelectionPresenter.swift */,
+				95590974220717C100757784 /* NotebookSelectionViewController.storyboard */,
+				95590975220717C100757784 /* NotebookSelectionModels.swift */,
+				95590976220717C100757784 /* NotebookSelectionViewController.swift */,
+				95590977220717C100757784 /* NotebookSelectionProtocols.swift */,
+				95590978220717C100757784 /* NotebookSelectionInteractor.swift */,
+			);
+			path = NotebookSelection;
+			sourceTree = "<group>";
+		};
+		9559097F2207293400757784 /* Memo */ = {
+			isa = PBXGroup;
+			children = (
+				95590980220729C200757784 /* MemoPresenter.swift */,
+				95590981220729C200757784 /* MemoViewController.storyboard */,
+				95590982220729C200757784 /* MemoModels.swift */,
+				95590983220729C200757784 /* MemoViewController.swift */,
+				95590984220729C200757784 /* MemoProtocols.swift */,
+				95590985220729C200757784 /* MemoInteractor.swift */,
+			);
+			path = Memo;
 			sourceTree = "<group>";
 		};
 		9581188421FA2CDD002DFA43 /* SignUp */ = {
@@ -573,12 +654,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9529530421F7730300599603 /* NoteDetailViewController.storyboard in Resources */,
+				95590987220729C200757784 /* MemoViewController.storyboard in Resources */,
 				95FDDD022205D03E00E44785 /* NotebookViewCell.xib in Resources */,
 				955496CF21F651010081668F /* NoteViewCell.xib in Resources */,
+				9559097A220717C100757784 /* NotebookSelectionViewController.storyboard in Resources */,
 				9530FCA821EB4BEA004DD256 /* NotebooksViewController.storyboard in Resources */,
 				9581188C21FA2CF7002DFA43 /* SignupViewController.storyboard in Resources */,
 				9530FC5921EA4B2A004DD256 /* LaunchScreen.storyboard in Resources */,
 				9530FC5621EA4B2A004DD256 /* Assets.xcassets in Resources */,
+				9559096D22070A4E00757784 /* ChallengesOverviewViewController.storyboard in Resources */,
 				955496D221F65FCC0081668F /* LoginViewController.storyboard in Resources */,
 				952E2E692206E9E800C456AF /* ProfileViewCell.xib in Resources */,
 				9529530721F77F7D00599603 /* NoteEditViewController.storyboard in Resources */,
@@ -619,12 +703,12 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/Floaty/Floaty.framework",
-				"${BUILT_PRODUCTS_DIR}/GoneVisible/GoneVisible.framework",
 				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
 				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/UITextView+Placeholder/UITextView_Placeholder.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -637,12 +721,12 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Floaty.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoneVisible.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextView_Placeholder.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -711,11 +795,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95590989220729C200757784 /* MemoViewController.swift in Sources */,
 				952952FC21F772A100599603 /* NoteDetailViewController.swift in Sources */,
 				9529530021F772C100599603 /* NoteDetailCoordinator.swift in Sources */,
 				9530FC8C21EA7219004DD256 /* Extenstions.swift in Sources */,
 				9530FC8421EA5869004DD256 /* AppCoordinator.swift in Sources */,
 				955496BE21F624C00081668F /* NotebooksView.swift in Sources */,
+				9559097C220717C100757784 /* NotebookSelectionViewController.swift in Sources */,
+				9559096F22070A4E00757784 /* ChallengesOverviewViewController.swift in Sources */,
+				9559096B22070A4E00757784 /* ChallengesOverviewCoordinator.swift in Sources */,
 				955496D421F660C90081668F /* LoginViewController.swift in Sources */,
 				9581188B21FA2CF7002DFA43 /* SignupPresenter.swift in Sources */,
 				9529531221F8DEFA00599603 /* ProfileViewController.swift in Sources */,
@@ -727,6 +815,7 @@
 				955909622206FA6C00757784 /* ProfileModels.swift in Sources */,
 				9529530921F77F9800599603 /* NoteEditViewController.swift in Sources */,
 				9581189021FA2CF7002DFA43 /* SignupInteractor.swift in Sources */,
+				9559098A220729C200757784 /* MemoProtocols.swift in Sources */,
 				9530FC8A21EA6D83004DD256 /* Note.swift in Sources */,
 				9530FC9621EA8D2F004DD256 /* BottomNavCoordinator.swift in Sources */,
 				9530FC8621EA653B004DD256 /* Repositories.swift in Sources */,
@@ -746,18 +835,29 @@
 				9530FC8E21EA7459004DD256 /* DependencyManager.swift in Sources */,
 				955496D821F712260081668F /* LoginCoordinator.swift in Sources */,
 				9581189521FDE890002DFA43 /* ServerRepository.swift in Sources */,
+				9559097D220717C100757784 /* NotebookSelectionProtocols.swift in Sources */,
 				952952F921F7694B00599603 /* User.swift in Sources */,
+				9559098B220729C200757784 /* MemoInteractor.swift in Sources */,
 				9529530B21F77FB300599603 /* NoteEditPresenter.swift in Sources */,
 				955496C221F63E560081668F /* NotesContract.swift in Sources */,
+				95590979220717C100757784 /* NotebookSelectionPresenter.swift in Sources */,
+				9559097022070A4E00757784 /* ChallengesOverviewProtocols.swift in Sources */,
+				9559097122070A4E00757784 /* ChallengesOverviewInteractor.swift in Sources */,
 				9529530D21F77FF000599603 /* NoteEditContract.swift in Sources */,
+				9559097E220717C100757784 /* NotebookSelectionInteractor.swift in Sources */,
 				955496CE21F651010081668F /* NoteViewCell.swift in Sources */,
 				952E2E60220600DF00C456AF /* GradientView.swift in Sources */,
 				95FDDD012205D03E00E44785 /* NotebookViewCell.swift in Sources */,
+				95590986220729C200757784 /* MemoPresenter.swift in Sources */,
 				9581189221FA3025002DFA43 /* SignupCoordinator.swift in Sources */,
 				955496C821F63F520081668F /* NotesViewController.swift in Sources */,
+				9559096E22070A4E00757784 /* ChallengesOverviewModels.swift in Sources */,
 				9581188E21FA2CF7002DFA43 /* SignupViewController.swift in Sources */,
+				9559097B220717C100757784 /* NotebookSelectionModels.swift in Sources */,
 				955496C421F63EE30081668F /* NotesCoordinator.swift in Sources */,
+				9559096C22070A4E00757784 /* ChallengesOverviewPresenter.swift in Sources */,
 				955496CA21F63FD00081668F /* NotesPresenterImpl.swift in Sources */,
+				95590988220729C200757784 /* MemoModels.swift in Sources */,
 				9581188321FA13D5002DFA43 /* ProfilePresenter.swift in Sources */,
 				9530FC4F21EA4B28004DD256 /* AppDelegate.swift in Sources */,
 				955496BC21F622290081668F /* BaseView.swift in Sources */,

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Memo View Controller-->
+        <scene sceneID="i0m-iF-p80">
+            <objects>
+                <viewController storyboardIdentifier="MemoViewController" id="F2H-rH-Lsj" customClass="MemoViewController" customModule="StudyPad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2ev-QE-M02">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2wv-gL-vM3" customClass="MDCCard">
+                                <rect key="frame" x="16" y="142" width="343" height="399"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stm-us-5Oh">
+                                        <rect key="frame" x="150.5" y="189.5" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="stm-us-5Oh" firstAttribute="centerY" secondItem="2wv-gL-vM3" secondAttribute="centerY" id="C1Q-wb-ciU"/>
+                                    <constraint firstItem="stm-us-5Oh" firstAttribute="centerX" secondItem="2wv-gL-vM3" secondAttribute="centerX" id="UyM-JU-Ua9"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="odN-nG-3gv">
+                                <rect key="frame" x="16" y="605" width="343" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szI-k5-nop">
+                                        <rect key="frame" x="0.0" y="0.0" width="281" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="onDontKnowButtonPressed:" destination="F2H-rH-Lsj" eventType="touchUpInside" id="JoG-B7-u3Q"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2CC-7H-4ir">
+                                        <rect key="frame" x="297" y="0.0" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="onKnowButtonPressed:" destination="F2H-rH-Lsj" eventType="touchUpInside" id="Upg-ZJ-5WC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAR-2a-c7T">
+                                <rect key="frame" x="16" y="36" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="jZk-Jr-ikE"/>
+                                    <constraint firstAttribute="height" constant="24" id="pBv-tO-H9Y"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="onCloseButtonPressed:" destination="F2H-rH-Lsj" eventType="touchUpInside" id="KTq-jD-qpQ"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xdb-nR-TQa">
+                                <rect key="frame" x="32" y="76" width="311" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fhz-5B-qaF" firstAttribute="trailing" secondItem="2wv-gL-vM3" secondAttribute="trailing" constant="16" id="7lD-dg-tRv"/>
+                            <constraint firstItem="sAR-2a-c7T" firstAttribute="top" secondItem="Fhz-5B-qaF" secondAttribute="top" constant="16" id="DvM-Fv-53W"/>
+                            <constraint firstItem="2wv-gL-vM3" firstAttribute="leading" secondItem="Fhz-5B-qaF" secondAttribute="leading" constant="16" id="INf-Cd-fhQ"/>
+                            <constraint firstItem="sAR-2a-c7T" firstAttribute="leading" secondItem="Fhz-5B-qaF" secondAttribute="leading" constant="16" id="Ltt-9H-gLg"/>
+                            <constraint firstItem="2wv-gL-vM3" firstAttribute="top" secondItem="xdb-nR-TQa" secondAttribute="bottom" constant="64" id="ZKl-y8-xcS"/>
+                            <constraint firstItem="xdb-nR-TQa" firstAttribute="leading" secondItem="2ev-QE-M02" secondAttribute="leadingMargin" constant="16" id="atT-Aj-DDn"/>
+                            <constraint firstItem="Fhz-5B-qaF" firstAttribute="bottom" secondItem="odN-nG-3gv" secondAttribute="bottom" constant="32" id="eva-6H-1bZ"/>
+                            <constraint firstItem="odN-nG-3gv" firstAttribute="top" secondItem="2wv-gL-vM3" secondAttribute="bottom" constant="64" id="gzZ-0x-9B2"/>
+                            <constraint firstItem="odN-nG-3gv" firstAttribute="leading" secondItem="Fhz-5B-qaF" secondAttribute="leading" constant="16" id="iLD-iL-MbB"/>
+                            <constraint firstItem="Fhz-5B-qaF" firstAttribute="trailing" secondItem="odN-nG-3gv" secondAttribute="trailing" constant="16" id="jIF-Ha-XYn"/>
+                            <constraint firstItem="xdb-nR-TQa" firstAttribute="top" secondItem="sAR-2a-c7T" secondAttribute="bottom" constant="16" id="lLT-Ef-s42"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xdb-nR-TQa" secondAttribute="trailing" constant="16" id="req-L0-GqZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fhz-5B-qaF"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardView" destination="2wv-gL-vM3" id="UuL-M1-Q8C"/>
+                        <outlet property="closeChallengeButton" destination="sAR-2a-c7T" id="9CE-RB-sTW"/>
+                        <outlet property="contentLabel" destination="stm-us-5Oh" id="ss1-0x-c6i"/>
+                        <outlet property="controlsViewStackView" destination="odN-nG-3gv" id="GLC-NX-IDI"/>
+                        <outlet property="dontKnowButton" destination="szI-k5-nop" id="tbT-Ra-qPa"/>
+                        <outlet property="knowButton" destination="2CC-7H-4ir" id="Zco-tN-iCp"/>
+                        <outlet property="progressView" destination="xdb-nR-TQa" id="zWe-Fg-lw1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FyU-Lz-LgX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7.2000000000000002" y="146.17691154422789"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="48" height="48"/>
+    </resources>
+</document>
