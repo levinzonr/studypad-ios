@@ -24,6 +24,7 @@ final class ProfileCoordinator : Coordinator {
         let presenter = ProfilePresenter(dependencies.userManager, coordinator: appDelegate)
         let vc = ProfileViewController.newInstance(with: presenter)
         navigationController.setViewControllers([vc], animated: false)
+        vc.title = "Profile"
     
     }
     

@@ -22,7 +22,7 @@ final class NotebooksViewController : UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(createButtonPressed))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Create", style: .plain, target: self, action: #selector(createButtonPressed))
     }
     
     override func viewDidLoad() {
@@ -33,11 +33,20 @@ final class NotebooksViewController : UIViewController {
         presenter.attachView(view: self)
     }
     
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presenter.loadNotebooks()
+    }
 
     
     private func showAlert(notebook: Notebook? = nil) {
         
-        let alert = UIAlertController(title: "Some Title", message: "Enter a text", preferredStyle: .alert)
+        let alert = UIAlertController(title: "New notebook", message: "Choose how your notebook will be named", preferredStyle: .alert)
+        if let toEdit = notebook {
+            alert.title = "Edit \(toEdit.name)"
+            alert.message = "Choose new name for this notebook"
+        }
         
         //2. Add the text field. You can configure it however you need.
         alert.addTextField { (textField) in
@@ -46,7 +55,7 @@ final class NotebooksViewController : UIViewController {
         }
         
         // 3. Grab the value from the text field, and print it when the user clicks OK.
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { [weak alert] (_) in
             let textField = alert!.textFields![0] // Force unwrapping because we know it exists.
             if let name = textField.text {
                 if let toEdit = notebook {
@@ -56,6 +65,9 @@ final class NotebooksViewController : UIViewController {
                 }
             }
         }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel) { _ in
+            alert.dismiss(animated: true)
+        })
         
         // 4. Present the alert.
         self.present(alert, animated: true, completion: nil)
