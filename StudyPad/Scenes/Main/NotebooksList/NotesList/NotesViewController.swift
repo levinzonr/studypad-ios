@@ -15,6 +15,7 @@ final class NotesViewController : UIViewController {
     var presenter: NotesPresenterImpl!
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var emptyView: EmptyView!
     
     var notes : [Note]  = []
     
@@ -47,11 +48,32 @@ final class NotesViewController : UIViewController {
 
 extension NotesViewController : NotesView {
     
+    func showEmptyView() {
+        tableView.isHidden = true
+        emptyView.isHidden = false
+        emptyView.configure(title: "This notebooks doesn't containt any notes yet", image: UIImage(named: "challenges"), button: ("Add note", {
+            self.presenter.handleNoteCreateion()
+        }))
+    }
+    
+    func showError() {
+        tableView.isHidden = true
+        emptyView.isHidden = false
+        emptyView.configure(title: "There was an error while loading notes", image: nil, button: ("Retry", {
+            self.presenter.refresh()
+        }))
+    }
+    
+    
     func showNotes(_ notes: [Note]) {
+        tableView.isHidden = false
+        emptyView.isHidden = true
         print("view loaded")
         self.notes = notes
         tableView.reloadData()
     }
+    
+
     
 }
 

@@ -32,6 +32,7 @@ protocol NotebookSelectionPresenterInput {
 // PRESENTER -> VIEW
 protocol NotebookSelectionPresenterOutput: class {
      func display(_ displayModel: [Notebook])
+    func display(_ state: NotebookSelection.DisplayData)
 }
 
 // PRESENTER -> Coordinator

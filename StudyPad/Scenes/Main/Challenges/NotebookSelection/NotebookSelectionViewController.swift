@@ -16,6 +16,7 @@ class NotebookSelectionViewController: UIViewController {
             selectionTitleLabel.text = "Select the notebook you wish to study"
         }
     }
+    @IBOutlet weak var emtyView: EmptyView!
     @IBOutlet weak var tableView: UITableView!
     // MARK: - Properties
     private var presenter: NotebookSelectionPresenterInput!
@@ -51,11 +52,26 @@ class NotebookSelectionViewController: UIViewController {
 
 // PRESENTER -> VIEW
 extension NotebookSelectionViewController: NotebookSelectionPresenterOutput {
+    func display(_ state: NotebookSelection.DisplayData) {
+        switch state {
+        case .empty:
+            emtyView.isHidden = false
+            emtyView.configure(title: "You don't have any notebooks", image: nil)
+            tableView.isHidden = true
+        default:
+            print("sad")
+        }
+    }
+    
     func display(_ displayModel: [Notebook]) {
+        tableView.isHidden = false
+        emtyView.isHidden = true
         notebooks = displayModel
         print("display")
         tableView.reloadData()
     }
+    
+    
     
 }
 

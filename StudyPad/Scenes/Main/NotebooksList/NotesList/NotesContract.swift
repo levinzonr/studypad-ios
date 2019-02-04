@@ -10,6 +10,9 @@ import Foundation
 
 protocol NotesView : BaseView {
     func showNotes(_ notes: [Note])
+    func showEmptyView()
+    func showError()
+    
 }
 
 protocol NotesPresenter: BasePresenter {

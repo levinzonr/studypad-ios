@@ -35,9 +35,13 @@ final class NotebooksPresenter : BasePresenter {
     
     func loadNotebooks() {
         repo.getNotebooks { (items: [Notebook]) in
-            self.runAction({ (view: NotebooksView) in
-                view.showNotebooks(notebooks: items)
-            })
+            self.runAction{ view in
+                if (items.count > 0) {
+                    view.showNotebooks(notebooks: items)
+                } else {
+                    view.showEmptyView()
+                }
+            }
         }
     }
 

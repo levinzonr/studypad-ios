@@ -17,6 +17,7 @@ final class NotebooksViewController : UIViewController {
     var notebooks : [Notebook] = []
     
     
+    @IBOutlet weak var emptyView: EmptyView!
     @IBOutlet weak var notebooksCollectionView: UICollectionView!
     
 
@@ -41,7 +42,6 @@ final class NotebooksViewController : UIViewController {
 
     
     private func showAlert(notebook: Notebook? = nil) {
-        
         let alert = UIAlertController(title: "New notebook", message: "Choose how your notebook will be named", preferredStyle: .alert)
         if let toEdit = notebook {
             alert.title = "Edit \(toEdit.name)"
@@ -101,13 +101,29 @@ final class NotebooksViewController : UIViewController {
 }
 
 extension NotebooksViewController : NotebooksView {
+    func showError() {
+        emptyView.configure(title: "Error while loading notebooks", image: nil, button: ("Retry", {
+            self.presenter.loadNotebooks()
+        }))
+    }
+    
     
     func showNotebooks(notebooks: [Notebook]) {
+        emptyView.isHidden = true
+        notebooksCollectionView.isHidden = false
         print("Reloaded: Count: \(notebooks.count)")
         self.notebooks = notebooks
         self.notebooksCollectionView.reloadData()
     }
     
+    func showEmptyView() {
+        emptyView.isHidden = false
+        notebooksCollectionView.isHidden = true
+        emptyView.configure(title: "You don't have any notebooks yet", image: UIImage(named: "library"), button: ("Create", {
+            self.showAlert()
+        }))
+    }
+
 }
 
 extension NotebooksViewController : NotebookViewCellDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

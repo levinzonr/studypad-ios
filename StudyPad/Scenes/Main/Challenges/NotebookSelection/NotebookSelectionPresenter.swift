@@ -47,7 +47,11 @@ extension NotebookSelectionPresenter: NotebookSelectionInteractorOutput {
     
     func present(_ response: [Notebook]) {
         print("present")
-        output?.display(response)
+        if (response.count > 0) {
+            output?.display(response)
+        } else {
+            output?.display(.empty)
+        }
     }
     
 

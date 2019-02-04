@@ -10,10 +10,12 @@ import Foundation
 protocol NotebooksView : BaseView {
     
     func showNotebooks(notebooks: [Notebook])
+    func showEmptyView()
+    func showError()
 }
 
 protocol NotebooksCoordinatorDelegate: class {
     
     func showNotesView(notebook: Notebook)
-    
+   
 }

@@ -32,7 +32,11 @@ class NotesPresenterImpl: NotesPresenter {
         print("load")
         repo.getNotesFromNotebook(notebookId: notebook.id) { ( items: [Note]) in
             self.runAction({ (view: NotesPresenterImpl.View) in
-                view.showNotes(items)
+                if (items.count > 0) {
+                    view.showNotes(items)
+                } else {
+                    view.showEmptyView()
+                }
                 print("loaded")
             })
         }

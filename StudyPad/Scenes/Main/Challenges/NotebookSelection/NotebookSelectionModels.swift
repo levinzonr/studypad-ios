@@ -21,7 +21,9 @@ enum NotebookSelection {
         }
         
     }
-    enum DisplayData { }
+    enum DisplayData {
+        case empty, error, loading
+    }
 
     enum Action {
         case notebookSelected(notebook: Notebook)
