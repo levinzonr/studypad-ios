@@ -82,6 +82,13 @@ class LoginViewController : UIViewController {
 }
 
 extension LoginViewController : LoginView {
+
+    func showError(_ error: Error) {
+        print("error")
+        showErrorAlert(of: error)
+
+    }
+    
     
     func showLoginButtonEnabled(_ enabled: Bool) {
         loginButton.isEnabled = enabled

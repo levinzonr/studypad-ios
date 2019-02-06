@@ -44,7 +44,7 @@ final class ServerRepository : Repository {
 
 // KeyChain
 extension ServerRepository {
-    func login(request: User.LoginRequest, onComplete: @escaping (User.LoginResponse) -> Void) {
+    func login(request: User.LoginRequest, onComplete: @escaping (AppResult<User.Authorization>) -> Void) {
         let payload: [String: Any] = [
             "email": request.email,
             "password": request.password
@@ -52,23 +52,10 @@ extension ServerRepository {
         print("start")
         sessionManager
             .request(AUTH + "email", method: .post, parameters: payload, encoding: JSONEncoding.default)
-            .responseJSON { response in
-                if let data = response.data {
-                    print("respomse \(response)")
-                    do {
-                        let jsonDecoder = JSONDecoder()
-                        let recipes = try jsonDecoder.decode(User.LoginResponse.self, from: data)
-                        print(recipes)
-                        onComplete(recipes)
-        
-                    } catch {
-                        print("catch")
-                    }
-                }
+            .resutltResponse(result: onComplete)
             
         }
-        
-    }
+    
     
     func createAccount(request: User.SignupRequest, onComplete: @escaping (User.LoginResponse) -> Void) {
         let payload: [String: Any] = [
@@ -84,8 +71,8 @@ extension ServerRepository {
                 if let data = respnse.data {
                     do {
                         let encoder = JSONDecoder()
-                        let result = try encoder.decode(User.LoginResponse.self, from: data)
-                        onComplete(result)
+                        let result = try encoder.decode(User.Authorization.self, from: data)
+                        onComplete(.success(result))
                     }  catch {}
                 }
         }
@@ -103,9 +90,9 @@ extension ServerRepository {
                     print("respomse \(response)")
                     do {
                         let jsonDecoder = JSONDecoder()
-                        let result = try jsonDecoder.decode(User.LoginResponse.self, from: data)
+                        let result = try jsonDecoder.decode(User.Authorization.self, from: data)
                         print(result)
-                        onComplete(result)
+                        onComplete(.success(result))
                         
                     } catch {
                         print("catch facebook")

@@ -38,6 +38,7 @@ extension String  {
         let sb = UIStoryboard.init(name: self, bundle: nil)
         return sb.instantiateViewController(withIdentifier: self)
     }
+
     
 }
 
@@ -47,6 +48,13 @@ extension UIViewController {
         let sb = UIStoryboard.init(name: name, bundle: nil)
         return sb.instantiateViewController(withIdentifier: name)
     }
+    
+    func showErrorAlert(of type: Error, with message: String = "Something bad has happened") {
+        let alert = UIAlertController(title: type.title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 }
 
 extension Request {
@@ -57,6 +65,34 @@ extension Request {
         return self
     }
 }
+
+extension DataRequest {
+    
+    func resutltResponse<T : Codable>(result: @escaping  (AppResult<T>) -> Void) {
+            responseJSON { response in
+                if response.result.isSuccess {
+                if let data = response.data {
+                        print("respomse \(response)")
+                        do {
+                            let jsonDecoder = JSONDecoder()
+                            let data = try jsonDecoder.decode(T.self, from: data)
+                            print(data)
+                            result(.success(data))
+                            
+                        } catch {
+                            print("catch")
+                            result(.failure(.generic))
+                        }
+                } else {}
+            } else {
+            result(.failure(.network))
+
+        }
+        }
+    }
+}
+
+
 
 extension UIActivityIndicatorView {
     

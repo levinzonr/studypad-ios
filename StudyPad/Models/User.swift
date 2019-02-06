@@ -33,9 +33,13 @@ struct User : Codable {
         var token: String
     }
     
-    struct LoginResponse  : Codable {
+    struct Authorization : Codable {
         var access_token: String
         var user: User
+    }
+    
+    enum LoginResponse {
+        case success ( _ data: Authorization), failure(_ error: Error)
     }
     
 }

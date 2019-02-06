@@ -62,11 +62,22 @@ class LoginPresenter : BasePresenter {
         
         self.runAction {$0.showLoading(true)}
         
-        repository.login(request: loginRequest) { (res: User.LoginResponse) in
-            self.userManager.token = res.access_token
-            self.userManager.userInfo = res.user
-            print("user info set: \n\n\n\(res.user)")
-            self.coordiantor?.finish()
+        repository.login(request: loginRequest) { (res: AppResult<User.Authorization>) in
+            
+            switch res {
+            case .success(let auth):
+                self.userManager.token = auth.access_token
+                self.userManager.userInfo = auth.user
+                print("user info set: \n\n\n\(auth.user)")
+                self.coordiantor?.finish()
+            case .failure(let error):
+                self.runAction{
+                    $0.showLoading(false)
+                    $0.showError(error)
+                }
+            }
+            
+           
         }
     }
     
@@ -80,9 +91,9 @@ class LoginPresenter : BasePresenter {
             case .success( _, _, let accessToken):
                 self.repository.loginViaFacebook(token: accessToken.authenticationToken, onComplete: { response in
                     print("Succes: \(accessToken)")
-                    self.userManager.token = response.access_token
-                    self.userManager.userInfo = response.user
-                    self.coordiantor?.finish()
+                    //self.userManager.token = response.access_token
+                   // self.userManager.userInfo = response.user
+                    //self.coordiantor?.finish()
                 })
             case .cancelled:
                 self.runAction{$0.showLoading(false)}

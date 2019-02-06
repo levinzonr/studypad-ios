@@ -13,5 +13,6 @@ protocol LoginView : BaseView {
     
     func showLoginButtonEnabled(_ enabled: Bool)
     func showLoading(_ show: Bool)
+    func showError(_ error: Error)
     
 }

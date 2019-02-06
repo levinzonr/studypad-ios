@@ -98,6 +98,7 @@
 		9581189721FDE999002DFA43 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581189621FDE999002DFA43 /* Constants.swift */; };
 		9596178A22089E740028BE93 /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9596178922089E740028BE93 /* EmptyView.xib */; };
 		9596178C22089F0A0028BE93 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9596178B22089F0A0028BE93 /* EmptyView.swift */; };
+		95D59032220B385A0021986A /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D59031220B385A0021986A /* Error.swift */; };
 		95FDDD012205D03E00E44785 /* NotebookViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FDDCFF2205D03E00E44785 /* NotebookViewCell.swift */; };
 		95FDDD022205D03E00E44785 /* NotebookViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95FDDD002205D03E00E44785 /* NotebookViewCell.xib */; };
 		BC41889BA65B8B5D23110F55 /* Pods_StudyPadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA30EBDCB9DB0851AC6A1448 /* Pods_StudyPadUITests.framework */; };
@@ -223,6 +224,7 @@
 		9581189621FDE999002DFA43 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9596178922089E740028BE93 /* EmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
 		9596178B22089F0A0028BE93 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		95D59031220B385A0021986A /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		95FDDCFF2205D03E00E44785 /* NotebookViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookViewCell.swift; sourceTree = "<group>"; };
 		95FDDD002205D03E00E44785 /* NotebookViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotebookViewCell.xib; sourceTree = "<group>"; };
 		D478DB767903BAE8302B9A5E /* Pods-StudyPadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyPadUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StudyPadUITests/Pods-StudyPadUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -365,6 +367,7 @@
 				9530FC8021EA52F6004DD256 /* Notebook.swift */,
 				9530FC8921EA6D83004DD256 /* Note.swift */,
 				952952F821F7694B00599603 /* User.swift */,
+				95D59031220B385A0021986A /* Error.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -846,6 +849,7 @@
 				955496BE21F624C00081668F /* NotebooksView.swift in Sources */,
 				9559097C220717C100757784 /* NotebookSelectionViewController.swift in Sources */,
 				9559096F22070A4E00757784 /* ChallengesOverviewViewController.swift in Sources */,
+				95D59032220B385A0021986A /* Error.swift in Sources */,
 				9559096B22070A4E00757784 /* ChallengesOverviewCoordinator.swift in Sources */,
 				955496D421F660C90081668F /* LoginViewController.swift in Sources */,
 				9581188B21FA2CF7002DFA43 /* SignupPresenter.swift in Sources */,
