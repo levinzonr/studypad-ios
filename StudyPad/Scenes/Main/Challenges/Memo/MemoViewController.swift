@@ -107,14 +107,22 @@ class MemoViewController: UIViewController {
 // PRESENTER -> VIEW
 extension MemoViewController: MemoPresenterOutput {
     func display(_ data: Memo.DisplayData.Question) {
-        dontKnowButton.isEnabled = true
-        knowButton.isEnabled = true
-        progressView.setProgress(data.progressPercentage, animated: true)
-        print(data.progressPercentage)
-        contentLabel.text = data.content
+        self.progressView.setProgress(data.progressPercentage, animated: true)
+        UIView.animate(withDuration: 1, delay: 0,  options: [], animations: {
+              self.cardView.center.x -= self.view.bounds.width
+        }, completion: { bool in
+            self.cardView.center.x += self.view.bounds.width
+        
+            self.dontKnowButton.isEnabled = true
+            self.knowButton.isEnabled = true
+            print(data.progressPercentage)
+            self.contentLabel.text = data.content
+        })
+    
     }
     
     func display(_ state: Memo.DisplayData) {
+       
         dontKnowButton.isEnabled = false
         knowButton.isEnabled = false
         switch state {
@@ -135,6 +143,7 @@ extension MemoViewController: MemoPresenterOutput {
     func display(_ answer: String) {
         dontKnowButton.isEnabled = false
         contentLabel.text = answer
+        
         
     }
 
