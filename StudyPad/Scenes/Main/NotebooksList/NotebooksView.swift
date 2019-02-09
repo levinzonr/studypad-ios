@@ -11,7 +11,8 @@ protocol NotebooksView : BaseView {
     
     func showNotebooks(notebooks: [Notebook])
     func showEmptyView()
-    func showError()
+    func showLoadingError()
+    func showError(_ error: Error)
 }
 
 protocol NotebooksCoordinatorDelegate: class {

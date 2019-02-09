@@ -95,6 +95,26 @@ extension DataRequest {
             }
         }
     }
+    
+    func resutltResponse(result: @escaping  (AppResult<Bool>) -> Void) {
+        responseJSON { response in
+            if response.result.isSuccess {
+                if let code = response.response?.statusCode {
+                    print("Response: \(response.data?.base64EncodedString())")
+                    switch code {
+                    case 200...299:
+                        result(.success(true))
+                    case 400 ... 599:
+                        result(.failure(.api("Somethind weird did happen (\(code))")))
+                    default:
+                        result(.failure(.generic))
+                    }
+                }
+            } else {
+                result(.failure(.network))
+            }
+        }
+    }
 }
 
 

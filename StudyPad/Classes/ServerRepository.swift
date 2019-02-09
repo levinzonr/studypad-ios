@@ -83,68 +83,37 @@ extension ServerRepository {
 
 // Notebooks
 extension ServerRepository  {
-    func getNotebooks(onComplete: @escaping ([Notebook]) -> Void) {
+    func getNotebooks(onComplete: @escaping (AppResult<[Notebook]>) -> Void) {
         sessionManager
             .request(API + "notebooks" , method: .get, parameters: nil, encoding: JSONEncoding.default, headers: authHeaders)
-            .debugLog()
-            .responseJSON { response in
-                print("respomse \(response)")
-                if let data = response.data {
-                    do {
-                        let encoder = JSONDecoder()
-                        let result = try encoder.decode([Notebook].self, from: data)
-                        onComplete(result)
-                    } catch {}
-                }
-        }
+            .resutltResponse(result: onComplete)
     }
     
-    func createNotebook(title: String, onComplete: @escaping (Notebook) -> Void) {
+    func createNotebook(title: String, onComplete: @escaping (AppResult<Notebook>) -> Void) {
         let payload : [String: Any] = [
             "name": title
         ]
         sessionManager
             .request(API + "notebooks", method: .post, parameters: payload, encoding: JSONEncoding.default, headers: authHeaders)
-            .debugLog()
-            .responseJSON { response in
-                print("respomse \(response)")
-                if let data = response.data {
-                    do {
-                        let encoder = JSONDecoder()
-                        let result = try encoder.decode(Notebook.self, from: data)
-                        onComplete(result)
-                    } catch {}
-                }
-        }
+            .resutltResponse(result: onComplete)
     }
+
     
-    func deleteNotebook(id: Int, onComplete: @escaping () -> Void) {
+    func deleteNotebook(id: Int, onComplete: @escaping (AppResult<Bool>) -> Void) {
         sessionManager
             .request(API + "notebooks/\(id)", method: .delete, parameters: nil, encoding: JSONEncoding.default, headers: authHeaders)
-            .response { r in
-                onComplete()
-        }
+            .resutltResponse(result: onComplete)
     }
+
     
-    func updateNotebook(id: Int, newName: String, onComplete: @escaping (Notebook) -> Void) {
+    func updateNotebook(id: Int, newName: String, onComplete: @escaping (AppResult<Notebook>) -> Void) {
         let payload : [String: Any] = [
             "name": newName
         ]
         sessionManager
             .request(API + "notebooks/\(id)", method: .patch, parameters: payload, encoding: JSONEncoding.default, headers: authHeaders)
-            .debugLog()
-            .responseJSON { response in
-                if let data = response.data {
-                    do {
-                        let econoder = JSONDecoder()
-                        let result =  try econoder.decode(Notebook.self, from: data)
-                        onComplete(result)
-                    } catch {
-                            
-                    }
-                }
-            }
-        }
+            .resutltResponse(result: onComplete)
+    }
 }
 
 // Notes

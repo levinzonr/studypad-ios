@@ -27,7 +27,12 @@ extension NotebookSelectionInteractor: NotebookSelectionInteractorInput {
     
     func perform(_ request: NotebookSelection.Request.GetNotebooks) {
         repository.getNotebooks { response in
-            self.output?.present(response)
+            switch response {
+            case .success(let data):
+             self.output?.present(data)
+            case .failure(let error):
+                print(error)
+            }
         }
     }
 }

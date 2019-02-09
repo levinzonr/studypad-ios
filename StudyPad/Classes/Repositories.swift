@@ -13,10 +13,10 @@ typealias Repository = NotebookRepository & NotesRepository & KeychainRepository
 
 protocol NotebookRepository{
     
-    func getNotebooks(onComplete: @escaping ([Notebook]) -> Void)
-    func createNotebook(title: String, onComplete: @escaping (Notebook) -> Void)
-    func deleteNotebook(id: Int, onComplete: @escaping () -> Void)
-    func updateNotebook(id: Int, newName: String, onComplete: @escaping (Notebook) -> Void)
+    func getNotebooks(onComplete: @escaping (AppResult<[Notebook]>) -> Void)
+    func createNotebook(title: String, onComplete: @escaping (AppResult<Notebook>) -> Void)
+    func deleteNotebook(id: Int, onComplete: @escaping (AppResult<Bool>) -> Void)
+    func updateNotebook(id: Int, newName: String, onComplete: @escaping (AppResult<Notebook>) -> Void)
 }
 
 

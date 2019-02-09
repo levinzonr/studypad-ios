@@ -101,12 +101,18 @@ final class NotebooksViewController : UIViewController {
 }
 
 extension NotebooksViewController : NotebooksView {
-    func showError() {
-        emptyView.configure(title: "Error while loading notebooks", image: nil, button: ("Retry", {
-            self.presenter.loadNotebooks()
-        }))
+    func showError(_ error: Error) {
+        showErrorAlert(of: error)
     }
+
     
+    func showLoadingError() {
+        if notebooks.count == 0 {
+            emptyView.configure(title: "Error while loading notebooks", image: nil, button: ("Retry", {
+                self.presenter.loadNotebooks()
+            }))
+        }
+    }
     
     func showNotebooks(notebooks: [Notebook]) {
         emptyView.isHidden = true
