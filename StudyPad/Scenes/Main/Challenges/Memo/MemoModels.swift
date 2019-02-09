@@ -15,7 +15,10 @@ enum Memo {
         }
     }
     enum Response {
-        
+        struct Result {
+            var total: Int
+            var correct: Int
+        }
     }
     enum DisplayData {
         case complete, empty
@@ -25,6 +28,7 @@ enum Memo {
     enum Action {
         case leaveChallenge
         case answerKnow, answerDontKnow
+        case completed
     }
 
     enum Route {

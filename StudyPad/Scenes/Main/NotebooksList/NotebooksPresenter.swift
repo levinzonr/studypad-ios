@@ -73,7 +73,7 @@ final class NotebooksPresenter : BasePresenter {
     }
     
     func updateNotebook(notebook: Notebook, newName: String) {
-        repo.updateNotebook(id: notebook.id, newName: notebook.name) { result in
+        repo.updateNotebook(id: notebook.id, newName: newName) { result in
             switch result {
             case .failure(let error):
                 self.runAction { $0.showError(error)}

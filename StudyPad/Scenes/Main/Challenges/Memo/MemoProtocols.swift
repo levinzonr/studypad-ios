@@ -34,8 +34,10 @@ protocol MemoPresenterOutput: class {
     func display(_ data: Memo.DisplayData.Question)
     func display(_ state: Memo.DisplayData)
     func display(_ answer: String)
+
 }
 
 protocol MemoCoordinatorInput: class {
-    func onChallengeCompleted()
+    func onChallengeCompleted(result: Memo.Response.Result)
+    func onChallengeExit()
 }

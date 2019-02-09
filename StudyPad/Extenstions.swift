@@ -97,10 +97,8 @@ extension DataRequest {
     }
     
     func resutltResponse(result: @escaping  (AppResult<Bool>) -> Void) {
-        responseJSON { response in
-            if response.result.isSuccess {
+        response(completionHandler: { response in
                 if let code = response.response?.statusCode {
-                    print("Response: \(response.data?.base64EncodedString())")
                     switch code {
                     case 200...299:
                         result(.success(true))
@@ -109,11 +107,10 @@ extension DataRequest {
                     default:
                         result(.failure(.generic))
                     }
-                }
             } else {
                 result(.failure(.network))
             }
-        }
+        })
     }
 }
 

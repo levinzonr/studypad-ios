@@ -117,6 +117,7 @@ extension MemoViewController: MemoPresenterOutput {
         case .complete:
             progressView.setProgress(1, animated: true)
             print("complete")
+            presenter.handle(.completed)
         case .empty:
             print("empty")
         }

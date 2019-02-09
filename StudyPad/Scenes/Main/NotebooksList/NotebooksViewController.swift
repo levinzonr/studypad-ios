@@ -59,6 +59,7 @@ final class NotebooksViewController : UIViewController {
             let textField = alert!.textFields![0] // Force unwrapping because we know it exists.
             if let name = textField.text {
                 if let toEdit = notebook {
+                    print("to edit \(name)")
                     self.presenter.updateNotebook(notebook: toEdit, newName: name)
                 } else {
                     self.presenter.createNotebook(name: name)
@@ -125,7 +126,7 @@ extension NotebooksViewController : NotebooksView {
     func showEmptyView() {
         emptyView.isHidden = false
         notebooksCollectionView.isHidden = true
-        emptyView.configure(title: "You don't have any notebooks yet", image: UIImage(named: "library"), button: ("Create", {
+        emptyView.configure(title: "You don't have any notebooks yet", image: UIImage(named: "library_image"), button: ("Create", {
             self.showAlert()
         }))
     }

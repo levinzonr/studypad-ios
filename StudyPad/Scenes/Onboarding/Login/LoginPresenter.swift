@@ -90,10 +90,16 @@ class LoginPresenter : BasePresenter {
             switch loginResult {
             case .success( _, _, let accessToken):
                 self.repository.loginViaFacebook(token: accessToken.authenticationToken, onComplete: { response in
-                    print("Succes: \(accessToken)")
-                    //self.userManager.token = response.access_token
-                   // self.userManager.userInfo = response.user
-                    //self.coordiantor?.finish()
+                    switch response {
+                    case .success(let auth):
+                        print("Succes: \(accessToken)")
+                        self.userManager.token = auth.access_token
+                        self.userManager.userInfo = auth.user
+                        self.coordiantor?.finish()
+                    case .failure(let error):
+                        self.runAction{ view in view.showError(error) }
+                    }
+                   
                 })
             case .cancelled:
                 self.runAction{$0.showLoading(false)}

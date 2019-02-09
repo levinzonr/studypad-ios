@@ -25,7 +25,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EWB-Af-m5Q" customClass="EmptyView" customModule="StudyPad" customModuleProvider="target">
-                                <rect key="frame" x="16" y="84" width="375" height="567"/>
+                                <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5N8-wh-y4l">
@@ -36,16 +36,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="5N8-wh-y4l" firstAttribute="top" secondItem="k9k-SB-TYa" secondAttribute="bottom" constant="16" id="DId-Qc-fdg"/>
-                            <constraint firstItem="EWB-Af-m5Q" firstAttribute="top" secondItem="k9k-SB-TYa" secondAttribute="bottom" constant="16" id="Izn-pZ-Jpf"/>
                             <constraint firstItem="k9k-SB-TYa" firstAttribute="leading" secondItem="Fhz-5B-qaF" secondAttribute="leading" constant="32" id="L4T-ZS-821"/>
-                            <constraint firstItem="EWB-Af-m5Q" firstAttribute="trailing" secondItem="Fhz-5B-qaF" secondAttribute="trailing" constant="16" id="MKz-ls-90z"/>
-                            <constraint firstItem="Fhz-5B-qaF" firstAttribute="bottom" secondItem="EWB-Af-m5Q" secondAttribute="bottom" constant="16" id="Nqc-Wl-h3R"/>
                             <constraint firstItem="5N8-wh-y4l" firstAttribute="trailing" secondItem="Fhz-5B-qaF" secondAttribute="trailing" id="OwC-um-3AB"/>
-                            <constraint firstItem="EWB-Af-m5Q" firstAttribute="leading" secondItem="Fhz-5B-qaF" secondAttribute="leading" constant="16" id="Rod-ku-WbH"/>
                             <constraint firstItem="5N8-wh-y4l" firstAttribute="bottom" secondItem="Fhz-5B-qaF" secondAttribute="bottom" id="T2A-Im-7N7"/>
+                            <constraint firstItem="EWB-Af-m5Q" firstAttribute="top" secondItem="k9k-SB-TYa" secondAttribute="bottom" id="Tgh-yN-B8J"/>
                             <constraint firstItem="k9k-SB-TYa" firstAttribute="top" secondItem="Fhz-5B-qaF" secondAttribute="top" constant="24" id="YFS-Xl-IIi"/>
                             <constraint firstItem="Fhz-5B-qaF" firstAttribute="trailing" secondItem="k9k-SB-TYa" secondAttribute="trailing" constant="32" id="diK-Td-HtP"/>
                             <constraint firstItem="5N8-wh-y4l" firstAttribute="leading" secondItem="Fhz-5B-qaF" secondAttribute="leading" id="hU9-pi-lJW"/>
+                            <constraint firstItem="EWB-Af-m5Q" firstAttribute="leading" secondItem="Fhz-5B-qaF" secondAttribute="leading" id="lU7-1F-Fky"/>
+                            <constraint firstItem="Fhz-5B-qaF" firstAttribute="bottom" secondItem="EWB-Af-m5Q" secondAttribute="bottom" id="n6u-go-TzJ"/>
+                            <constraint firstAttribute="trailing" secondItem="EWB-Af-m5Q" secondAttribute="trailing" id="pzT-ZR-Syp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fhz-5B-qaF"/>
                     </view>

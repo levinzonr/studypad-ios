@@ -61,7 +61,7 @@ extension NotesViewController : NotesView {
     func showEmptyView() {
         tableView.isHidden = true
         emptyView.isHidden = false
-        emptyView.configure(title: "This notebooks doesn't containt any notes yet", image: UIImage(named: "challenges"), button: ("Add note", {
+        emptyView.configure(title: "This notebooks doesn't containt any notes yet", image: UIImage(named: "notes_image"), button: ("Add note", {
             self.presenter.handleNoteCreateion()
         }))
     }

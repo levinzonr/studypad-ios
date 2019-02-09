@@ -36,10 +36,13 @@ class EditProfileViewController: UIViewController {
     // MARK: - Callbacks -
 
     @IBAction func onLastNameChanged(_ sender: Any) {
-        presenter.handle(.lastNameInput(value: lastNameInputField.text ?? ""))
 
     }
     
+   @IBAction func onLastnameChanged(_ sender: Any) {
+    presenter.handle(.lastNameInput(value: lastNameInputField.text ?? ""))
+
+    }
     @IBAction func onFirstNameChanged(_ sender: Any) {
         presenter.handle(.firstNameInput(value: firstNameInputField.text ?? ""))
     }

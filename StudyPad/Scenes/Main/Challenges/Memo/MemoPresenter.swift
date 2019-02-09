@@ -15,6 +15,7 @@ class MemoPresenter {
     let notebook: Notebook
     var notes: [Note] = []
     var currentQuestionIndex = 0
+    var correct: Int = 0
     // Your custom coordinator
      weak var coordinator: MemoCoordinatorInput?
 
@@ -37,16 +38,20 @@ extension MemoPresenter: MemoPresenterInput {
         print("jande")
         switch action {
         case .leaveChallenge:
-            coordinator?.onChallengeCompleted()
+            coordinator?.onChallengeExit()
         
         case .answerDontKnow:
+            correct = correct - 1
             output?.display(notes[currentQuestionIndex].content)
         case .answerKnow:
+            correct = correct + 1
             if let next = getQuestion(at: currentQuestionIndex + 1) {
                 output?.display(next)
             } else {
-                output?.display(.complete)
+                coordinator?.onChallengeCompleted(result: Memo.Response.Result(total: notes.count, correct: correct))
             }
+        case .completed:
+           print("sa")
         }
 
     }

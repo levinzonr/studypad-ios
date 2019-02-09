@@ -78,9 +78,29 @@ extension ChallengesOverviewCoordinator : NotebookSelectionCoordinatorInput {
 }
 
 extension ChallengesOverviewCoordinator : MemoCoordinatorInput {
-    func onChallengeCompleted() {
+    func onChallengeCompleted(result: Memo.Response.Result) {
+        let vc = ChallengeCompletedViewController.instantiate(with: self, and: result)
+        navigationController.dismiss(animated: false, completion: nil)
+        navigationController.present(vc, animated: true)
+    }
+    
+    func onChallengeExit() {
         navigationController.dismiss(animated: true, completion: nil)
         navigationController.popToRootViewController(animated: true)
+    }
+        
+}
+
+extension ChallengesOverviewCoordinator : ChallengeCompletedCoordinatorInput {
+    func retryChallenge() {
+        navigationController.dismiss(animated: false, completion: nil)
+        onNotebookSelected(challengeHolder.notebook!)
+    }
+    
+    func finishChallenge() {
+        navigationController.dismiss(animated: true, completion: nil)
+        navigationController.popToRootViewController(animated: true)
+        
     }
     
     

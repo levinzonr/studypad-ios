@@ -15,7 +15,7 @@ class EmptyView: UIView {
     @IBOutlet weak var imageView: UIImageView! {
         didSet {
             imageView.isHidden = true
-            imageView.tintColor = .gray
+            imageView.tintColor = .blue
            
         }
     }
