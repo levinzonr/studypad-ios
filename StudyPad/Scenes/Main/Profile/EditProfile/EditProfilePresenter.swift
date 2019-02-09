@@ -68,10 +68,15 @@ extension EditProfilePresenter: EditProfilePresenterInput {
 
 // INTERACTOR -> PRESENTER (indirect)
 extension EditProfilePresenter: EditProfileInteractorOutput {
+    func present(_ error: Error) {
+        output?.displayError(error)
+    }
     
+
     func present(_ response: User) {
         userManager.userInfo = response
     }
 
+    
     
 }

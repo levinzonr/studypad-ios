@@ -118,23 +118,13 @@ extension ServerRepository  {
 
 // Notes
 extension ServerRepository  {
-    func getNotesFromNotebook(notebookId: Int, onComplete: @escaping ([Note]) -> Void) {
+    func getNotesFromNotebook(notebookId: Int, onComplete: @escaping (AppResult<[Note]>) -> Void) {
         sessionManager
             .request(API + "notebooks/\(notebookId)/notes", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: authHeaders)
-            .responseJSON { response in
-                if let data = response.data {
-                    do {
-                        let decoder = JSONDecoder()
-                        let result = try decoder.decode([Note].self, from: data)
-                        onComplete(result)
-                    } catch {
-                        print("catch notes")
-                    }
-                }
-            }
+            .resutltResponse(result: onComplete)
     }
     
-    func createNote(request: Note.CreateRequest, onComplete: @escaping (Note) -> Void) {
+    func createNote(request: Note.CreateRequest, onComplete: @escaping (AppResult<Note>) -> Void) {
         let payload : [String: Any] = [
             "title": request.title,
             "content": request.content,
@@ -142,45 +132,24 @@ extension ServerRepository  {
         ]
         sessionManager
             .request(API + "notes", method: .post, parameters: payload, encoding: JSONEncoding.default, headers: authHeaders)
-            .responseJSON { response in
-                if let data = response.data {
-                    do {
-                        let decoder = JSONDecoder()
-                        let result = try decoder.decode(Note.self, from: data)
-                        onComplete(result)
-                    } catch {
-                        print("Catch create note")
-                    }
-                }
-        }
+            .resutltResponse(result: onComplete)
     }
     
-    func updateNote(request: Note.UpdateRequest, onComplete: @escaping () -> Void) {
+    func updateNote(request: Note.UpdateRequest, onComplete: @escaping (AppResult<Note>) -> Void) {
         let payload : [String: Any] = [
             "title": request.title,
             "content": request.content,
         ]
         sessionManager
             .request(API + "notes/\(request.id)", method: .patch, parameters: payload, encoding: JSONEncoding.default, headers: authHeaders)
-            .responseJSON { response in
-                if let data = response.data {
-                    do {
-                        let decoder = JSONDecoder()
-                        let result = try decoder.decode(Note.self, from: data)
-                        onComplete()
-                    } catch {
-                        print("Catch update note")
-                    }
-                }
-        }
+            .resutltResponse(result: onComplete)
     }
     
-    func deleteNote(noteId: Int, onComplete: @escaping () -> Void) {
+    func deleteNote(noteId: Int, onComplete: @escaping (AppResult<Bool>) -> Void) {
         sessionManager
             .request(API + "notes/\(noteId)", method: .delete, parameters: nil, encoding: JSONEncoding.default, headers: authHeaders)
-            .response { response in
-                onComplete()
-        }
+            .resutltResponse(result: onComplete)
+        
     }
     
     
@@ -188,27 +157,16 @@ extension ServerRepository  {
 
 extension ServerRepository {
     
-    func updateUserProfile(firstName: String, lastName: String, onComplete: @escaping (User) -> Void) {
+    func updateUserProfile(firstName: String, lastName: String, onComplete: @escaping (AppResult<User>) -> Void) {
         let payload : [String: Any] = [
             "firstName": firstName,
             "lastName": lastName,
         ]
         sessionManager
             .request(API + "users/me", method: .post, parameters: payload, encoding: JSONEncoding.default, headers: authHeaders)
-            .responseJSON { response in
-                print("respnse \(response)")
-                if let data = response.data {
-                    do {
-                        let decoder = JSONDecoder()
-                        let result = try decoder.decode(User.self, from: data)
-                        onComplete(result)
-                    } catch {
-                        print("catch")
-                    }
-                }
-        }
-    }
+            .resutltResponse(result: onComplete)
 
+    }
 }
 
 

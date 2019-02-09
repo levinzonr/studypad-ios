@@ -21,10 +21,10 @@ protocol NotebookRepository{
 
 
 protocol NotesRepository {
-    func getNotesFromNotebook(notebookId: Int, onComplete: @escaping ([Note]) -> Void)
-    func createNote(request: Note.CreateRequest, onComplete: @escaping (Note) -> Void)
-    func updateNote(request: Note.UpdateRequest, onComplete: @escaping () -> Void)
-    func deleteNote(noteId: Int, onComplete: @escaping () -> Void)
+    func getNotesFromNotebook(notebookId: Int, onComplete: @escaping (AppResult<[Note]>) -> Void)
+    func createNote(request: Note.CreateRequest, onComplete: @escaping (AppResult<Note>) -> Void)
+    func updateNote(request: Note.UpdateRequest, onComplete: @escaping (AppResult<Note>) -> Void)
+    func deleteNote(noteId: Int, onComplete: @escaping (AppResult<Bool>) -> Void)
 }
 
 protocol KeychainRepository {
@@ -36,6 +36,6 @@ protocol KeychainRepository {
 }
 
 protocol UserRepository {
-    func updateUserProfile(firstName: String, lastName: String, onComplete: @escaping (User) -> Void)
+    func updateUserProfile(firstName: String, lastName: String, onComplete: @escaping (AppResult<User>) -> Void)
     
 }

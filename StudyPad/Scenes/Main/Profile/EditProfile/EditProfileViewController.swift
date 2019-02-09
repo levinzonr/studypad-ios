@@ -63,5 +63,8 @@ extension EditProfileViewController: EditProfilePresenterOutput {
         lastNameInputField.text = displayModel.lastName
     }
     
-
+    func displayError(_ error: Error) {
+        showErrorAlert(of: error)
+    }
+    
 }

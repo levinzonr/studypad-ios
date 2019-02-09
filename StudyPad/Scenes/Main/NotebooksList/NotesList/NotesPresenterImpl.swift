@@ -30,15 +30,21 @@ class NotesPresenterImpl: NotesPresenter {
     
     func loadNotesFromNotebook(notebook: Notebook) {
         print("load")
-        repo.getNotesFromNotebook(notebookId: notebook.id) { ( items: [Note]) in
-            self.runAction({ (view: NotesPresenterImpl.View) in
-                if (items.count > 0) {
-                    view.showNotes(items)
-                } else {
-                    view.showEmptyView()
+        repo.getNotesFromNotebook(notebookId: notebook.id) { result in
+            switch result {
+            case .success(let items):
+                self.runAction { view in
+                    if items.count > 0 {
+                        view.showNotes(items)
+                    } else {
+                        view.showEmptyView()
+                    }
                 }
-                print("loaded")
-            })
+            case .failure(let error):
+                self.runAction{  view in
+                    view.showError(error: error)
+                }
+            }
         }
     }
     

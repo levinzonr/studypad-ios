@@ -47,6 +47,16 @@ final class NotesViewController : UIViewController {
 }
 
 extension NotesViewController : NotesView {
+    func showLoadingError() {
+        if notes.count == 0 {
+            showError()
+        }
+    }
+    
+    func showError(error: Error) {
+        showErrorAlert(of: error)
+    }
+    
     
     func showEmptyView() {
         tableView.isHidden = true

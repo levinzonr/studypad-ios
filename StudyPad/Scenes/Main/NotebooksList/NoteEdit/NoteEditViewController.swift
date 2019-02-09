@@ -69,6 +69,10 @@ class NoteEditViewController : UIViewController, UITextViewDelegate {
 }
 
 extension NoteEditViewController : NoteEditView {
+    func showError(_ error: Error) {
+        showErrorAlert(of: error)
+    }
+    
     func showSaveButtonEnabled(_ enabled: Bool) {
         saveNoteTabBarItem.isEnabled = enabled
     }

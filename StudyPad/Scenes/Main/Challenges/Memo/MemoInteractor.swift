@@ -25,8 +25,14 @@ class MemoInteractor {
 // PRESENTER -> INTERACTOR
 extension MemoInteractor: MemoInteractorInput {
     func perform(_ request: Memo.Request.GetNotes) {
-        repository.getNotesFromNotebook(notebookId: request.notebookId) { response in
-            self.output?.present(response)
+        repository.getNotesFromNotebook(notebookId: request.notebookId) { result in
+            switch result {
+            case .success(let items):
+                self.output?.present(items)
+            case .failure(let error):
+                print(error)
+            }
+            
         }
     }
     

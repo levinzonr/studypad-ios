@@ -26,8 +26,13 @@ class EditProfileInteractor {
 extension EditProfileInteractor: EditProfileInteractorInput {
     
     func perform(_ request: EditProfile.Request.UpdateProfile) {
-        repositroy.updateUserProfile(firstName: request.firstName, lastName: request.lastName) { response in
-            self.output?.present(response)
+        repositroy.updateUserProfile(firstName: request.firstName, lastName: request.lastName) { result in
+            switch result {
+            case .success(let updated):
+                self.output?.present(updated)
+            case .failure(let error):
+                self.output?.present(error)
+            }
         }
     }
     

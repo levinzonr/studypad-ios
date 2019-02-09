@@ -14,5 +14,6 @@ protocol NoteEditView: BaseView {
     func showEditMode(_ note: Note)
     func showNoteUpdated()
     func showNoteCreated()
+    func showError(_ error: Error)
 
 }

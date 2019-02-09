@@ -40,25 +40,52 @@ class NoteEditPresenter: BasePresenter {
         }
     }
     
-    func saveNote() {
-        if let note = self.note {
-            let request = Note.UpdateRequest(id: note.id, title: newTitle, content: newContent)
-            repository.updateNote(request: request) {
-                self.runAction({ (view: NoteEditView) in
-                    view.showNoteUpdated()
-                    view.showSaveButtonEnabled(false)
-                })
-            }
-        } else  if let notebookId = self.notebookId {
-            let request = Note.CreateRequest(notebookId: notebookId, title: newTitle, content: newContent)
-            repository.createNote(request: request) { (created: Note) in
-                self.runAction({ (view : NoteEditView) in
+    private func createNote(_ notebookId: Int) {
+        let request = Note.CreateRequest(notebookId: notebookId, title: newTitle, content: newContent)
+        repository.createNote(request: request) { result in
+            self.runAction({ (view : NoteEditView) in
+            
+                switch result {
+                case .success(let created):
                     self.note = created
                     view.showNoteCreated()
                     view.showEditMode(created)
                     view.showSaveButtonEnabled(false)
+                    
+                    
+                case .failure(let error):
+                    self.runAction{ view in
+                        view.showError(error)
+                    }
+                }
+            })
+        }
+    }
+    
+    private func updateNote(_ note: Note) {
+        let request = Note.UpdateRequest(id: note.id, title: newTitle, content: newContent)
+        repository.updateNote(request: request) { result in
+            switch result {
+            case .success:
+                self.runAction({ (view: NoteEditView) in
+                    view.showNoteUpdated()
+                    view.showSaveButtonEnabled(false)
                 })
+                
+            case .failure(let error):
+                self.runAction{ view in
+                    view.showError(error)
+                }
             }
+        }
+            
+    }
+    
+    func saveNote() {
+        if let note = self.note {
+            updateNote(note)
+        } else  if let notebookId = self.notebookId {
+           createNote(notebookId)
         } else {
             fatalError("Nor id or note passed")
         }
@@ -67,7 +94,8 @@ class NoteEditPresenter: BasePresenter {
     func dettachView() {
         self.view = nil
     }
-    
+
+        
     
     private func checkIfCanBeSaved() {
         let isNotEmpty = !newContent.isEmpty || !newTitle.isEmpty

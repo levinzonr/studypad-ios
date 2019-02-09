@@ -19,6 +19,7 @@ protocol EditProfileInteractorInput {
 // INTERACTOR -> PRESENTER (indirect)
 protocol EditProfileInteractorOutput: class {
     func present(_ response: User)
+    func present(_ error: Error)
 }
 
 // ======== Presenter ======== //
@@ -33,4 +34,5 @@ protocol EditProfilePresenterInput {
 protocol EditProfilePresenterOutput: class {
     func display(_ displayModel: User)
     func displayUpdateButtonEnabled(_ enabled: Bool)
+    func displayError(_ error: Error)
 }
