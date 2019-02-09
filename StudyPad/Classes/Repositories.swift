@@ -30,8 +30,8 @@ protocol NotesRepository {
 protocol KeychainRepository {
     
     func login(request: User.LoginRequest, onComplete: @escaping (AppResult<User.Authorization>) -> Void)
-    func createAccount(request: User.SignupRequest, onComplete: @escaping (User.LoginResponse) -> Void)
-    func loginViaFacebook(token: String, onComplete: @escaping (User.LoginResponse) -> Void)
+    func createAccount(request: User.SignupRequest, onComplete: @escaping (AppResult<User.Authorization>) -> Void)
+    func loginViaFacebook(token: String, onComplete: @escaping (AppResult<User.Authorization>) -> Void)
     
 }
 

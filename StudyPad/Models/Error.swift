@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import Alamofire
 enum Error {
     
     case network, api(_ message : String), generic
@@ -33,4 +33,23 @@ enum Error {
 enum AppResult<T>  {
     case success(_ data: T)
     case failure(_ error: Error)
+    
+    
+    public static func fromDataResponse<T : Codable>(_ response: Data?) -> AppResult<T> {
+        if let data = response {
+            do {
+                let jsonDecoder = JSONDecoder()
+                let data = try jsonDecoder.decode(T.self, from: data)
+                print(data)
+                return .success(data)
+                
+            } catch {
+                print("catch")
+                return .failure(.generic)
+            }
+        } else {
+            return .failure(.generic)
+        }
+    }
+    
 }

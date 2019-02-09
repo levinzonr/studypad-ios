@@ -29,11 +29,15 @@ extension SignupInteractor: SignupInteractorInput {
     
     func perform(_ request: Signup.Request.CreateAccount) {
         let crequest = User.SignupRequest(email: request.email, password: request.password, firstName: "", lastName: "")
-        repository.createAccount(request: crequest) { (response : User.LoginResponse) in
-            print("created")
-            //self.userManager.token = response.access_token
-           // self.userManager.userInfo = response.user
-           // self.output?.present(Signup.Response.AccountCreated())
+        repository.createAccount(request: crequest) { result in
+            switch result {
+            case .success(let auth):
+                self.userManager.token = auth.access_token
+                self.userManager.userInfo = auth.user
+                self.output?.present(.accountCreated)
+            case .failure(let error):
+                self.output?.present(.accountCreatedError(error))
+            }
         }
     }
 }

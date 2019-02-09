@@ -66,6 +66,10 @@ class SignupViewController: UIViewController {
 
 // PRESENTER -> VIEW
 extension SignupViewController: SignupPresenterOutput {
+    func showError(_ error: Error) {
+        showErrorAlert(of: error)
+    }
+    
     func showCreateButtonEnabled(_ enabled: Bool) {
         print("enabled: \(enabled)")
         createAccountBtn.isEnabled = enabled

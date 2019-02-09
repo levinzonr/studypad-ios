@@ -18,7 +18,7 @@ protocol SignupInteractorInput {
 
 // INTERACTOR -> PRESENTER (indirect)
 protocol SignupInteractorOutput: class {
-     func present(_ response: Signup.Response.AccountCreated)
+     func present(_ response: Signup.Response)
 }
 
 // ======== Presenter ======== //
@@ -33,6 +33,7 @@ protocol SignupPresenterInput {
 protocol SignupPresenterOutput: class {
     func showCreateButtonEnabled(_ enabled: Bool)
     func showLoading(_ show: Bool)
+    func showError(_ error: Error)
 }
 
 protocol SignupCoordinatorInput: class {

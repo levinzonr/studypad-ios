@@ -57,7 +57,7 @@ extension ServerRepository {
         }
     
     
-    func createAccount(request: User.SignupRequest, onComplete: @escaping (User.LoginResponse) -> Void) {
+    func createAccount(request: User.SignupRequest, onComplete: @escaping (AppResult<User.Authorization>) -> Void) {
         let payload: [String: Any] = [
             "email": request.email,
             "password": request.password,
@@ -66,44 +66,19 @@ extension ServerRepository {
         ]
         sessionManager
             .request(API + "users", method: .post, parameters: payload, encoding: JSONEncoding.default)
-            .responseJSON { respnse in
-                print("respomse \(respnse)")
-                if let data = respnse.data {
-                    do {
-                        let encoder = JSONDecoder()
-                        let result = try encoder.decode(User.Authorization.self, from: data)
-                        onComplete(.success(result))
-                    }  catch {}
-                }
-        }
+            .resutltResponse(result: onComplete)
     }
+
     
-    func loginViaFacebook(token: String, onComplete: @escaping (User.LoginResponse) -> Void) {
+    func loginViaFacebook(token: String, onComplete: @escaping (AppResult<User.Authorization>) -> Void) {
         
         let payload: [String: Any] = [
             "token": token
         ]
         sessionManager
             .request(AUTH + "facebook", method: .post, parameters: payload, encoding: JSONEncoding.default)
-            .responseJSON { response in
-                if let data = response.data {
-                    print("respomse \(response)")
-                    do {
-                        let jsonDecoder = JSONDecoder()
-                        let result = try jsonDecoder.decode(User.Authorization.self, from: data)
-                        print(result)
-                        onComplete(.success(result))
-                        
-                    } catch {
-                        print("catch facebook")
-                    }
-                }
+            .resutltResponse(result: onComplete)
     }
-
-
-    
-}
-    
 }
 
 // Notebooks

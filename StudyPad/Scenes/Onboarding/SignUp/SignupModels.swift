@@ -10,7 +10,11 @@ import Foundation
 
 enum Signup {
     enum Request { }
-    enum Response { }
+    enum Response {
+        
+        case accountCreated, accountCreatedError(_ error: Error)
+        
+    }
     enum DisplayData { }
 
     enum Action {
@@ -30,11 +34,6 @@ extension Signup.Request {
     }
 }
 
-extension Signup.Response {
-    struct AccountCreated {
-        var token: String = ""
-    }
-}
 
 extension Signup.DisplayData {
     

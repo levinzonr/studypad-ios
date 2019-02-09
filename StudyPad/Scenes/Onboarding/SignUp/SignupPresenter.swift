@@ -66,9 +66,14 @@ extension SignupPresenter: SignupPresenterInput {
 
 // INTERACTOR -> PRESENTER (indirect)
 extension SignupPresenter: SignupInteractorOutput {
-    func present(_ response: Signup.Response.AccountCreated) {
-        print("interact -> presenter")
-        coordinator?.showMain()
+    func present(_ response: Signup.Response) {
+        switch response {
+        case .accountCreated:
+            coordinator?.showMain()
+        case .accountCreatedError(let error):
+            output?.showError(error)
+            output?.showLoading(false)
+        }
     }
     
 

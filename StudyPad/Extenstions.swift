@@ -50,7 +50,15 @@ extension UIViewController {
     }
     
     func showErrorAlert(of type: Error, with message: String = "Something bad has happened") {
-        let alert = UIAlertController(title: type.title, message: message, preferredStyle: .alert)
+        var messageToShow: String!
+        switch type {
+        case .api(let message):
+            messageToShow = message
+        default:
+            messageToShow = message
+        }
+        
+        let alert = UIAlertController(title: type.title, message: messageToShow, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
@@ -69,25 +77,22 @@ extension Request {
 extension DataRequest {
     
     func resutltResponse<T : Codable>(result: @escaping  (AppResult<T>) -> Void) {
-            responseJSON { response in
-                if response.result.isSuccess {
-                if let data = response.data {
-                        print("respomse \(response)")
-                        do {
-                            let jsonDecoder = JSONDecoder()
-                            let data = try jsonDecoder.decode(T.self, from: data)
-                            print(data)
-                            result(.success(data))
-                            
-                        } catch {
-                            print("catch")
-                            result(.failure(.generic))
-                        }
-                } else {}
+        responseJSON { response in
+            if response.result.isSuccess {
+                if let code = response.response?.statusCode {
+                    print("Response: \(response.data?.base64EncodedString())")
+                    switch code {
+                    case 200...299:
+                        result(AppResult<T>.fromDataResponse(response.data))
+                    case 400 ... 599:
+                        result(.failure(.api("Somethind weird did happen (\(code))")))
+                    default:
+                        result(.failure(.generic))
+                    }
+                }
             } else {
-            result(.failure(.network))
-
-        }
+                result(.failure(.network))
+            }
         }
     }
 }
