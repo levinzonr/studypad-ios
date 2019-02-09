@@ -19,29 +19,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="D5W-Ww-Ngh">
-                                <rect key="frame" x="16" y="272.5" width="343" height="122"/>
+                                <rect key="frame" x="16" y="246.5" width="343" height="174"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nCX-lN-Nic">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="v9I-rK-Jvr"/>
+                                        </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="given-name"/>
                                         <connections>
                                             <action selector="onFirstNameChanged:" destination="F2H-rH-Lsj" eventType="editingChanged" id="mMk-2W-GfX"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xao-OL-qmr">
-                                        <rect key="frame" x="0.0" y="46" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="72" width="343" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="3ox-f1-OSn"/>
+                                        </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go" textContentType="family-name"/>
                                         <connections>
                                             <action selector="onLastNameChanged:" destination="F2H-rH-Lsj" eventType="editingDidEnd" id="dz3-Kw-dYZ"/>
                                             <action selector="onLastnameChanged:" destination="F2H-rH-Lsj" eventType="editingChanged" id="4RL-ro-sRa"/>
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72a-vH-b9K">
-                                        <rect key="frame" x="0.0" y="92" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="144" width="343" height="30"/>
                                         <state key="normal" title="Update"/>
                                         <connections>
                                             <action selector="onUpdateButtonPressed:" destination="F2H-rH-Lsj" eventType="touchUpInside" id="x5l-VZ-ihz"/>

@@ -71,3 +71,16 @@ extension EditProfileViewController: EditProfilePresenterOutput {
     }
     
 }
+
+extension EditProfileViewController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if (textField == firstNameInputField) {
+            return lastNameInputField.becomeFirstResponder()
+        } else {
+            return textField.resignFirstResponder()
+        }
+    }
+    
+    
+}

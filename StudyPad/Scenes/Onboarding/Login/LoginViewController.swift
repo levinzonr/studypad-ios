@@ -14,6 +14,13 @@ class LoginViewController : UIViewController {
     
     var presenter: LoginPresenter!
     
+    @IBOutlet weak var logoImageView: UIImageView! {
+        didSet {
+            let image = logoImageView.image?.withRenderingMode(.alwaysTemplate)
+            logoImageView.tintColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+            logoImageView.image = image
+        }
+    }
     @IBOutlet weak var facebooLoginButton: UIButton! {
         didSet {
             facebooLoginButton.tintColor = .white
@@ -52,6 +59,17 @@ class LoginViewController : UIViewController {
         
         emailInputField.delegate = self
         passwordInputField.delegate = self
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     @IBAction func onLoginButtonClicked(_ sender: Any) {

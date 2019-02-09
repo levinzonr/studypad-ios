@@ -37,6 +37,7 @@ class NoteEditViewController : UIViewController, UITextViewDelegate {
         didSet {
             noteContentInputField.placeholder = "Enter note here ..."
             noteContentInputField.delegate = self
+            noteContentInputField.layer.cornerRadius = 8
         }
     }
     @IBAction func noteTitleDidChange(_ sender: Any) {

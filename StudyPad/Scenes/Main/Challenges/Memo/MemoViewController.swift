@@ -47,7 +47,11 @@ class MemoViewController: UIViewController {
         }
     }
     @IBOutlet weak var contentLabel: UILabel!
-    @IBOutlet weak var closeChallengeButton: UIButton!
+    @IBOutlet weak var closeChallengeButton: UIButton! {
+        didSet {
+
+        }
+    }
     @IBOutlet weak var cardView: MDCCard! {
         didSet {
             cardView.setShadowElevation(ShadowElevation.init(CGFloat(12)), for: .normal)

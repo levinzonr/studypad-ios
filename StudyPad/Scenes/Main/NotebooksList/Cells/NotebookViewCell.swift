@@ -18,6 +18,11 @@ protocol NotebookViewCellDelegate : class  {
 class NotebookViewCell: UICollectionViewCell, Reusable {
     
     
+    @IBOutlet weak var moreButton: UIButton! {
+        didSet {
+            moreButton.contentEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 8)
+        }
+    }
     @IBOutlet weak var notesCountLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var cardView: MDCCard!
@@ -45,7 +50,11 @@ class NotebookViewCell: UICollectionViewCell, Reusable {
     func configure(using notebook: Notebook) {
      
        nameLabel.text =  notebook.name
-        notesCountLabel.text = "Count: \(notebook.notesCount)"
+        if notebook.notesCount > 0 {
+            notesCountLabel.text = "Notes count: \(notebook.notesCount)"
+        } else {
+            notesCountLabel.text = "No notes"
+        }
         
         let colors = notebook.color.toColorArray()
         gradientView.colors = colors

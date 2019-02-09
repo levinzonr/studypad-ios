@@ -78,6 +78,7 @@
             <connections>
                 <outlet property="cardView" destination="C37-sM-Jcr" id="oWj-V8-M7M"/>
                 <outlet property="gradientView" destination="TzI-m4-I4l" id="p2b-Pw-x00"/>
+                <outlet property="moreButton" destination="MtW-u1-7zq" id="EhT-vk-4uG"/>
                 <outlet property="nameLabel" destination="W8R-JS-w6N" id="okR-J6-Ltu"/>
                 <outlet property="notesCountLabel" destination="oAs-Du-7v4" id="Dzi-zV-Jhr"/>
             </connections>

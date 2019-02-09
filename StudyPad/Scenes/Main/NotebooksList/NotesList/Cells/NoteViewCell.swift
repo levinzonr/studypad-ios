@@ -26,6 +26,9 @@ class NoteViewCell: UITableViewCell, NibReusable {
         if note.content.isEmpty {
             noteContentLabel.text = "<No Content>"
         }
+        
+        
+        
     }
     
 }

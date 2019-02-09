@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2wv-gL-vM3" customClass="MDCCard">
-                                <rect key="frame" x="16" y="142" width="343" height="399"/>
+                                <rect key="frame" x="16" y="94" width="343" height="447"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stm-us-5Oh">
-                                        <rect key="frame" x="150.5" y="189.5" width="42" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stm-us-5Oh">
+                                        <rect key="frame" x="16" y="213.5" width="311" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -30,6 +30,8 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="stm-us-5Oh" secondAttribute="trailing" constant="16" id="58D-eT-rtj"/>
+                                    <constraint firstItem="stm-us-5Oh" firstAttribute="leading" secondItem="2wv-gL-vM3" secondAttribute="leading" constant="16" id="5N5-1X-8Xk"/>
                                     <constraint firstItem="stm-us-5Oh" firstAttribute="centerY" secondItem="2wv-gL-vM3" secondAttribute="centerY" id="C1Q-wb-ciU"/>
                                     <constraint firstItem="stm-us-5Oh" firstAttribute="centerX" secondItem="2wv-gL-vM3" secondAttribute="centerX" id="UyM-JU-Ua9"/>
                                 </constraints>
@@ -74,7 +76,7 @@
                             <constraint firstItem="sAR-2a-c7T" firstAttribute="top" secondItem="Fhz-5B-qaF" secondAttribute="top" constant="16" id="DvM-Fv-53W"/>
                             <constraint firstItem="2wv-gL-vM3" firstAttribute="leading" secondItem="Fhz-5B-qaF" secondAttribute="leading" constant="16" id="INf-Cd-fhQ"/>
                             <constraint firstItem="sAR-2a-c7T" firstAttribute="leading" secondItem="Fhz-5B-qaF" secondAttribute="leading" constant="16" id="Ltt-9H-gLg"/>
-                            <constraint firstItem="2wv-gL-vM3" firstAttribute="top" secondItem="xdb-nR-TQa" secondAttribute="bottom" constant="64" id="ZKl-y8-xcS"/>
+                            <constraint firstItem="2wv-gL-vM3" firstAttribute="top" secondItem="xdb-nR-TQa" secondAttribute="bottom" constant="16" id="ZKl-y8-xcS"/>
                             <constraint firstItem="xdb-nR-TQa" firstAttribute="leading" secondItem="2ev-QE-M02" secondAttribute="leadingMargin" constant="16" id="atT-Aj-DDn"/>
                             <constraint firstItem="Fhz-5B-qaF" firstAttribute="bottom" secondItem="odN-nG-3gv" secondAttribute="bottom" constant="32" id="eva-6H-1bZ"/>
                             <constraint firstItem="odN-nG-3gv" firstAttribute="top" secondItem="2wv-gL-vM3" secondAttribute="bottom" constant="64" id="gzZ-0x-9B2"/>
